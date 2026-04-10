@@ -19,6 +19,7 @@ Run this file:
   python 01_custom_tools.py
 """
 
+import os
 import math
 from datetime import datetime
 from dotenv import load_dotenv
@@ -130,9 +131,13 @@ print()
 # ---------------------------------------------------------------------------
 # 5. Binding tools to the LLM (preview — used fully in 03_react_agent.py)
 # ---------------------------------------------------------------------------
-from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
 
-llm = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
+llm = ChatOllama(
+    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
+    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+    temperature=0,
+)
 
 # .bind_tools() tells the LLM about available tools.
 # The model can now respond with tool_calls instead of plain text.

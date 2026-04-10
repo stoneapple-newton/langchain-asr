@@ -18,12 +18,17 @@ Run this file:
   python 02_prompt_templates.py
 """
 
+import os
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
-from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
 
 load_dotenv()
-llm = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
+llm = ChatOllama(
+    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
+    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+    temperature=0,
+)
 
 # ---------------------------------------------------------------------------
 # 1. Basic ChatPromptTemplate

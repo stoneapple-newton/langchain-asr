@@ -100,13 +100,17 @@ print_results("Wikipedia Result", wiki_result)
 # ---------------------------------------------------------------------------
 # 4. Using search tools in a simple LLM chain
 # ---------------------------------------------------------------------------
-from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 print("\n=== Search-Augmented Chain ===")
 
-llm = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
+llm = ChatOllama(
+    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
+    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+    temperature=0,
+)
 
 # Pick whichever search tool is available
 search_tool = tavily if tavily else ddg

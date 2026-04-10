@@ -9,7 +9,7 @@ Gemini, local Ollama) exposes the same interface, so swapping providers is
 a one-line change.
 
 Key classes introduced:
-  - ChatOpenAI        : wraps OpenAI's chat API
+  - ChatOllama        : wraps a local Ollama chat model
   - HumanMessage      : a message from the user
   - SystemMessage     : instructions that set the model's behavior
   - AIMessage         : the model's response (what you get back)
@@ -24,13 +24,13 @@ from dotenv import load_dotenv
 # langchain_core holds the fundamental building blocks (messages, etc.)
 from langchain_core.messages import HumanMessage, SystemMessage
 
-# langchain_openai is the OpenAI-specific integration package
-from langchain_openai import ChatOpenAI
+# langchain_ollama is the Ollama-specific integration package
+from langchain_ollama import ChatOllama
 
 # ---------------------------------------------------------------------------
 # Setup
 # ---------------------------------------------------------------------------
-load_dotenv()  # reads OPENAI_API_KEY from your .env file
+load_dotenv()  # reads optional Ollama settings from your .env file
 
 # ---------------------------------------------------------------------------
 # 1. Instantiate the model
@@ -38,10 +38,11 @@ load_dotenv()  # reads OPENAI_API_KEY from your .env file
 # temperature=0  → deterministic / factual output (great for research)
 # temperature=1  → more creative / varied output
 # max_tokens     → cap the response length (saves money during dev)
-llm = ChatOpenAI(
-    model="gpt-4.1-mini",
+llm = ChatOllama(
+  model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
+  base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
     temperature=0,
-    max_tokens=512,
+  num_predict=512,
 )
 
 # ---------------------------------------------------------------------------
