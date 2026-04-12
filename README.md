@@ -53,7 +53,7 @@ providers usually means updating `.env`, not changing tutorial code.
 
 ### 1. Deep Research Agent
 
-Location: [deep_research/deep_research_agent](/C:/Users/Newto/Documents/project/test-langchain/deep_research/deep_research_agent)
+Location: [deep_research/deep_research_agent](./deep_research/deep_research_agent)
 
 The general LangChain learning progression. It moves from basics to tools,
 LangGraph, RAG, memory, a deep research agent, and production-oriented topics
@@ -72,7 +72,7 @@ Representative stages:
 
 ### 2. ASR Quality Progression
 
-Location: [deep_research/asr](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr)
+Location: [deep_research/asr](./deep_research/asr)
 
 An end-to-end progression for improving automatic speech recognition output.
 This track covers transcript parsing, quality metrics, LLM cleanup,
@@ -87,12 +87,12 @@ Highlights:
 - Deep Agents swarm stage with multiple ASR specialists
 
 See also:
-- [deep_research/asr/stage_07_deep_agents/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr/stage_07_deep_agents/README.md)
-- [deep_research/ASR_QUALITY_AGENT_CATALOG.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/ASR_QUALITY_AGENT_CATALOG.md)
+- [deep_research/asr/stage_07_deep_agents/README.md](./deep_research/asr/stage_07_deep_agents/README.md)
+- [deep_research/ASR_QUALITY_AGENT_CATALOG.md](./deep_research/ASR_QUALITY_AGENT_CATALOG.md)
 
 ### 3. ASR-v2
 
-Location: [deep_research/asr-v2](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr-v2)
+Location: [deep_research/asr-v2](./deep_research/asr-v2)
 
 A cleaner staged tutorial focused on post-processing WhisperX-like JSON into a
 more readable, speaker-aware transcript. It mixes deterministic cleanup,
@@ -103,11 +103,11 @@ Outputs are written under `outputs/<input-stem>/` as enhanced JSON and Markdown
 transcripts.
 
 See:
-- [deep_research/asr-v2/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr-v2/README.md)
+- [deep_research/asr-v2/README.md](./deep_research/asr-v2/README.md)
 
 ### 4. ASR-v2 Translation
 
-Location: [deep_research/asr-v2/translation](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr-v2/translation)
+Location: [deep_research/asr-v2/translation](./deep_research/asr-v2/translation)
 
 A parallel Chinese-to-English translation track built on top of ASR-v2. It
 preserves segment counts, timestamps, and speaker labels while comparing
@@ -117,11 +117,11 @@ variants.
 This track includes its own dataset, outputs, scoring utilities, and tests.
 
 See:
-- [deep_research/asr-v2/translation/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr-v2/translation/README.md)
+- [deep_research/asr-v2/translation/README.md](./deep_research/asr-v2/translation/README.md)
 
 ### 5. Summary Agents
 
-Location: [deep_research/summary_agents](/C:/Users/Newto/Documents/project/test-langchain/deep_research/summary_agents)
+Location: [deep_research/summary_agents](./deep_research/summary_agents)
 
 A staged series for meeting and transcript summarization. It compares one-shot
 prompting, LangChain agents, LangGraph workflows, RAG-enhanced summaries,
@@ -132,11 +132,11 @@ multiple implementations of the same task with explicit trade-offs in quality,
 complexity, and control.
 
 See:
-- [deep_research/summary_agents/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/summary_agents/README.md)
+- [deep_research/summary_agents/README.md](./deep_research/summary_agents/README.md)
 
 ### 6. PII Redaction
 
-Location: [deep_research/pii_redaction](/C:/Users/Newto/Documents/project/test-langchain/deep_research/pii_redaction)
+Location: [deep_research/pii_redaction](./deep_research/pii_redaction)
 
 A progression that solves the same redaction task across one-shot prompting,
 LangChain agents, LangGraph, and Deep Agents, then benchmarks each approach on
@@ -146,11 +146,11 @@ This track is useful if you want a compact example of "same task, different
 framework layer" with deterministic scoring.
 
 See:
-- [deep_research/pii_redaction/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/pii_redaction/README.md)
+- [deep_research/pii_redaction/README.md](./deep_research/pii_redaction/README.md)
 
 ### 7. Diarization Improvements
 
-Location: [deep_research/diarization_improvements](/C:/Users/Newto/Documents/project/test-langchain/deep_research/diarization_improvements)
+Location: [deep_research/diarization_improvements](./deep_research/diarization_improvements)
 
 A focused track for fixing common diarization failures such as run-on segments,
 speaker attachment errors, graph-based correction, Deep Agents swarms, and
@@ -158,18 +158,18 @@ benchmarking.
 
 ### 8. Transcription Correction Agent
 
-Location: [deep_research/transcription_correction_agent](/C:/Users/Newto/Documents/project/test-langchain/deep_research/transcription_correction_agent)
+Location: [deep_research/transcription_correction_agent](./deep_research/transcription_correction_agent)
 
 A LangGraph-based agent that detects transcript errors, optionally extracts
 audio, retranscribes difficult segments, and applies specialized medical-term
 handling with glossary support.
 
 See:
-- [deep_research/transcription_correction_agent/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/transcription_correction_agent/README.md)
+- [deep_research/transcription_correction_agent/README.md](./deep_research/transcription_correction_agent/README.md)
 
 ### 9. ASR Medical Verification
 
-Location: [deep_research/asr_medical_verification](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr_medical_verification)
+Location: [deep_research/asr_medical_verification](./deep_research/asr_medical_verification)
 
 Supporting experiments and utilities for medical-term error detection,
 audio-segment extraction, retranscription, and transcript verification in
@@ -253,7 +253,7 @@ including:
 - `LANGSMITH_API_KEY`
 - `LANGCHAIN_API_KEY`
 
-More detail is in [config/README.md](/C:/Users/Newto/Documents/project/test-langchain/config/README.md).
+More detail is in [config/README.md](./config/README.md).
 
 ## Common Run Commands
 
@@ -329,9 +329,9 @@ If you are new to the codebase:
 
 ## Related Docs
 
-- [config/README.md](/C:/Users/Newto/Documents/project/test-langchain/config/README.md)
-- [deep_research/summary_agents/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/summary_agents/README.md)
-- [deep_research/asr-v2/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr-v2/README.md)
-- [deep_research/asr-v2/translation/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr-v2/translation/README.md)
-- [deep_research/pii_redaction/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/pii_redaction/README.md)
-- [deep_research/transcription_correction_agent/README.md](/C:/Users/Newto/Documents/project/test-langchain/deep_research/transcription_correction_agent/README.md)
+- [config/README.md](./config/README.md)
+- [deep_research/summary_agents/README.md](./deep_research/summary_agents/README.md)
+- [deep_research/asr-v2/README.md](./deep_research/asr-v2/README.md)
+- [deep_research/asr-v2/translation/README.md](./deep_research/asr-v2/translation/README.md)
+- [deep_research/pii_redaction/README.md](./deep_research/pii_redaction/README.md)
+- [deep_research/transcription_correction_agent/README.md](./deep_research/transcription_correction_agent/README.md)
