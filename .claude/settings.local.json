@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(git -C /c/Users/Newto/Documents/project/test-langchain log --oneline)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(grep -E \"^[^/]*$|asr|deep_research\")",
+      "Bash(uv sync:*)",
+      "Bash(uv run:*)"
     ]
   }
 }
