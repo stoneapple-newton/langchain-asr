@@ -18,12 +18,17 @@ Run this file:
   python 02_prompt_templates.py
 """
 
-from dotenv import load_dotenv
+import os
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
-from langchain_openai import ChatOpenAI
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-load_dotenv()
-llm = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
+from config import create_chat_model
+
+llm = create_chat_model(temperature=0)
 
 # ---------------------------------------------------------------------------
 # 1. Basic ChatPromptTemplate

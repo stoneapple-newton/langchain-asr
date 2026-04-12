@@ -1,0 +1,136 @@
+{
+  "regex_baseline": [
+    {
+      "id": "patient_contact",
+      "variant": "regex_baseline",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8,
+      "exact_redaction": false
+    },
+    {
+      "id": "employee_contact",
+      "variant": "regex_baseline",
+      "true_positives": 1,
+      "false_positives": 1,
+      "false_negatives": 2,
+      "precision": 0.5,
+      "recall": 0.333,
+      "f1": 0.4,
+      "exact_redaction": false
+    },
+    {
+      "id": "shipping_address",
+      "variant": "regex_baseline",
+      "true_positives": 0,
+      "false_positives": 1,
+      "false_negatives": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_redaction": false
+    },
+    {
+      "id": "ticket_ssn_dob",
+      "variant": "regex_baseline",
+      "true_positives": 0,
+      "false_positives": 2,
+      "false_negatives": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_redaction": false
+    },
+    {
+      "id": "card_and_receipt",
+      "variant": "regex_baseline",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_redaction": true
+    },
+    {
+      "id": "vpn_login",
+      "variant": "regex_baseline",
+      "true_positives": 1,
+      "false_positives": 1,
+      "false_negatives": 2,
+      "precision": 0.5,
+      "recall": 0.333,
+      "f1": 0.4,
+      "exact_redaction": false
+    },
+    {
+      "id": "mrn_follow_up",
+      "variant": "regex_baseline",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8,
+      "exact_redaction": false
+    },
+    {
+      "id": "emergency_contact",
+      "variant": "regex_baseline",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8,
+      "exact_redaction": false
+    },
+    {
+      "id": "bank_transfer",
+      "variant": "regex_baseline",
+      "true_positives": 0,
+      "false_positives": 2,
+      "false_negatives": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_redaction": false
+    },
+    {
+      "id": "mail_form",
+      "variant": "regex_baseline",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8,
+      "exact_redaction": false
+    },
+    {
+      "id": "passport_case",
+      "variant": "regex_baseline",
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667,
+      "exact_redaction": false
+    },
+    {
+      "id": "no_pii_control",
+      "variant": "regex_baseline",
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_redaction": true
+    }
+  ]
+}

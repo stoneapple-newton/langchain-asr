@@ -1,0 +1,82 @@
+{
+  "transcript_path": "C:\\Users\\Newto\\Documents\\project\\test-langchain\\deep_research\\asr_medical_verification\\stage_01_error_detection\\sample_transcript.json",
+  "audio_path": null,
+  "statistics": {
+    "segment_count": 3,
+    "speaker_count": 2,
+    "speakers": [
+      "SPEAKER_00",
+      "SPEAKER_01"
+    ],
+    "total_words": 15,
+    "low_confidence_words": 4,
+    "low_confidence_rate": 0.267,
+    "duration_seconds": 12.0
+  },
+  "error_summary": {
+    "low_confidence_count": 4,
+    "homophone_count": 1,
+    "unknown_term_count": 0,
+    "total_unique_errors": 4
+  },
+  "candidates": [
+    {
+      "segment_idx": 0,
+      "word_idx": 3,
+      "word": "hypertension",
+      "score": 0.45,
+      "speaker": "SPEAKER_00",
+      "context": "the patient has [hypertension] .",
+      "segment_text": "the patient has hypertension",
+      "start_time": 1.2,
+      "end_time": 2.5,
+      "error_type": "low_confidence"
+    },
+    {
+      "segment_idx": 1,
+      "word_idx": 2,
+      "word": "aspirin",
+      "score": 0.55,
+      "speaker": "SPEAKER_00",
+      "context": "we prescribed [aspirin] .",
+      "segment_text": "we prescribed aspirin",
+      "start_time": 4.6,
+      "end_time": 5.5,
+      "error_type": "low_confidence"
+    },
+    {
+      "segment_idx": 1,
+      "word_idx": 1,
+      "word": "prescribed",
+      "score": 0.62,
+      "speaker": "SPEAKER_00",
+      "context": "we [prescribed] aspirin .",
+      "segment_text": "we prescribed aspirin",
+      "start_time": 3.8,
+      "end_time": 4.5,
+      "error_type": "low_confidence"
+    },
+    {
+      "segment_idx": 2,
+      "word_idx": 0,
+      "word": "their",
+      "score": 0.7,
+      "speaker": "SPEAKER_01",
+      "context": " [their] blood pressure was",
+      "segment_text": "their blood pressure was high",
+      "start_time": 7.0,
+      "end_time": 7.5,
+      "error_type": "low_confidence"
+    }
+  ],
+  "medical_terms_found": [
+    {
+      "matched_text": "hypertension",
+      "term_id": "cardiology_hypertension",
+      "english": "hypertension",
+      "category": "condition",
+      "specialty": "cardiology",
+      "score": 1.0
+    }
+  ]
+}

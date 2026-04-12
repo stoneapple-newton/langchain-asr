@@ -1,0 +1,123 @@
+{
+  "language": "en",
+  "audio_path": null,
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 3.5,
+      "text": "the patient has hypertension",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "the",
+          "start": 0.0,
+          "end": 0.2,
+          "score": 0.95
+        },
+        {
+          "word": "patient",
+          "start": 0.3,
+          "end": 0.8,
+          "score": 0.88
+        },
+        {
+          "word": "has",
+          "start": 0.9,
+          "end": 1.1,
+          "score": 0.92
+        },
+        {
+          "word": "hypertension",
+          "start": 1.2,
+          "end": 2.5,
+          "score": 0.45
+        },
+        {
+          "word": ".",
+          "start": 2.5,
+          "end": 2.6,
+          "score": 0.99
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "start": 3.5,
+      "end": 7.0,
+      "text": "we prescribed aspirin",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "we",
+          "start": 3.5,
+          "end": 3.7,
+          "score": 0.85
+        },
+        {
+          "word": "prescribed",
+          "start": 3.8,
+          "end": 4.5,
+          "score": 0.62
+        },
+        {
+          "word": "aspirin",
+          "start": 4.6,
+          "end": 5.5,
+          "score": 0.55
+        },
+        {
+          "word": ".",
+          "start": 5.5,
+          "end": 5.6,
+          "score": 0.99
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 7.0,
+      "end": 12.0,
+      "text": "their blood pressure was high",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "their",
+          "start": 7.0,
+          "end": 7.5,
+          "score": 0.7
+        },
+        {
+          "word": "blood",
+          "start": 7.6,
+          "end": 8.0,
+          "score": 0.88
+        },
+        {
+          "word": "pressure",
+          "start": 8.1,
+          "end": 8.8,
+          "score": 0.85
+        },
+        {
+          "word": "was",
+          "start": 8.9,
+          "end": 9.2,
+          "score": 0.9
+        },
+        {
+          "word": "high",
+          "start": 9.3,
+          "end": 10.0,
+          "score": 0.82
+        },
+        {
+          "word": ".",
+          "start": 10.0,
+          "end": 10.1,
+          "score": 0.99
+        }
+      ]
+    }
+  ]
+}

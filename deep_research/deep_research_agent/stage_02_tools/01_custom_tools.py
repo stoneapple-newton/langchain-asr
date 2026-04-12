@@ -19,13 +19,12 @@ Run this file:
   python 01_custom_tools.py
 """
 
+import os
 import math
 from datetime import datetime
-from dotenv import load_dotenv
 from langchain_core.tools import tool, StructuredTool
 from pydantic import BaseModel, Field
 
-load_dotenv()
 
 
 # ---------------------------------------------------------------------------
@@ -130,9 +129,15 @@ print()
 # ---------------------------------------------------------------------------
 # 5. Binding tools to the LLM (preview — used fully in 03_react_agent.py)
 # ---------------------------------------------------------------------------
-from langchain_openai import ChatOpenAI
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-llm = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
+from config import create_chat_model
+
+llm = create_chat_model(temperature=0)
 
 # .bind_tools() tells the LLM about available tools.
 # The model can now respond with tool_calls instead of plain text.

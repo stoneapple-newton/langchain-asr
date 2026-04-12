@@ -1,0 +1,247 @@
+{
+  "terms": [
+    {
+      "term_id": "cardiology_atrial_fibrillation",
+      "canonical_en": "atrial fibrillation",
+      "specialty": "cardiology",
+      "category": "condition",
+      "translations": {
+        "es": "fibrilacion auricular",
+        "fr": "fibrillation auriculaire",
+        "de": "vorhofflimmern",
+        "pt": "fibrilacao atrial",
+        "zh": "房颤",
+        "ja": "心房細動",
+        "ar": "الرجفان الاذيني",
+        "hi": "एट्रियल फिब्रिलेशन"
+      },
+      "aliases": {
+        "en": ["afib", "a-fib"],
+        "zh": ["心房颤动"]
+      },
+      "phonetic_variants": ["a trial fibrillation", "atrial fib relation"],
+      "codes": {"icd10": "I48"}
+    },
+    {
+      "term_id": "cardiology_hypertension",
+      "canonical_en": "hypertension",
+      "specialty": "cardiology",
+      "category": "condition",
+      "translations": {
+        "es": "hipertension",
+        "fr": "hypertension",
+        "de": "hypertonie",
+        "pt": "hipertensao",
+        "zh": "高血压",
+        "ja": "高血圧",
+        "ar": "ارتفاع ضغط الدم",
+        "hi": "उच्च रक्तचाप"
+      },
+      "aliases": {
+        "en": ["high blood pressure", "htn"]
+      },
+      "phonetic_variants": ["hyper tension"],
+      "codes": {"icd10": "I10"}
+    },
+    {
+      "term_id": "cardiology_echocardiogram",
+      "canonical_en": "echocardiogram",
+      "specialty": "cardiology",
+      "category": "procedure",
+      "translations": {
+        "es": "ecocardiograma",
+        "fr": "echocardiogramme",
+        "de": "echokardiogramm",
+        "pt": "ecocardiograma",
+        "zh": "超声心动图",
+        "ja": "心エコー",
+        "ar": "تخطيط صدى القلب",
+        "hi": "इकोकार्डियोग्राम"
+      },
+      "aliases": {
+        "en": ["echo"]
+      },
+      "phonetic_variants": ["echo cardio gram"]
+    },
+    {
+      "term_id": "pharmacy_lisinopril",
+      "canonical_en": "lisinopril",
+      "specialty": "pharmacy",
+      "category": "medication",
+      "translations": {
+        "es": "lisinopril",
+        "fr": "lisinopril",
+        "de": "lisinopril",
+        "pt": "lisinopril",
+        "zh": "赖诺普利",
+        "ja": "リシノプリル",
+        "ar": "ليزينوبريل",
+        "hi": "लिसिनोप्रिल"
+      },
+      "aliases": {
+        "en": ["zestril", "prinivil"]
+      },
+      "phonetic_variants": ["lissanopril", "lisin april"]
+    },
+    {
+      "term_id": "pharmacy_atorvastatin",
+      "canonical_en": "atorvastatin",
+      "specialty": "pharmacy",
+      "category": "medication",
+      "translations": {
+        "es": "atorvastatina",
+        "fr": "atorvastatine",
+        "de": "atorvastatin",
+        "pt": "atorvastatina",
+        "zh": "阿托伐他汀",
+        "ja": "アトルバスタチン",
+        "ar": "اتورفاستاتين",
+        "hi": "एटोरवास्टेटिन"
+      },
+      "aliases": {
+        "en": ["lipitor"]
+      },
+      "phonetic_variants": ["atorvastaten"]
+    },
+    {
+      "term_id": "pharmacy_metformin",
+      "canonical_en": "metformin",
+      "specialty": "pharmacy",
+      "category": "medication",
+      "translations": {
+        "es": "metformina",
+        "fr": "metformine",
+        "de": "metformin",
+        "pt": "metformina",
+        "zh": "二甲双胍",
+        "ja": "メトホルミン",
+        "ar": "ميتفورمين",
+        "hi": "मेटफॉर्मिन"
+      },
+      "aliases": {
+        "en": ["glucophage"]
+      },
+      "phonetic_variants": ["metphormin", "met formin"]
+    },
+    {
+      "term_id": "neurology_encephalopathy",
+      "canonical_en": "encephalopathy",
+      "specialty": "neurology",
+      "category": "condition",
+      "translations": {
+        "es": "encefalopatia",
+        "fr": "encephalopathie",
+        "de": "enzephalopathie",
+        "pt": "encefalopatia",
+        "zh": "脑病",
+        "ja": "脳症",
+        "ar": "اعتلال دماغي",
+        "hi": "एन्सेफैलोपैथी"
+      },
+      "aliases": {
+        "en": ["brain dysfunction"]
+      },
+      "phonetic_variants": ["encephalo pathy"]
+    },
+    {
+      "term_id": "pulmonology_bronchoscopy",
+      "canonical_en": "bronchoscopy",
+      "specialty": "pulmonology",
+      "category": "procedure",
+      "translations": {
+        "es": "broncoscopia",
+        "fr": "bronchoscopie",
+        "de": "bronchoskopie",
+        "pt": "broncoscopia",
+        "zh": "支气管镜检查",
+        "ja": "気管支鏡検査",
+        "ar": "تنظير القصبات",
+        "hi": "ब्रोंकोस्कोपी"
+      },
+      "aliases": {
+        "en": ["bronch"]
+      },
+      "phonetic_variants": ["bronco scopy"]
+    },
+    {
+      "term_id": "nephrology_creatinine",
+      "canonical_en": "creatinine",
+      "specialty": "nephrology",
+      "category": "lab",
+      "translations": {
+        "es": "creatinina",
+        "fr": "creatinine",
+        "de": "kreatinin",
+        "pt": "creatinina",
+        "zh": "肌酐",
+        "ja": "クレアチニン",
+        "ar": "الكرياتينين",
+        "hi": "क्रिएटिनिन"
+      },
+      "aliases": {
+        "en": ["serum creatinine"]
+      },
+      "phonetic_variants": ["createinine"]
+    },
+    {
+      "term_id": "oncology_metastasis",
+      "canonical_en": "metastasis",
+      "specialty": "oncology",
+      "category": "condition",
+      "translations": {
+        "es": "metastasis",
+        "fr": "metastase",
+        "de": "metastase",
+        "pt": "metastase",
+        "zh": "转移",
+        "ja": "転移",
+        "ar": "نقيلة",
+        "hi": "मेटास्टेसिस"
+      },
+      "aliases": {
+        "en": ["metastatic spread"]
+      },
+      "phonetic_variants": ["meta stasis"]
+    },
+    {
+      "term_id": "pulmonology_pneumonia",
+      "canonical_en": "pneumonia",
+      "specialty": "pulmonology",
+      "category": "condition",
+      "translations": {
+        "es": "neumonia",
+        "fr": "pneumonie",
+        "de": "lungenentzundung",
+        "pt": "pneumonia",
+        "zh": "肺炎",
+        "ja": "肺炎",
+        "ar": "التهاب رئوي",
+        "hi": "निमोनिया"
+      },
+      "aliases": {
+        "en": ["lung infection"]
+      },
+      "phonetic_variants": ["pnuemonia", "new monia"]
+    },
+    {
+      "term_id": "cardiology_tachycardia",
+      "canonical_en": "tachycardia",
+      "specialty": "cardiology",
+      "category": "condition",
+      "translations": {
+        "es": "taquicardia",
+        "fr": "tachycardie",
+        "de": "tachykardie",
+        "pt": "taquicardia",
+        "zh": "心动过速",
+        "ja": "頻脈",
+        "ar": "تسرع القلب",
+        "hi": "टैकीकार्डिया"
+      },
+      "aliases": {
+        "en": ["rapid heart rate"]
+      },
+      "phonetic_variants": ["tacky cardia"]
+    }
+  ]
+}

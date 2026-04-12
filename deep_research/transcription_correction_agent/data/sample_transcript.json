@@ -1,0 +1,118 @@
+{
+  "duration": 92.5,
+  "language": "en",
+  "segments": [
+    {
+      "id": "0",
+      "start": 0.0,
+      "end": 4.2,
+      "speaker": "DOCTOR",
+      "text": "Good morning, let's review the patient's cardiac situation.",
+      "words": []
+    },
+    {
+      "id": "1",
+      "start": 4.5,
+      "end": 9.8,
+      "speaker": "DOCTOR",
+      "text": "The ECG showed signs of a trial fibrilation, which is concerning.",
+      "words": []
+    },
+    {
+      "id": "2",
+      "start": 10.1,
+      "end": 15.6,
+      "speaker": "NURSE",
+      "text": "Yes, and his blood pressure has been elevated consistently, around 160 over 95.",
+      "words": []
+    },
+    {
+      "id": "3",
+      "start": 16.0,
+      "end": 22.3,
+      "speaker": "DOCTOR",
+      "text": "We should consider starting him on lissanopril for the hyper tension.",
+      "words": []
+    },
+    {
+      "id": "4",
+      "start": 22.8,
+      "end": 28.1,
+      "speaker": "NURSE",
+      "text": "He's already on atorvastaten and metphormin for the diabetes.",
+      "words": []
+    },
+    {
+      "id": "5",
+      "start": 28.5,
+      "end": 34.7,
+      "speaker": "DOCTOR",
+      "text": "Right. The echo cardio gram from last week showed reduced ejection fraction.",
+      "words": []
+    },
+    {
+      "id": "6",
+      "start": 35.0,
+      "end": 41.2,
+      "speaker": "DOCTOR",
+      "text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "words": []
+    },
+    {
+      "id": "7",
+      "start": 41.5,
+      "end": 47.8,
+      "speaker": "NURSE",
+      "text": "Should we order a bronco scopy for the persistent cough as well?",
+      "words": []
+    },
+    {
+      "id": "8",
+      "start": 48.2,
+      "end": 55.0,
+      "speaker": "DOCTOR",
+      "text": "Yes, and let's check the creatinine levels to rule out nephro pathy.",
+      "words": []
+    },
+    {
+      "id": "9",
+      "start": 55.3,
+      "end": 61.6,
+      "speaker": "NURSE",
+      "text": "The oncology team flagged possible meta stasis in the mediastinum.",
+      "words": []
+    },
+    {
+      "id": "10",
+      "start": 62.0,
+      "end": 68.4,
+      "speaker": "DOCTOR",
+      "text": "That's serious. We'll need a biopsy. Also start azithromycin for the pnuemonia.",
+      "words": []
+    },
+    {
+      "id": "11",
+      "start": 68.8,
+      "end": 75.1,
+      "speaker": "NURSE",
+      "text": "I'll coordinate with pharmacy for the new medications.",
+      "words": []
+    },
+    {
+      "id": "12",
+      "start": 75.5,
+      "end": 82.0,
+      "speaker": "DOCTOR",
+      "text": "Great. We also need to monitor for tacky cardia given his current status.",
+      "words": []
+    },
+    {
+      "id": "13",
+      "start": 82.3,
+      "end": 92.5,
+      "speaker": "NURSE",
+      "text": "Understood. I'll update the chart and schedule the necessary referrals.",
+      "words": []
+    }
+  ]
+}
