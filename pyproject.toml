@@ -15,6 +15,7 @@ dependencies = [
     "langchain-text-splitters>=0.3.0",
     "langgraph>=0.3.0",
     "langgraph-checkpoint-sqlite>=2.0.0",
+    "langsmith>=0.3.0",
     "pydantic-settings>=2.13.1",
     "wikipedia>=1.4.0",
     "chromadb>=0.6.0",

@@ -1,0 +1,36 @@
+{
+  "id": "team_sync_release",
+  "dataset_id": "asr_translation_zh_en_v1",
+  "source_language": "zh",
+  "target_language": "en",
+  "variant": "one_shot_translation",
+  "notes": [
+    "stub"
+  ],
+  "segments": [
+    {
+      "id": "0",
+      "start": 0.0,
+      "end": 2.4,
+      "speaker": "SPEAKER_00",
+      "text": "Hello, let's start by reviewing the release status today.",
+      "source_text": "你好，今天先看一下发布进度。"
+    },
+    {
+      "id": "1",
+      "start": 2.5,
+      "end": 4.8,
+      "speaker": "SPEAKER_01",
+      "text": "The payment issue was fixed yesterday.",
+      "source_text": "支付问题昨天已经修好了。"
+    },
+    {
+      "id": "2",
+      "start": 4.9,
+      "end": 7.0,
+      "speaker": "SPEAKER_00",
+      "text": "The dashboard design needs one more day.",
+      "source_text": "那仪表盘的设计还需要一天。"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "dataset_id": "asr_translation_zh_en_v1",
+  "source_language": "zh",
+  "target_language": "en",
+  "examples": [
+    {
+      "id": "team_sync_release",
+      "source_language": "zh",
+      "target_language": "en",
+      "source_document": {
+        "language": "zh",
+        "meeting_metadata": {
+          "title": "Release Sync"
+        },
+        "segments": [
+          {
+            "id": "0",
+            "start": 0.0,
+            "end": 2.4,
+            "speaker": "SPEAKER_00",
+            "text": "你好，今天先看一下发布进度。"
+          },
+          {
+            "id": "1",
+            "start": 2.5,
+            "end": 4.8,
+            "speaker": "SPEAKER_01",
+            "text": "支付问题昨天已经修好了。"
+          },
+          {
+            "id": "2",
+            "start": 4.9,
+            "end": 7.0,
+            "speaker": "SPEAKER_00",
+            "text": "那仪表盘的设计还需要一天。"
+          }
+        ]
+      },
+      "reference_segments": [
+        "Hello, let's start by reviewing the release status today.",
+        "The payment issue was fixed yesterday.",
+        "The dashboard design needs one more day."
+      ],
+      "notes": [
+        "Translate 发布进度 as release status, not publishing progress."
+      ]
+    },
+    {
+      "id": "support_handoff",
+      "source_language": "zh",
+      "target_language": "en",
+      "source_document": {
+        "language": "zh",
+        "meeting_metadata": {
+          "title": "Support Handoff"
+        },
+        "segments": [
+          {
+            "id": "0",
+            "start": 0.0,
+            "end": 3.0,
+            "speaker": "SPEAKER_00",
+            "text": "客户说明天上午十点再确认合同。"
+          },
+          {
+            "id": "1",
+            "start": 3.1,
+            "end": 4.9,
+            "speaker": "SPEAKER_01",
+            "text": "我会先准备英文版本。"
+          },
+          {
+            "id": "2",
+            "start": 5.0,
+            "end": 6.9,
+            "speaker": "SPEAKER_00",
+            "text": "记得把旧报价也附上。"
+          }
+        ]
+      },
+      "reference_segments": [
+        "The client said they will confirm the contract again at 10 a.m. tomorrow.",
+        "I'll prepare the English version first.",
+        "Remember to attach the old quote as well."
+      ],
+      "notes": [
+        "报价 should be translated as quote in this sales context."
+      ]
+    },
+    {
+      "id": "hiring_sync",
+      "source_language": "zh",
+      "target_language": "en",
+      "source_document": {
+        "language": "zh",
+        "meeting_metadata": {
+          "title": "Hiring Review"
+        },
+        "segments": [
+          {
+            "id": "0",
+            "start": 0.0,
+            "end": 2.7,
+            "speaker": "SPEAKER_01",
+            "text": "这个候选人做过搜索和推荐系统。"
+          },
+          {
+            "id": "1",
+            "start": 2.8,
+            "end": 5.0,
+            "speaker": "SPEAKER_00",
+            "text": "但他对实时流处理经验一般。"
+          },
+          {
+            "id": "2",
+            "start": 5.1,
+            "end": 7.2,
+            "speaker": "SPEAKER_01",
+            "text": "我们可以安排下一轮系统设计。"
+          }
+        ]
+      },
+      "reference_segments": [
+        "This candidate has worked on search and recommendation systems.",
+        "But his experience with real-time stream processing is only moderate.",
+        "We can schedule the next round for system design."
+      ],
+      "notes": [
+        "Translate 系统设计 as system design in the interview sense."
+      ]
+    },
+    {
+      "id": "incident_review",
+      "source_language": "zh",
+      "target_language": "en",
+      "source_document": {
+        "language": "zh",
+        "meeting_metadata": {
+          "title": "Incident Review"
+        },
+        "segments": [
+          {
+            "id": "0",
+            "start": 0.0,
+            "end": 2.5,
+            "speaker": "SPEAKER_00",
+            "text": "昨晚十一点开始延迟明显升高。"
+          },
+          {
+            "id": "1",
+            "start": 2.6,
+            "end": 5.4,
+            "speaker": "SPEAKER_01",
+            "text": "原因是缓存集群有两个节点掉线。"
+          },
+          {
+            "id": "2",
+            "start": 5.5,
+            "end": 8.0,
+            "speaker": "SPEAKER_00",
+            "text": "早上两点切流以后就恢复了。"
+          }
+        ]
+      },
+      "reference_segments": [
+        "Latency started to rise noticeably at 11 p.m. last night.",
+        "The cause was that two nodes in the cache cluster went offline.",
+        "It recovered after we shifted traffic at 2 a.m."
+      ],
+      "notes": [
+        "切流 means shifting traffic, not simply switching."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "support_handoff",
+  "dataset_id": "asr_translation_zh_en_v1",
+  "source_language": "zh",
+  "target_language": "en",
+  "variant": "one_shot_translation",
+  "notes": [
+    "stub"
+  ],
+  "segments": [
+    {
+      "id": "0",
+      "start": 0.0,
+      "end": 3.0,
+      "speaker": "SPEAKER_00",
+      "text": "The client said they will confirm the contract again at 10 a.m. tomorrow.",
+      "source_text": "客户说明天上午十点再确认合同。"
+    },
+    {
+      "id": "1",
+      "start": 3.1,
+      "end": 4.9,
+      "speaker": "SPEAKER_01",
+      "text": "I'll prepare the English version first.",
+      "source_text": "我会先准备英文版本。"
+    },
+    {
+      "id": "2",
+      "start": 5.0,
+      "end": 6.9,
+      "speaker": "SPEAKER_00",
+      "text": "Remember to attach the old quote as well.",
+      "source_text": "记得把旧报价也附上。"
+    }
+  ]
+}

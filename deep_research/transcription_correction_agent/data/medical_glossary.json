@@ -1,0 +1,524 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Multilingual medical term glossary for ASR correction",
+    "languages": ["en", "es", "fr", "de", "pt", "ar", "zh_pinyin", "ja_romaji"],
+    "fields": {
+      "en": "English (canonical)",
+      "es": "Spanish",
+      "fr": "French",
+      "de": "German",
+      "pt": "Portuguese",
+      "ar": "Arabic (romanized)",
+      "zh_pinyin": "Mandarin (Pinyin)",
+      "ja_romaji": "Japanese (Romaji)",
+      "icd_hint": "ICD-10 code prefix",
+      "phonetic_variants": "Common ASR mishearings of this term",
+      "specialty": "Medical specialty",
+      "definition": "Brief English definition"
+    }
+  },
+  "terms": [
+    {
+      "en": "myocardial infarction",
+      "es": "infarto de miocardio",
+      "fr": "infarctus du myocarde",
+      "de": "Herzinfarkt",
+      "pt": "infarto do miocárdio",
+      "ar": "احتشاء عضلة القلب (ihtisha'a adalat alqalb)",
+      "zh_pinyin": "xīnjī gěngsè",
+      "ja_romaji": "shinkin kōsoku",
+      "icd_hint": "I21",
+      "phonetic_variants": [
+        "my cardio infarction", "my cardiac infarction",
+        "myocardial infraction", "myocardial infarcktion",
+        "heart attack", "MI"
+      ],
+      "specialty": "cardiology",
+      "definition": "Irreversible ischemic damage to myocardial tissue due to coronary artery occlusion"
+    },
+    {
+      "en": "atrial fibrillation",
+      "es": "fibrilación auricular",
+      "fr": "fibrillation auriculaire",
+      "de": "Vorhofflimmern",
+      "pt": "fibrilação atrial",
+      "ar": "الرجفان الأذيني (alrajafan al-udhayni)",
+      "zh_pinyin": "xīnfáng chàndòng",
+      "ja_romaji": "shinbō saidō",
+      "icd_hint": "I48",
+      "phonetic_variants": [
+        "atrial fib", "a fib", "afib",
+        "atrial fibrulation", "arterial fibrillation"
+      ],
+      "specialty": "cardiology",
+      "definition": "Irregular and often rapid heart rhythm originating in the atria"
+    },
+    {
+      "en": "hypertension",
+      "es": "hipertensión",
+      "fr": "hypertension artérielle",
+      "de": "Bluthochdruck",
+      "pt": "hipertensão",
+      "ar": "ارتفاع ضغط الدم (irtifaa daght aldam)",
+      "zh_pinyin": "gāo xuèyā",
+      "ja_romaji": "kōketsuatsu",
+      "icd_hint": "I10",
+      "phonetic_variants": [
+        "high blood pressure", "hyper tension",
+        "hypertention", "hypertenshun"
+      ],
+      "specialty": "cardiology",
+      "definition": "Persistently elevated arterial blood pressure (≥130/80 mmHg)"
+    },
+    {
+      "en": "tachycardia",
+      "es": "taquicardia",
+      "fr": "tachycardie",
+      "de": "Tachykardie",
+      "pt": "taquicardia",
+      "ar": "تسارع القلب (tassaru alqalb)",
+      "zh_pinyin": "xīndòng guòsù",
+      "ja_romaji": "hinmyaku",
+      "icd_hint": "R00.0",
+      "phonetic_variants": [
+        "tacky cardia", "tachy cardiac", "tachycardea",
+        "fast heart rate"
+      ],
+      "specialty": "cardiology",
+      "definition": "Heart rate exceeding 100 beats per minute at rest"
+    },
+    {
+      "en": "bradycardia",
+      "es": "bradicardia",
+      "fr": "bradycardie",
+      "de": "Bradykardie",
+      "pt": "bradicardia",
+      "ar": "بطء القلب (but' alqalb)",
+      "zh_pinyin": "xīndòng guòmàn",
+      "ja_romaji": "chikumyaku",
+      "icd_hint": "R00.1",
+      "phonetic_variants": [
+        "brady cardia", "bradycardea", "slow heart rate"
+      ],
+      "specialty": "cardiology",
+      "definition": "Heart rate below 60 beats per minute at rest"
+    },
+    {
+      "en": "atherosclerosis",
+      "es": "aterosclerosis",
+      "fr": "athérosclérose",
+      "de": "Arteriosklerose",
+      "pt": "aterosclerose",
+      "ar": "تصلب الشرايين (tasallub alshara'in)",
+      "zh_pinyin": "dòngmài yìnghuà",
+      "ja_romaji": "dōmyaku kōka",
+      "icd_hint": "I70",
+      "phonetic_variants": [
+        "athero sclerosis", "arterio sclerosis",
+        "athrosclerosis", "athroscleroses"
+      ],
+      "specialty": "cardiology",
+      "definition": "Chronic inflammatory plaque buildup in arterial walls"
+    },
+    {
+      "en": "metastasis",
+      "es": "metástasis",
+      "fr": "métastase",
+      "de": "Metastase",
+      "pt": "metástase",
+      "ar": "انتقال الورم (intiqal alwarama)",
+      "zh_pinyin": "zhuǎnyí",
+      "ja_romaji": "ten'i",
+      "icd_hint": "C77-C79",
+      "phonetic_variants": [
+        "metasticis", "metastaisis", "meta stasis",
+        "met spread", "mets"
+      ],
+      "specialty": "oncology",
+      "definition": "Spread of cancer cells from primary site to distant organs"
+    },
+    {
+      "en": "carcinoma",
+      "es": "carcinoma",
+      "fr": "carcinome",
+      "de": "Karzinom",
+      "pt": "carcinoma",
+      "ar": "سرطان (saratan)",
+      "zh_pinyin": "ái",
+      "ja_romaji": "ganshū",
+      "icd_hint": "C",
+      "phonetic_variants": [
+        "karcenoma", "carsinoma", "carcenoma"
+      ],
+      "specialty": "oncology",
+      "definition": "Malignant tumor arising from epithelial cells"
+    },
+    {
+      "en": "lymphoma",
+      "es": "linfoma",
+      "fr": "lymphome",
+      "de": "Lymphom",
+      "pt": "linfoma",
+      "ar": "سرطان الغدد الليمفاوية (saratan alghudd allaymfawiyya)",
+      "zh_pinyin": "línbā liú",
+      "ja_romaji": "rinpa shu",
+      "icd_hint": "C81-C86",
+      "phonetic_variants": [
+        "limphoma", "lymph oma", "limfoma"
+      ],
+      "specialty": "oncology",
+      "definition": "Cancer of the lymphatic system"
+    },
+    {
+      "en": "chemotherapy",
+      "es": "quimioterapia",
+      "fr": "chimiothérapie",
+      "de": "Chemotherapie",
+      "pt": "quimioterapia",
+      "ar": "العلاج الكيميائي (alilaj alkimiyai)",
+      "zh_pinyin": "huàliáo",
+      "ja_romaji": "kagaku ryōhō",
+      "icd_hint": "Z51.1",
+      "phonetic_variants": [
+        "chemo therapy", "chemo", "kemo therapy",
+        "keemotherapy", "chemotheraphy"
+      ],
+      "specialty": "oncology",
+      "definition": "Drug treatment that uses cytotoxic agents to destroy cancer cells"
+    },
+    {
+      "en": "encephalopathy",
+      "es": "encefalopatía",
+      "fr": "encéphalopathie",
+      "de": "Enzephalopathie",
+      "pt": "encefalopatia",
+      "ar": "اعتلال الدماغ (i'tila al-dimagh)",
+      "zh_pinyin": "nǎobìng",
+      "ja_romaji": "nōshō",
+      "icd_hint": "G93",
+      "phonetic_variants": [
+        "encephalo pathy", "en cephalopathy",
+        "ensephalopathy", "anencephalopathy"
+      ],
+      "specialty": "neurology",
+      "definition": "Any diffuse disease of the brain that alters brain function or structure"
+    },
+    {
+      "en": "epilepsy",
+      "es": "epilepsia",
+      "fr": "épilepsie",
+      "de": "Epilepsie",
+      "pt": "epilepsia",
+      "ar": "الصرع (al-sara'a)",
+      "zh_pinyin": "diānxián",
+      "ja_romaji": "tenkan",
+      "icd_hint": "G40",
+      "phonetic_variants": [
+        "epilepsey", "epelepsy", "epilipsy"
+      ],
+      "specialty": "neurology",
+      "definition": "Neurological disorder characterized by recurrent, unprovoked seizures"
+    },
+    {
+      "en": "neuropathy",
+      "es": "neuropatía",
+      "fr": "neuropathie",
+      "de": "Neuropathie",
+      "pt": "neuropatia",
+      "ar": "اعتلال الأعصاب (i'tila al-a'sab)",
+      "zh_pinyin": "shénjīng bìng",
+      "ja_romaji": "shinkei shō",
+      "icd_hint": "G60-G64",
+      "phonetic_variants": [
+        "neuro pathy", "neuropothy", "nueropathy"
+      ],
+      "specialty": "neurology",
+      "definition": "Damage or dysfunction of one or more peripheral nerves"
+    },
+    {
+      "en": "dementia",
+      "es": "demencia",
+      "fr": "démence",
+      "de": "Demenz",
+      "pt": "demência",
+      "ar": "الخرف (al-kharaf)",
+      "zh_pinyin": "chīdāi zhèng",
+      "ja_romaji": "ninchishō",
+      "icd_hint": "F01-F03",
+      "phonetic_variants": [
+        "demensia", "demenshia", "demecia"
+      ],
+      "specialty": "neurology",
+      "definition": "Syndrome of progressive cognitive decline interfering with daily function"
+    },
+    {
+      "en": "pneumonia",
+      "es": "neumonía",
+      "fr": "pneumonie",
+      "de": "Lungenentzündung",
+      "pt": "pneumonia",
+      "ar": "التهاب الرئة (iltihab al-ri'a)",
+      "zh_pinyin": "fèiyán",
+      "ja_romaji": "haien",
+      "icd_hint": "J18",
+      "phonetic_variants": [
+        "new monia", "pneumonia", "pnuemonia",
+        "newmonia", "pnemonia"
+      ],
+      "specialty": "pulmonology",
+      "definition": "Infection causing inflammation of the air sacs in one or both lungs"
+    },
+    {
+      "en": "asthma",
+      "es": "asma",
+      "fr": "asthme",
+      "de": "Asthma",
+      "pt": "asma",
+      "ar": "الربو (al-rabw)",
+      "zh_pinyin": "xiāochuǎn",
+      "ja_romaji": "zensoku",
+      "icd_hint": "J45",
+      "phonetic_variants": [
+        "azmah", "azzma", "asthm"
+      ],
+      "specialty": "pulmonology",
+      "definition": "Chronic inflammatory airway disease with reversible bronchoconstriction"
+    },
+    {
+      "en": "gastritis",
+      "es": "gastritis",
+      "fr": "gastrite",
+      "de": "Gastritis",
+      "pt": "gastrite",
+      "ar": "التهاب المعدة (iltihab al-mi'da)",
+      "zh_pinyin": "wèiyán",
+      "ja_romaji": "ien",
+      "icd_hint": "K29",
+      "phonetic_variants": [
+        "gastritus", "gastritis", "gastertis"
+      ],
+      "specialty": "gastroenterology",
+      "definition": "Inflammation of the stomach lining"
+    },
+    {
+      "en": "hepatitis",
+      "es": "hepatitis",
+      "fr": "hépatite",
+      "de": "Hepatitis",
+      "pt": "hepatite",
+      "ar": "التهاب الكبد (iltihab al-kabd)",
+      "zh_pinyin": "gānyán",
+      "ja_romaji": "kanen",
+      "icd_hint": "B15-B19",
+      "phonetic_variants": [
+        "hepetitis", "hepititis", "hepatitis"
+      ],
+      "specialty": "gastroenterology",
+      "definition": "Inflammation of the liver, often caused by viral infection"
+    },
+    {
+      "en": "osteoporosis",
+      "es": "osteoporosis",
+      "fr": "ostéoporose",
+      "de": "Osteoporose",
+      "pt": "osteoporose",
+      "ar": "هشاشة العظام (hashasha al-izam)",
+      "zh_pinyin": "gǔzhì shūsōng zhèng",
+      "ja_romaji": "kotsusoshōshō",
+      "icd_hint": "M80-M81",
+      "phonetic_variants": [
+        "ostio porosis", "osteopoarosis", "osteo porosis",
+        "ostio prosis"
+      ],
+      "specialty": "orthopedics",
+      "definition": "Metabolic bone disease with reduced bone density increasing fracture risk"
+    },
+    {
+      "en": "sepsis",
+      "es": "sepsis",
+      "fr": "sepsis",
+      "de": "Sepsis",
+      "pt": "sepse",
+      "ar": "الإنتان (al-intan)",
+      "zh_pinyin": "bàixuèzhèng",
+      "ja_romaji": "haketsusha",
+      "icd_hint": "A41",
+      "phonetic_variants": [
+        "sepsus", "sepces", "blood poisoning"
+      ],
+      "specialty": "critical_care",
+      "definition": "Life-threatening organ dysfunction due to dysregulated response to infection"
+    },
+    {
+      "en": "amoxicillin",
+      "es": "amoxicilina",
+      "fr": "amoxicilline",
+      "de": "Amoxicillin",
+      "pt": "amoxicilina",
+      "ar": "أموكسيسيلين (amuksisilin)",
+      "zh_pinyin": "ā mò xī xī lín",
+      "ja_romaji": "amokishishirin",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "amoxy cillin", "amoxicilan", "amoxacilin",
+        "amoxycillin"
+      ],
+      "specialty": "pharmacy",
+      "definition": "Beta-lactam antibiotic used to treat bacterial infections"
+    },
+    {
+      "en": "metformin",
+      "es": "metformina",
+      "fr": "metformine",
+      "de": "Metformin",
+      "pt": "metformina",
+      "ar": "ميتفورمين (mitformin)",
+      "zh_pinyin": "èr jiǎ shuāngguā",
+      "ja_romaji": "methoformin",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "met formin", "metphormin", "metforim",
+        "glucophage"
+      ],
+      "specialty": "pharmacy",
+      "definition": "First-line oral antidiabetic drug for type 2 diabetes mellitus"
+    },
+    {
+      "en": "lisinopril",
+      "es": "lisinopril",
+      "fr": "lisinopril",
+      "de": "Lisinopril",
+      "pt": "lisinopril",
+      "ar": "ليسينوبريل (lisinobril)",
+      "zh_pinyin": "lì xīn nǔ pǔ lì",
+      "ja_romaji": "risinopuriru",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "lissanopril", "lisinapril", "lisanopril",
+        "lis inopril"
+      ],
+      "specialty": "pharmacy",
+      "definition": "ACE inhibitor used for hypertension and heart failure"
+    },
+    {
+      "en": "atorvastatin",
+      "es": "atorvastatina",
+      "fr": "atorvastatine",
+      "de": "Atorvastatin",
+      "pt": "atorvastatina",
+      "ar": "أتورفاستاتين (atorvastatīn)",
+      "zh_pinyin": "ā tuō fá tā tīng",
+      "ja_romaji": "atorubasutachin",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "atorvastatin", "ater vastatin", "lipitor",
+        "a torvastatine", "atorvastaten"
+      ],
+      "specialty": "pharmacy",
+      "definition": "HMG-CoA reductase inhibitor (statin) for lowering LDL cholesterol"
+    },
+    {
+      "en": "omeprazole",
+      "es": "omeprazol",
+      "fr": "oméprazole",
+      "de": "Omeprazol",
+      "pt": "omeprazol",
+      "ar": "أوميبرازول (umibirazul)",
+      "zh_pinyin": "ào méi pǔ lā zuò",
+      "ja_romaji": "omepurazōru",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "omeperazole", "omeprasole", "prilosec",
+        "ome prazole"
+      ],
+      "specialty": "pharmacy",
+      "definition": "Proton pump inhibitor (PPI) reducing gastric acid production"
+    },
+    {
+      "en": "echocardiogram",
+      "es": "ecocardiograma",
+      "fr": "échocardiogramme",
+      "de": "Echokardiogramm",
+      "pt": "ecocardiograma",
+      "ar": "مخطط صدى القلب (mukhttat sada alqalb)",
+      "zh_pinyin": "xīnzàng chāoshēng bō",
+      "ja_romaji": "shinzō chōonpa",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "echo cardio gram", "echo", "cardiac ultrasound",
+        "ecco cardiogram", "echo cardiagram"
+      ],
+      "specialty": "cardiology",
+      "definition": "Ultrasound imaging of the heart to assess structure and function"
+    },
+    {
+      "en": "electrocardiogram",
+      "es": "electrocardiograma",
+      "fr": "électrocardiogramme",
+      "de": "Elektrokardiogramm",
+      "pt": "eletrocardiograma",
+      "ar": "تخطيط القلب الكهربائي (takhtit alqalb alkahrabai)",
+      "zh_pinyin": "xīn diàn tú",
+      "ja_romaji": "shindenzu",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "EKG", "ECG", "E C G", "electro cardio gram",
+        "electrocardio gram"
+      ],
+      "specialty": "cardiology",
+      "definition": "Recording of the heart's electrical activity via surface electrodes"
+    },
+    {
+      "en": "hyponatremia",
+      "es": "hiponatremia",
+      "fr": "hyponatrémie",
+      "de": "Hyponatriämie",
+      "pt": "hiponatremia",
+      "ar": "نقص صوديوم الدم (naqss sudyum aldam)",
+      "zh_pinyin": "dī xuè nà",
+      "ja_romaji": "tei ketsu natsu",
+      "icd_hint": "E87.1",
+      "phonetic_variants": [
+        "hypo natremia", "low sodium", "hyponatremia",
+        "hyponatremia"
+      ],
+      "specialty": "nephrology",
+      "definition": "Serum sodium concentration below 135 mEq/L"
+    },
+    {
+      "en": "creatinine",
+      "es": "creatinina",
+      "fr": "créatinine",
+      "de": "Kreatinin",
+      "pt": "creatinina",
+      "ar": "الكرياتينين (al-kiriyatinin)",
+      "zh_pinyin": "ròu gān suān",
+      "ja_romaji": "kureatinin",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "crea tineine", "kreatinine", "creatinine level",
+        "creatin"
+      ],
+      "specialty": "nephrology",
+      "definition": "Waste product filtered by kidneys; elevated levels indicate renal impairment"
+    },
+    {
+      "en": "bronchoscopy",
+      "es": "broncoscopia",
+      "fr": "bronchoscopie",
+      "de": "Bronchoskopie",
+      "pt": "broncoscopia",
+      "ar": "تنظير القصبات (tanzir alqasabat)",
+      "zh_pinyin": "zhī qì guǎn jìng jiǎn chá",
+      "ja_romaji": "kikanshikyō",
+      "icd_hint": null,
+      "phonetic_variants": [
+        "bronco scopy", "bronchoscopy", "broncoscopy",
+        "bronkoscopy"
+      ],
+      "specialty": "pulmonology",
+      "definition": "Endoscopic procedure for direct visualization of the airways"
+    }
+  ]
+}
