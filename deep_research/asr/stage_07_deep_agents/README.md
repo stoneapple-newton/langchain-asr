@@ -1,23 +1,19 @@
 # ASR Deep Agents Stage
 
-This stage adds a Deep Agents supervisor plus 20 ASR specialist subagents in
-[01_asr_quality_swarm.py](/C:/Users/Newto/Documents/project/test-langchain/deep_research/asr/stage_07_deep_agents/01_asr_quality_swarm.py).
+This stage now contains two Deep Agents workflows:
+
+- **ASR quality swarm** with 20 specialist subagents in
+  [`01_asr_quality_swarm.py`](./01_asr_quality_swarm.py)
+- **Medical extraction swarm** for medical terms + medicine names in
+  [`02_medical_term_extraction_swarm.py`](./02_medical_term_extraction_swarm.py)
 
 ## What It Contains
 
-- one Deep Agents supervisor built with `create_deep_agent(...)`
-- 20 ASR-focused subagents registered through the Deep Agents `task` tool
-- shared transcript-analysis tools for:
-  - transcript overview
-  - low-confidence span detection
-  - diarization anomaly detection
-  - overlap detection
-  - glossary extraction
-  - filler analysis
-  - numeric/entity verification
-  - markdown export
+- Deep Agents supervisors built with `create_deep_agent(...)`
+- specialist subagents registered through the Deep Agents `task` tool
+- shared transcript-analysis tools for structured extraction and review
 
-## Specialist Agents
+## ASR Quality Specialist Agents
 
 1. `audio_intake_agent`
 2. `segmentation_agent`
@@ -40,33 +36,39 @@ This stage adds a Deep Agents supervisor plus 20 ASR specialist subagents in
 19. `severity_review_agent`
 20. `redaction_review_agent`
 
+## Medical Extraction Specialist Agents
+
+1. `clinical_intake_agent`
+2. `medical_terms_agent`
+3. `medication_names_agent`
+4. `ambiguity_resolution_agent`
+5. `clinical_summary_agent`
+
 ## Install
 
-The official Deep Agents docs describe installation as:
-
-```powershell
+```bash
 uv add deepagents
 ```
 
-Reference:
+References:
 - [deepagents package reference](https://reference.langchain.com/python/deepagents/)
 - [create_deep_agent reference](https://reference.langchain.com/python/deepagents/graph/create_deep_agent)
 
-## Example
+## Example (Medical Extraction)
 
 ```python
 from pathlib import Path
 import importlib.util
 
-path = Path("deep_research/asr/stage_07_deep_agents/01_asr_quality_swarm.py")
-spec = importlib.util.spec_from_file_location("asr_quality_swarm", path)
+path = Path("deep_research/asr/stage_07_deep_agents/02_medical_term_extraction_swarm.py")
+spec = importlib.util.spec_from_file_location("medical_swarm", path)
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
-agent = module.build_asr_quality_swarm()
+agent = module.build_medical_extraction_swarm()
 result = agent.invoke(
     module.example_request(),
-    config={"configurable": {"thread_id": "asr-quality-demo"}},
+    config={"configurable": {"thread_id": "asr-medical-demo"}},
 )
 ```
 
