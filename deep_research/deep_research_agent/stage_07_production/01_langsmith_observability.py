@@ -25,39 +25,46 @@ Additional features covered here:
   - LangSmithClient      : log feedback (thumbs up/down) from users
 
 Setup (already in your .env):
-  LANGCHAIN_TRACING_V2=true
-  LANGCHAIN_API_KEY=<your key>
-  LANGCHAIN_PROJECT=test-langchain   ← optional project name
+  TRACING__ENABLED=true
+  TRACING__API_KEY=<your key>
+  TRACING__PROJECT=test-langchain   ← optional project name
+
+Legacy aliases such as LANGSMITH_API_KEY and LANGCHAIN_API_KEY are still accepted.
 
 Run this file:
   uv run deep_research/deep_research_agent/stage_07_production/01_langsmith_observability.py
 """
 
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
-# Enable tracing — this is all that's needed for automatic LangChain tracing
-os.environ.setdefault("LANGCHAIN_TRACING_V2", "true")
-os.environ.setdefault("LANGCHAIN_PROJECT", "test-langchain-stage7")
 
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_ollama import ChatOllama
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-llm = ChatOllama(
-    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+from config import create_chat_model, get_settings
+
+settings = get_settings()
+for key, value in settings.tracing.to_langsmith_env(
+    default_enabled=True,
+    default_project="test-langchain-stage7",
+).items():
+    os.environ.setdefault(key, value)
+
+llm = create_chat_model(
     temperature=0,
-    num_predict=256,
+    max_tokens=256,
 )
 
 
 # ---------------------------------------------------------------------------
 # 1. Automatic tracing — zero code changes needed
 # ---------------------------------------------------------------------------
-# With LANGCHAIN_TRACING_V2=true, every .invoke() is traced automatically.
+# With LANGSMITH_TRACING=true, every .invoke() is traced automatically.
 # View traces at: https://smith.langchain.com
 
 print("=== 1. Automatic tracing (check LangSmith after running) ===")
@@ -162,7 +169,7 @@ print()
 
 from langsmith import Client
 
-if os.getenv("LANGCHAIN_API_KEY"):
+if settings.tracing.api_key:
     print("=== 4. Logging user feedback ===")
 
     client = Client()
@@ -188,7 +195,7 @@ if os.getenv("LANGCHAIN_API_KEY"):
     print()
 else:
     print("=== 4. Logging user feedback ===")
-    print("  Set LANGCHAIN_API_KEY in .env to enable LangSmith features")
+    print("  Set TRACING__API_KEY or LANGSMITH_API_KEY in .env to enable LangSmith features")
     print()
 
 
@@ -235,7 +242,7 @@ print(EVAL_PATTERN)
 # ---------------------------------------------------------------------------
 # KEY TAKEAWAYS
 # ---------------------------------------------------------------------------
-# ✅ Two env vars (LANGCHAIN_TRACING_V2, LANGCHAIN_API_KEY) = automatic tracing
+# ✅ Two env vars (LANGSMITH_TRACING, LANGSMITH_API_KEY) = automatic tracing
 # ✅ @traceable wraps any function — not just LangChain components
 # ✅ Tags + metadata let you filter, compare, and A/B test runs in the UI
 # ✅ create_feedback() captures user signals for quality monitoring

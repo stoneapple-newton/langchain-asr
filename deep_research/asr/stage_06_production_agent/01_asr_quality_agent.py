@@ -39,37 +39,35 @@ import json
 import re
 import copy
 from pathlib import Path
+import sys
 from typing import Annotated
 from typing_extensions import TypedDict
 from datetime import timedelta
-from dotenv import load_dotenv
 
 from langchain_core.documents import Document
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.tools import tool
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_ollama import ChatOllama, OllamaEmbeddings
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import create_chat_model, create_embeddings
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 
-load_dotenv()
 
 TRANSCRIPT_PATH = Path(__file__).parent.parent / "sample_data" / "sample_transcript.json"
 OUT_DIR = TRANSCRIPT_PATH.parent
 
-llm = ChatOllama(
-    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+llm = create_chat_model(
     temperature=0,
-    num_predict=512,
+    max_tokens=512,
 )
-embeddings = OllamaEmbeddings(
-    model=os.getenv("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
-)
+embeddings = create_embeddings()
 
 MAX_ROUNDS = 3
 QUALITY_TARGETS = {

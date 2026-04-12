@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Educational LangChain learning progression using a local Ollama model (no OpenAI costs). Covers 6 planned stages from LangChain basics to a full deep research agent.
+Educational LangChain learning progression with a shared provider-aware config
+layer. Ollama is still the default runtime, but the repo now supports OpenAI,
+OpenRouter, and Azure OpenAI through the same `config/` factories.
 
 ## Setup & Prerequisites
 
@@ -12,15 +14,17 @@ Educational LangChain learning progression using a local Ollama model (no OpenAI
 # Install dependencies
 uv sync
 
-# Ollama must be running locally before executing any scripts
-# Default model: gemma4:e2b (configurable via OLLAMA_MODEL env var)
+# If you use Ollama, it must be running locally before executing scripts
+# Default chat profile: "default" -> ollama / gemma4:e2b
+# ASR v2 chat profile: "asr_v2" -> ollama / gemma4:e4b
 ```
 
 Environment variables (in `.env`):
-- `OLLAMA_MODEL` — model name (default: `gemma4:e2b`)
-- `OLLAMA_BASE_URL` — default: `http://localhost:11434`
-- `TAVILY_API_KEY` — optional; falls back to DuckDuckGo if absent
-- `LANGSMITH_API_KEY` — optional; for LangSmith tracing
+- Canonical settings use nested env vars such as `CHAT__PROFILES__...`,
+  `EMBEDDINGS__PROFILES__...`, and `PROVIDERS__...`
+- See `.env.example` for the supported structure
+- Legacy flat vars like `OLLAMA_MODEL`, `OPENAI_API_KEY`, `TAVILY_API_KEY`,
+  `LANGSMITH_API_KEY`, and `LANGCHAIN_API_KEY` are still accepted
 
 ## Running Scripts
 
@@ -30,7 +34,7 @@ uv run deep_research/deep_research_agent/stage_01_basics/01_hello_langchain.py
 uv run deep_research/deep_research_agent/stage_02_tools/02_web_search.py
 ```
 
-There are no automated tests — all scripts are standalone tutorials meant to be run directly.
+Automated tests now cover both the ASR helpers and the shared config layer.
 
 ## Architecture
 
@@ -50,8 +54,11 @@ deep_research/deep_research_agent/
 
 **LLM instantiation** (all scripts):
 ```python
-from langchain_ollama import ChatOllama
-llm = ChatOllama(model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"))
+from config import create_chat_model, create_embeddings
+
+llm = create_chat_model()
+llm_asr = create_chat_model("asr_v2", max_tokens=768)
+embeddings = create_embeddings()
 ```
 
 **LCEL composition** (chains, parsers):
@@ -71,13 +78,13 @@ llm_with_tools = llm.bind_tools([my_tool])
 ```
 
 **Search fallback pattern** (stage 02):
-- Prefers `TavilySearch` if `TAVILY_API_KEY` is set
+- Prefers `TavilySearch` if `SEARCH__TAVILY_API_KEY` or legacy `TAVILY_API_KEY` is set
 - Falls back to `DuckDuckGoSearchRun` otherwise
 
 ### Key Design Principles
 
 - **Composability**: Everything implements the `Runnable` interface and chains with `|`
-- **LLM-agnostic**: Scripts work with any `ChatOllama`-compatible model; swapping to OpenAI requires only changing the LLM class
+- **LLM-agnostic**: Scripts use shared factories, so provider swaps live in `.env`, not in tutorial code
 - **Tool separation**: LLM decides *when* to call tools; the framework executes them
 
 ## Skills

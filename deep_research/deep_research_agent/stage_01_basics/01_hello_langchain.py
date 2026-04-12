@@ -19,18 +19,22 @@ Run this file:
 """
 
 import os
-from dotenv import load_dotenv
 
 # langchain_core holds the fundamental building blocks (messages, etc.)
 from langchain_core.messages import HumanMessage, SystemMessage
 
 # langchain_ollama is the Ollama-specific integration package
-from langchain_ollama import ChatOllama
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import create_chat_model
 
 # ---------------------------------------------------------------------------
 # Setup
 # ---------------------------------------------------------------------------
-load_dotenv()  # reads optional Ollama settings from your .env file
 
 # ---------------------------------------------------------------------------
 # 1. Instantiate the model
@@ -38,11 +42,9 @@ load_dotenv()  # reads optional Ollama settings from your .env file
 # temperature=0  → deterministic / factual output (great for research)
 # temperature=1  → more creative / varied output
 # max_tokens     → cap the response length (saves money during dev)
-llm = ChatOllama(
-  model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-  base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+llm = create_chat_model(
     temperature=0,
-  num_predict=512,
+    max_tokens=512,
 )
 
 # ---------------------------------------------------------------------------

@@ -30,18 +30,21 @@ import os
 import json
 import re
 from pathlib import Path
+import sys
 from dataclasses import dataclass, field
 from collections import Counter
-from dotenv import load_dotenv
 
 from langchain_core.documents import Document
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_ollama import ChatOllama, OllamaEmbeddings
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import create_chat_model, create_embeddings
 from pydantic import BaseModel, Field
 
-load_dotenv()
 
 TRANSCRIPT_PATH = Path(__file__).parent.parent / "sample_data" / "sample_transcript.json"
 with open(TRANSCRIPT_PATH) as f:
@@ -54,16 +57,11 @@ if name_map_path.exists():
     with open(name_map_path) as f:
         name_map = json.load(f)
 
-llm = ChatOllama(
-    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+llm = create_chat_model(
     temperature=0,
-    num_predict=512,
+    max_tokens=512,
 )
-embeddings = OllamaEmbeddings(
-    model=os.getenv("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
-)
+embeddings = create_embeddings()
 
 STOPWORDS = {"the", "a", "an", "is", "are", "was", "we", "i", "to", "of",
              "and", "it", "in", "that", "for", "this", "you", "so", "be",

@@ -245,7 +245,7 @@ MINIMAL_SEGMENTS = [
 # LangChain/LangGraph packages to mock when loading ASR scripts
 # ---------------------------------------------------------------------------
 MOCK_MODULE_NAMES = [
-    "dotenv",
+    "config",
     "langchain_ollama",
     "langchain_core",
     "langchain_core.documents",
@@ -287,7 +287,26 @@ def load_asr_module(rel_path: str):
     # Set sentinel values needed by scripts
     mock_modules["langgraph.graph"].START = "START"
     mock_modules["langgraph.graph"].END = "END"
-    mock_modules["dotenv"].load_dotenv = MagicMock(return_value=None)
+    fake_llm = MagicMock()
+    fake_embeddings = MagicMock()
+    fake_settings = types.SimpleNamespace(
+        search=types.SimpleNamespace(has_tavily_api_key=False),
+        tracing=types.SimpleNamespace(
+            api_key=None,
+            to_langsmith_env=lambda **_: {},
+        ),
+        get_chat_profile=lambda *args, **kwargs: types.SimpleNamespace(
+            provider="ollama",
+            model="test-model",
+        ),
+        get_embedding_profile=lambda *args, **kwargs: types.SimpleNamespace(
+            provider="ollama",
+            model="test-embedding-model",
+        ),
+    )
+    mock_modules["config"].create_chat_model = MagicMock(return_value=fake_llm)
+    mock_modules["config"].create_embeddings = MagicMock(return_value=fake_embeddings)
+    mock_modules["config"].get_settings = MagicMock(return_value=fake_settings)
 
     # pydantic: BaseModel and Field must be real so dataclasses/models work in pure-python fns.
     # We use the real pydantic instead of mocking it.

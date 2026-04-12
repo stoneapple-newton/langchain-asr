@@ -24,21 +24,24 @@ Or run the demo client at the bottom of this file:
   uv run deep_research/deep_research_agent/stage_07_production/04_async_serving.py
 """
 
-import os
 import asyncio
 from typing import AsyncIterator, Annotated
 from typing_extensions import TypedDict
-from dotenv import load_dotenv
 
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_ollama import ChatOllama
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import create_chat_model, get_settings
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 
-load_dotenv()
 
 # ---------------------------------------------------------------------------
 # A. Async LangChain — the basics
@@ -53,11 +56,9 @@ load_dotenv()
 
 async def demo_async_basics():
     """Show async invoke and streaming."""
-    llm_async = ChatOllama(
-        model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-        base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+    llm_async = create_chat_model(
         temperature=0,
-        num_predict=128,
+        max_tokens=128,
     )
 
     chain = (
@@ -99,12 +100,11 @@ class ChatState(TypedDict):
     messages: Annotated[list, add_messages]
 
 
-llm_sync = ChatOllama(
-    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+llm_sync = create_chat_model(
     temperature=0.2,
-    num_predict=256,
+    max_tokens=256,
 )
+settings = get_settings()
 
 SYSTEM = SystemMessage(content="You are a helpful assistant. Reply concisely.")
 
@@ -239,7 +239,12 @@ async def get_history(thread_id: str):
 
 @app.get("/health")
 async def health():
-    return {"status": "ok", "model": os.getenv("OLLAMA_MODEL", "gemma4:e2b")}
+    profile = settings.get_chat_profile()
+    return {
+        "status": "ok",
+        "provider": profile.provider,
+        "model": profile.model,
+    }
 
 
 # ---------------------------------------------------------------------------

@@ -12,10 +12,13 @@ import os
 from pathlib import Path
 import sys
 
-from dotenv import load_dotenv
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_ollama import ChatOllama
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import create_chat_model
 from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,7 +34,6 @@ from shared.transcript_utils import (
     repair_diarization,
 )
 
-load_dotenv()
 
 
 class EditedChunk(BaseModel):
@@ -53,11 +55,10 @@ prompt = ChatPromptTemplate.from_messages([
     ("human", "{chunk_text}"),
 ]).partial(format_instructions=parser.get_format_instructions())
 
-llm = ChatOllama(
-    model=os.getenv("OLLAMA_MODEL", "gemma4:e4b"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
+llm = create_chat_model(
+    "asr_v2",
     temperature=0,
-    num_predict=768,
+    max_tokens=768,
 )
 
 chain = prompt | llm | parser

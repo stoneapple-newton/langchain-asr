@@ -19,15 +19,19 @@ Run this file:
   python 02_web_search.py
 """
 
-import os
-from dotenv import load_dotenv
 from langchain_community.tools import DuckDuckGoSearchRun, WikipediaQueryRun
 from langchain_community.utilities import WikipediaAPIWrapper
 from langchain_tavily import TavilySearch
 import wikipedia as wikipedia_module
 from wikipedia import wikipedia as wikipedia_backend
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-load_dotenv()
+from config import create_chat_model, get_settings
+
 
 
 # ---------------------------------------------------------------------------
@@ -73,7 +77,9 @@ def configure_wikipedia_https(lang: str = "en") -> None:
 # include_raw_content: get full page text (more tokens but richer)
 # include_images: whether to include image URLs
 
-if os.getenv("TAVILY_API_KEY"):
+settings = get_settings()
+
+if settings.search.has_tavily_api_key:
     tavily = TavilySearch(
         max_results=3,
         include_answer=True,       # Tavily's own 1-sentence summary
@@ -95,7 +101,7 @@ if os.getenv("TAVILY_API_KEY"):
     )
     print("\nTavily is configured and ready")
 else:
-    print("Warning: TAVILY_API_KEY not found. Skipping Tavily demo. Add it to .env to enable.")
+    print("Warning: Tavily API key not found. Skipping Tavily demo. Add it to .env to enable.")
     tavily = None
 
 
@@ -127,17 +133,12 @@ print_results("Wikipedia Result", wiki_result)
 # ---------------------------------------------------------------------------
 # 4. Using search tools in a simple LLM chain
 # ---------------------------------------------------------------------------
-from langchain_ollama import ChatOllama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 print("\n=== Search-Augmented Chain ===")
 
-llm = ChatOllama(
-    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
-    temperature=0,
-)
+llm = create_chat_model(temperature=0)
 
 # Pick whichever search tool is available
 search_tool = tavily if tavily else ddg

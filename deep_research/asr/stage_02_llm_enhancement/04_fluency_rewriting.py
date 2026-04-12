@@ -33,15 +33,18 @@ import json
 import re
 import copy
 from pathlib import Path
+import sys
 from dataclasses import dataclass
-from dotenv import load_dotenv
 
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_ollama import ChatOllama
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import create_chat_model
 from pydantic import BaseModel, Field
 
-load_dotenv()
 
 TRANSCRIPT_PATH = Path(__file__).parent.parent / "sample_data" / "sample_transcript.json"
 OUT_DIR = TRANSCRIPT_PATH.parent
@@ -50,11 +53,9 @@ with open(TRANSCRIPT_PATH) as f:
     raw = json.load(f)
 segments = raw["segments"]
 
-llm = ChatOllama(
-    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
-    temperature=0.1,   # slight temperature for natural rewriting
-    num_predict=512,
+llm = create_chat_model(
+    temperature=0.1,
+    max_tokens=512,
 )
 
 

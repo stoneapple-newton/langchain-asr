@@ -23,15 +23,16 @@ Run this file:
   uv run deep_research/deep_research_agent/stage_04_rag/01_embeddings.py
 """
 
-import os
-from dotenv import load_dotenv
-
 from langchain_core.documents import Document
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_ollama import OllamaEmbeddings
-from ollama import ResponseError
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-load_dotenv()
+from config import create_embeddings, get_settings
+
 
 # ---------------------------------------------------------------------------
 # 1. Create an embeddings model
@@ -40,29 +41,27 @@ load_dotenv()
 # models do NOT implement the embeddings endpoint, so use a dedicated
 # embedding model such as nomic-embed-text or mxbai-embed-large.
 
-EMBEDDING_MODEL = os.getenv("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text")
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-
-embeddings = OllamaEmbeddings(
-    model=EMBEDDING_MODEL,
-    base_url=OLLAMA_BASE_URL,
-)
+settings = get_settings()
+embedding_profile = settings.get_embedding_profile()
+EMBEDDING_MODEL = embedding_profile.model or "unknown"
+EMBEDDING_PROVIDER = embedding_profile.provider or "unknown"
+embeddings = create_embeddings()
 
 
 def embed_query_or_raise(text: str) -> list[float]:
     """Raise a setup-focused error when the Ollama embedding model is missing."""
     try:
         return embeddings.embed_query(text)
-    except ResponseError as exc:
-        if "does not support embeddings" in str(exc):
+    except Exception as exc:
+        if EMBEDDING_PROVIDER == "ollama" and "does not support embeddings" in str(exc):
             raise RuntimeError(
                 f"Ollama model '{EMBEDDING_MODEL}' does not support embeddings. "
-                "Set OLLAMA_EMBEDDING_MODEL to an embedding model such as "
+                "Set EMBEDDINGS__PROFILES__DEFAULT__MODEL to an embedding model such as "
                 "'nomic-embed-text' or 'mxbai-embed-large'."
             ) from exc
         raise RuntimeError(
-            f"Failed to create embeddings with Ollama model '{EMBEDDING_MODEL}'. "
-            f"Pull it first with: ollama pull {EMBEDDING_MODEL}"
+            f"Failed to create embeddings with provider '{EMBEDDING_PROVIDER}' "
+            f"and model '{EMBEDDING_MODEL}'. Check your config/.env settings."
         ) from exc
 
 print("=== 1. Embed a single string ===")

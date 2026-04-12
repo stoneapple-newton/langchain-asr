@@ -21,19 +21,19 @@ Run this file:
 """
 
 import os
-from dotenv import load_dotenv
 from langchain_core.output_parsers import JsonOutputParser, StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableLambda, RunnableParallel, RunnablePassthrough
-from langchain_ollama import ChatOllama
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from config import create_chat_model
 from pydantic import BaseModel, Field
 
-load_dotenv()
-llm = ChatOllama(
-    model=os.getenv("OLLAMA_MODEL", "gemma4:e2b"),
-    base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
-    temperature=0,
-)
+llm = create_chat_model(temperature=0)
 
 # ---------------------------------------------------------------------------
 # 1. The canonical chain: prompt | llm | parser
