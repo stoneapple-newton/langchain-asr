@@ -54,6 +54,7 @@ with open(TRANSCRIPT_PATH) as f:
 segments = raw["segments"]
 
 llm = create_chat_model(
+    "asr",
     temperature=0.1,
     max_tokens=512,
 )

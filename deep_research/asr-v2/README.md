@@ -40,7 +40,8 @@ uv run --with pytest pytest deep_research/asr-v2/tests -q
 
 The pytest suite covers the shared transcript utilities plus the deterministic
 cleanup graph. The LLM-backed stages are still intended as manual integration
-runs because they depend on a reachable local Ollama server.
+runs because they depend on a reachable chat provider configured for the
+`asr_v2` profile in the shared [config package](/C:/Users/Newto/Documents/project/test-langchain/config/README.md).
 
 ## Input shape
 

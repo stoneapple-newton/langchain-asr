@@ -109,6 +109,10 @@ def _default_chat_profiles() -> dict[str, ChatProfileSettings]:
             provider="ollama",
             model="gemma4:e2b",
         ),
+        "asr": ChatProfileSettings(
+            provider="ollama",
+            model="gemma4:e2b",
+        ),
         "asr_v2": ChatProfileSettings(
             provider="ollama",
             model="gemma4:e4b",
@@ -119,6 +123,14 @@ def _default_chat_profiles() -> dict[str, ChatProfileSettings]:
 def _default_embedding_profiles() -> dict[str, EmbeddingProfileSettings]:
     return {
         "default": EmbeddingProfileSettings(
+            provider="ollama",
+            model="nomic-embed-text",
+        ),
+        "asr": EmbeddingProfileSettings(
+            provider="ollama",
+            model="nomic-embed-text",
+        ),
+        "asr_v2": EmbeddingProfileSettings(
             provider="ollama",
             model="nomic-embed-text",
         ),

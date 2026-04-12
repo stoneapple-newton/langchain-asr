@@ -40,8 +40,11 @@ def test_app_settings_defaults_with_sparse_env(monkeypatch):
     assert settings.chat.default_profile == "default"
     assert settings.chat.profiles["default"].provider == "ollama"
     assert settings.chat.profiles["default"].model == "gemma4:e2b"
+    assert settings.chat.profiles["asr"].model == "gemma4:e2b"
     assert settings.chat.profiles["asr_v2"].model == "gemma4:e4b"
     assert settings.embeddings.profiles["default"].model == "nomic-embed-text"
+    assert settings.embeddings.profiles["asr"].model == "nomic-embed-text"
+    assert settings.embeddings.profiles["asr_v2"].model == "nomic-embed-text"
     assert settings.providers.ollama.base_url == "http://localhost:11434"
 
 

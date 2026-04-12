@@ -30,12 +30,21 @@ CHAT__DEFAULT_PROFILE=default
 CHAT__PROFILES__DEFAULT__PROVIDER=ollama
 CHAT__PROFILES__DEFAULT__MODEL=gemma4:e2b
 
+CHAT__PROFILES__ASR__PROVIDER=ollama
+CHAT__PROFILES__ASR__MODEL=gemma4:e2b
+
 CHAT__PROFILES__ASR_V2__PROVIDER=ollama
 CHAT__PROFILES__ASR_V2__MODEL=gemma4:e4b
 
 EMBEDDINGS__DEFAULT_PROFILE=default
 EMBEDDINGS__PROFILES__DEFAULT__PROVIDER=ollama
 EMBEDDINGS__PROFILES__DEFAULT__MODEL=nomic-embed-text
+
+EMBEDDINGS__PROFILES__ASR__PROVIDER=ollama
+EMBEDDINGS__PROFILES__ASR__MODEL=nomic-embed-text
+
+EMBEDDINGS__PROFILES__ASR_V2__PROVIDER=ollama
+EMBEDDINGS__PROFILES__ASR_V2__MODEL=nomic-embed-text
 
 PROVIDERS__OLLAMA__BASE_URL=http://localhost:11434
 SEARCH__TAVILY_API_KEY=
@@ -52,7 +61,8 @@ Legacy flat vars such as `OLLAMA_MODEL`, `OLLAMA_EMBEDDING_MODEL`,
 from config import create_chat_model, create_embeddings
 
 llm = create_chat_model()
-llm_asr = create_chat_model("asr_v2", max_tokens=768)
+llm_asr = create_chat_model("asr", max_tokens=768)
+llm_asr_v2 = create_chat_model("asr_v2", max_tokens=768)
 embeddings = create_embeddings()
 ```
 
@@ -70,5 +80,5 @@ uv run .\deep_research\asr-v2\stage_02_tools\02_llm_readability_editor.py
 ## Notes
 
 - Tavily search still falls back to DuckDuckGo when no Tavily key is configured.
-- The default chat profile is `default`; ASR v2 scripts use the `asr_v2` profile.
+- The default chat profile is `default`; `deep_research/asr` uses `asr`, and `deep_research/asr-v2` uses `asr_v2`.
 - Provider extension guidance lives in [config/README.md](/C:/Users/Newto/Documents/project/test-langchain/config/README.md).

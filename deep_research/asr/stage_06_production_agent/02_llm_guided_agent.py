@@ -70,10 +70,11 @@ with open(TRANSCRIPT_PATH) as f:
     raw = json.load(f)
 
 llm = create_chat_model(
+    "asr",
     temperature=0,
     max_tokens=1024,
 )
-embeddings = create_embeddings()
+embeddings = create_embeddings("asr")
 
 # ---------------------------------------------------------------------------
 # 1. RAG context store (terminology + participants)

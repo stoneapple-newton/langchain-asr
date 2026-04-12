@@ -51,6 +51,7 @@ if name_map_path.exists():
         name_map = json.load(f)
 
 llm = create_chat_model(
+    "asr",
     temperature=0,
     max_tokens=512,
 )

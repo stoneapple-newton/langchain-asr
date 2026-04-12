@@ -53,6 +53,7 @@ TRANSCRIPT_PATH = Path(__file__).parent.parent / "sample_data" / "sample_transcr
 OUT_DIR = TRANSCRIPT_PATH.parent
 
 llm = create_chat_model(
+    "asr",
     temperature=0,
     max_tokens=512,
 )

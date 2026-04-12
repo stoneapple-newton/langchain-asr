@@ -18,7 +18,7 @@ profiles become the knowledge base for context-aware correction.
 
 Key patterns:
   - Speaker profile as a Document with metadata
-  - OllamaEmbeddings for profile vectors
+  - Shared embeddings config for profile vectors
   - InMemoryVectorStore (or Chroma) for retrieval
   - Profile merging across multiple transcripts
 
@@ -58,10 +58,11 @@ if name_map_path.exists():
         name_map = json.load(f)
 
 llm = create_chat_model(
+    "asr",
     temperature=0,
     max_tokens=512,
 )
-embeddings = create_embeddings()
+embeddings = create_embeddings("asr")
 
 STOPWORDS = {"the", "a", "an", "is", "are", "was", "we", "i", "to", "of",
              "and", "it", "in", "that", "for", "this", "you", "so", "be",

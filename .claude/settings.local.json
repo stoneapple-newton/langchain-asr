@@ -5,7 +5,9 @@
       "Bash(git:*)",
       "Bash(grep -E \"^[^/]*$|asr|deep_research\")",
       "Bash(uv sync:*)",
-      "Bash(uv run:*)"
+      "Bash(uv run:*)",
+      "Bash(ls:*)",
+      "Bash(find /c/Users/Newto/Documents/project/test-langchain -maxdepth 3 -name *.py ! -path */.venv/* ! -path */__pycache__/*)"
     ]
   }
 }

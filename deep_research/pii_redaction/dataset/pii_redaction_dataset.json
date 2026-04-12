@@ -1,0 +1,115 @@
+[
+  {
+    "id": "patient_contact",
+    "text": "Patient Jane Miller called from 415-555-0199 and confirmed her email jane.miller@example.com.",
+    "entities": [
+      {"label": "PERSON", "value": "Jane Miller"},
+      {"label": "PHONE", "value": "415-555-0199"},
+      {"label": "EMAIL", "value": "jane.miller@example.com"}
+    ],
+    "expected_redacted_text": "Patient [PERSON] called from [PHONE] and confirmed her email [EMAIL]."
+  },
+  {
+    "id": "employee_contact",
+    "text": "Employee Robert Chen can be reached at robert.chen@acme.io or (212) 555-7788.",
+    "entities": [
+      {"label": "PERSON", "value": "Robert Chen"},
+      {"label": "EMAIL", "value": "robert.chen@acme.io"},
+      {"label": "PHONE", "value": "(212) 555-7788"}
+    ],
+    "expected_redacted_text": "Employee [PERSON] can be reached at [EMAIL] or [PHONE]."
+  },
+  {
+    "id": "shipping_address",
+    "text": "Ship the replacement card to 88 Market Street, San Francisco, CA 94105 for Maria Lopez.",
+    "entities": [
+      {"label": "ADDRESS", "value": "88 Market Street, San Francisco, CA 94105"},
+      {"label": "PERSON", "value": "Maria Lopez"}
+    ],
+    "expected_redacted_text": "Ship the replacement card to [ADDRESS] for [PERSON]."
+  },
+  {
+    "id": "ticket_ssn_dob",
+    "text": "The support ticket lists SSN 123-45-6789 and DOB 1987-04-22 for David King.",
+    "entities": [
+      {"label": "SSN", "value": "123-45-6789"},
+      {"label": "DOB", "value": "1987-04-22"},
+      {"label": "PERSON", "value": "David King"}
+    ],
+    "expected_redacted_text": "The support ticket lists SSN [SSN] and DOB [DOB] for [PERSON]."
+  },
+  {
+    "id": "card_and_receipt",
+    "text": "Charge the corporate card 4111 1111 1111 1111 and send the receipt to finance@northwind.dev.",
+    "entities": [
+      {"label": "CREDIT_CARD", "value": "4111 1111 1111 1111"},
+      {"label": "EMAIL", "value": "finance@northwind.dev"}
+    ],
+    "expected_redacted_text": "Charge the corporate card [CREDIT_CARD] and send the receipt to [EMAIL]."
+  },
+  {
+    "id": "vpn_login",
+    "text": "VPN login came from IP 203.0.113.42 for user Anita Patel, employee id EMP-4471.",
+    "entities": [
+      {"label": "IP_ADDRESS", "value": "203.0.113.42"},
+      {"label": "PERSON", "value": "Anita Patel"},
+      {"label": "EMPLOYEE_ID", "value": "EMP-4471"}
+    ],
+    "expected_redacted_text": "VPN login came from IP [IP_ADDRESS] for user [PERSON], employee id [EMPLOYEE_ID]."
+  },
+  {
+    "id": "mrn_follow_up",
+    "text": "Patient MRN A552991 called and left callback number 646-555-0182 for follow-up with Evelyn Hart.",
+    "entities": [
+      {"label": "MRN", "value": "A552991"},
+      {"label": "PHONE", "value": "646-555-0182"},
+      {"label": "PERSON", "value": "Evelyn Hart"}
+    ],
+    "expected_redacted_text": "Patient MRN [MRN] called and left callback number [PHONE] for follow-up with [PERSON]."
+  },
+  {
+    "id": "emergency_contact",
+    "text": "Emergency contact: Samuel Reed, sam.reed@familymail.com, address 742 Evergreen Terrace, Springfield.",
+    "entities": [
+      {"label": "PERSON", "value": "Samuel Reed"},
+      {"label": "EMAIL", "value": "sam.reed@familymail.com"},
+      {"label": "ADDRESS", "value": "742 Evergreen Terrace, Springfield"}
+    ],
+    "expected_redacted_text": "Emergency contact: [PERSON], [EMAIL], address [ADDRESS]."
+  },
+  {
+    "id": "bank_transfer",
+    "text": "Bank transfer for Noor Hassan used account 9988776655 and routing 021000021.",
+    "entities": [
+      {"label": "PERSON", "value": "Noor Hassan"},
+      {"label": "ACCOUNT_NUMBER", "value": "9988776655"},
+      {"label": "ROUTING_NUMBER", "value": "021000021"}
+    ],
+    "expected_redacted_text": "Bank transfer for [PERSON] used account [ACCOUNT_NUMBER] and routing [ROUTING_NUMBER]."
+  },
+  {
+    "id": "mail_form",
+    "text": "Please mail the form to Olivia Grant at 12 King Road, London and confirm at +44 20 7946 0958.",
+    "entities": [
+      {"label": "PERSON", "value": "Olivia Grant"},
+      {"label": "ADDRESS", "value": "12 King Road, London"},
+      {"label": "PHONE", "value": "+44 20 7946 0958"}
+    ],
+    "expected_redacted_text": "Please mail the form to [PERSON] at [ADDRESS] and confirm at [PHONE]."
+  },
+  {
+    "id": "passport_case",
+    "text": "Case note: Ethan Brooks said his passport number is X1234567 and his hotel is room 814.",
+    "entities": [
+      {"label": "PERSON", "value": "Ethan Brooks"},
+      {"label": "PASSPORT_NUMBER", "value": "X1234567"}
+    ],
+    "expected_redacted_text": "Case note: [PERSON] said his passport number is [PASSPORT_NUMBER] and his hotel is room 814."
+  },
+  {
+    "id": "no_pii_control",
+    "text": "Reminder: deploy the staging service after lunch and review the logs before standup.",
+    "entities": [],
+    "expected_redacted_text": "Reminder: deploy the staging service after lunch and review the logs before standup."
+  }
+]

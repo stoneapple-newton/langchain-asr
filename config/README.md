@@ -9,7 +9,8 @@ repository.
 from config import create_chat_model, create_embeddings, get_settings
 
 llm = create_chat_model()
-llm_asr = create_chat_model("asr_v2", max_tokens=768)
+llm_asr = create_chat_model("asr", max_tokens=768)
+llm_asr_v2 = create_chat_model("asr_v2", max_tokens=768)
 embeddings = create_embeddings()
 settings = get_settings()
 ```
@@ -27,12 +28,21 @@ CHAT__DEFAULT_PROFILE=default
 CHAT__PROFILES__DEFAULT__PROVIDER=ollama
 CHAT__PROFILES__DEFAULT__MODEL=gemma4:e2b
 
+CHAT__PROFILES__ASR__PROVIDER=ollama
+CHAT__PROFILES__ASR__MODEL=gemma4:e2b
+
 CHAT__PROFILES__ASR_V2__PROVIDER=ollama
 CHAT__PROFILES__ASR_V2__MODEL=gemma4:e4b
 
 EMBEDDINGS__DEFAULT_PROFILE=default
 EMBEDDINGS__PROFILES__DEFAULT__PROVIDER=ollama
 EMBEDDINGS__PROFILES__DEFAULT__MODEL=nomic-embed-text
+
+EMBEDDINGS__PROFILES__ASR__PROVIDER=ollama
+EMBEDDINGS__PROFILES__ASR__MODEL=nomic-embed-text
+
+EMBEDDINGS__PROFILES__ASR_V2__PROVIDER=ollama
+EMBEDDINGS__PROFILES__ASR_V2__MODEL=nomic-embed-text
 
 PROVIDERS__OLLAMA__BASE_URL=http://localhost:11434
 ```

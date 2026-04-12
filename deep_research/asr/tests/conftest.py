@@ -3,7 +3,7 @@ Shared fixtures and import helper for the ASR test suite.
 
 Every ASR script executes module-level code at import time:
   - opens sample_transcript.json
-  - creates ChatOllama / OllamaEmbeddings instances
+  - creates provider-backed chat / embedding clients through config
   - prints demo output
 
 load_asr_module() works around this by:

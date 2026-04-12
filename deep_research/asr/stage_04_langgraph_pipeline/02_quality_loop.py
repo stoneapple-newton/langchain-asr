@@ -46,6 +46,7 @@ from langgraph.graph import StateGraph, START, END
 TRANSCRIPT_PATH = Path(__file__).parent.parent / "sample_data" / "sample_transcript.json"
 
 llm = create_chat_model(
+    "asr",
     temperature=0,
     max_tokens=512,
 )
