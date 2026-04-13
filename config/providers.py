@@ -143,7 +143,11 @@ def build_chat_model(
         if settings.providers.openrouter.site_name:
             headers["X-OpenRouter-Title"] = settings.providers.openrouter.site_name
         if headers:
-            kwargs.setdefault("default_headers", headers)
+            existing_headers = kwargs.get("default_headers")
+            if isinstance(existing_headers, dict):
+                kwargs["default_headers"] = {**existing_headers, **headers}
+            else:
+                kwargs["default_headers"] = headers
         return ChatOpenRouter(
             model=model_name,
             api_key=_require(

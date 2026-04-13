@@ -53,9 +53,9 @@ local setups keep working while you migrate.
 
 ## Adding A New Provider
 
-1. Add a provider settings model in [settings.py](/C:/Users/Newto/Documents/project/test-langchain/config/settings.py).
+1. Add a provider settings model in [settings.py](./config/settings.py).
 2. Add the provider field to `ProviderSettings`.
-3. Add a constructor branch in [providers.py](/C:/Users/Newto/Documents/project/test-langchain/config/providers.py) for chat and, if supported, embeddings.
+3. Add a constructor branch in [providers.py](./config/providers.py) for chat and, if supported, embeddings.
 4. Add canonical `.env.example` entries for the new provider.
 5. Add config tests for successful construction and missing-credential failures.
 

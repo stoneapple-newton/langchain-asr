@@ -253,9 +253,7 @@ class AppSettings(BaseSettings):
             self.chat.profiles["default"].model = self.legacy_ollama_model
         if self.legacy_ollama_embedding_model:
             self.embeddings.profiles["default"].model = self.legacy_ollama_embedding_model
-        if self.legacy_ollama_base_url and not self.providers.ollama.base_url:
-            self.providers.ollama.base_url = self.legacy_ollama_base_url
-        elif self.legacy_ollama_base_url:
+        if self.legacy_ollama_base_url:
             self.providers.ollama.base_url = self.legacy_ollama_base_url
 
         if self.legacy_openai_api_key and not self.providers.openai.api_key:

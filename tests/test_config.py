@@ -232,6 +232,34 @@ def test_create_embeddings_uses_expected_factory(
         assert result["kwargs"]["model"] == model_name
 
 
+def test_openrouter_default_headers_are_merged(monkeypatch):
+    settings = AppSettings(
+        _env_file=None,
+        chat={"profiles": {"default": {"provider": "openrouter", "model": "openai/gpt-5-mini"}}},
+        providers={
+            "openrouter": {
+                "api_key": "sk-openrouter",
+                "site_url": "https://example.com",
+                "site_name": "Test App",
+            }
+        },
+    )
+
+    monkeypatch.setattr(llm_module, "get_settings", lambda: settings)
+    monkeypatch.setattr(providers_module, "_load_class", _fake_load_class)
+
+    result = llm_module.create_chat_model(
+        extra_kwargs={"default_headers": {"X-Custom-Header": "custom-value"}}
+    )
+
+    assert result["class_name"] == "ChatOpenRouter"
+    assert result["kwargs"]["default_headers"] == {
+        "X-Custom-Header": "custom-value",
+        "HTTP-Referer": "https://example.com",
+        "X-OpenRouter-Title": "Test App",
+    }
+
+
 @pytest.mark.parametrize(
     ("provider", "providers"),
     [
