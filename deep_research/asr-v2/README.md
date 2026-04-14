@@ -13,7 +13,8 @@ readability.
 5. `stage_03_langgraph/01_diarization_cleanup_graph.py`
 6. `stage_03_langgraph/02_readability_revision_graph.py`
 7. `stage_04_agent/01_asr_quality_agent.py`
-8. `stage_05_production/01_batch_asr_quality_runner.py`
+8. `stage_04_agent/02_transcript_diff_agent.py`
+9. `stage_05_production/01_batch_asr_quality_runner.py`
 
 ## Run commands
 
@@ -27,6 +28,7 @@ uv run deep_research/asr-v2/stage_02_tools/02_llm_readability_editor.py
 uv run deep_research/asr-v2/stage_03_langgraph/01_diarization_cleanup_graph.py
 uv run deep_research/asr-v2/stage_03_langgraph/02_readability_revision_graph.py
 uv run deep_research/asr-v2/stage_04_agent/01_asr_quality_agent.py
+uv run deep_research/asr-v2/stage_04_agent/02_transcript_diff_agent.py
 uv run deep_research/asr-v2/stage_05_production/01_batch_asr_quality_runner.py
 ```
 

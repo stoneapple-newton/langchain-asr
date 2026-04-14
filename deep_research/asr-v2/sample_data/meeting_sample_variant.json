@@ -1,0 +1,54 @@
+{
+  "language": "en",
+  "job_name": "demo_team_sync_variant",
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.4,
+      "speaker": "SPEAKER_00",
+      "text": "Okay, let's get started with the release update.",
+      "words": []
+    },
+    {
+      "id": 1,
+      "start": 2.7,
+      "end": 3.1,
+      "speaker": "SPEAKER_01",
+      "text": "sure",
+      "words": []
+    },
+    {
+      "id": 2,
+      "start": 3.3,
+      "end": 5.9,
+      "speaker": "SPEAKER_01",
+      "text": "we fixed the payment bug, and i think the dashboard problem too",
+      "words": []
+    },
+    {
+      "id": 4,
+      "start": 6.5,
+      "end": 8.3,
+      "speaker": "SPEAKER_01",
+      "text": "the login issue is still open right",
+      "words": []
+    },
+    {
+      "id": 5,
+      "start": 8.38,
+      "end": 10.7,
+      "speaker": "SPEAKER_01",
+      "text": "yes and support has three more customer reports on that",
+      "words": []
+    },
+    {
+      "id": 6,
+      "start": 10.75,
+      "end": 11.4,
+      "speaker": "SPEAKER_00",
+      "text": "let's review mitigation steps now",
+      "words": []
+    }
+  ]
+}
