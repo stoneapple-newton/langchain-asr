@@ -1,0 +1,99 @@
+{
+  "language": "en",
+  "job_name": "comparison_demo_a",
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 2.4,
+      "speaker": "SPEAKER_00",
+      "text": "okay lets get started with the release update",
+      "words": [
+        {"word": "okay", "start": 0.0, "end": 0.2, "speaker": "SPEAKER_00", "score": 0.93},
+        {"word": "lets", "start": 0.21, "end": 0.4, "speaker": "SPEAKER_00", "score": 0.92},
+        {"word": "get", "start": 0.41, "end": 0.52, "speaker": "SPEAKER_00", "score": 0.95},
+        {"word": "started", "start": 0.53, "end": 0.9, "speaker": "SPEAKER_00", "score": 0.97},
+        {"word": "with", "start": 1.0, "end": 1.2, "speaker": "SPEAKER_00", "score": 0.89},
+        {"word": "the", "start": 1.21, "end": 1.3, "speaker": "SPEAKER_00", "score": 0.9},
+        {"word": "release", "start": 1.31, "end": 1.7, "speaker": "SPEAKER_00", "score": 0.88},
+        {"word": "update", "start": 1.71, "end": 2.2, "speaker": "SPEAKER_00", "score": 0.9}
+      ]
+    },
+    {
+      "id": 1,
+      "start": 2.55,
+      "end": 4.8,
+      "speaker": "SPEAKER_01",
+      "text": "um sure we fixed the payment bug and i think the dashboard issue too",
+      "words": [
+        {"word": "um", "start": 2.55, "end": 2.7, "speaker": "SPEAKER_01", "score": 0.65},
+        {"word": "sure", "start": 2.71, "end": 3.0, "speaker": "SPEAKER_01", "score": 0.88},
+        {"word": "we", "start": 3.01, "end": 3.1, "speaker": "SPEAKER_01", "score": 0.93},
+        {"word": "fixed", "start": 3.11, "end": 3.4, "speaker": "SPEAKER_01", "score": 0.94},
+        {"word": "the", "start": 3.41, "end": 3.5, "speaker": "SPEAKER_01", "score": 0.91},
+        {"word": "payment", "start": 3.51, "end": 3.9, "speaker": "SPEAKER_01", "score": 0.93},
+        {"word": "bug", "start": 3.91, "end": 4.1, "speaker": "SPEAKER_01", "score": 0.92},
+        {"word": "and", "start": 4.11, "end": 4.2, "speaker": "SPEAKER_01", "score": 0.88},
+        {"word": "i", "start": 4.21, "end": 4.25, "speaker": "SPEAKER_01", "score": 0.91},
+        {"word": "think", "start": 4.26, "end": 4.5, "speaker": "SPEAKER_01", "score": 0.87},
+        {"word": "the", "start": 4.51, "end": 4.58, "speaker": "SPEAKER_01", "score": 0.9},
+        {"word": "dashboard", "start": 4.59, "end": 4.95, "speaker": "SPEAKER_01", "score": 0.94},
+        {"word": "issue", "start": 4.96, "end": 5.2, "speaker": "SPEAKER_01", "score": 0.92},
+        {"word": "too", "start": 5.21, "end": 5.4, "speaker": "SPEAKER_01", "score": 0.9}
+      ]
+    },
+    {
+      "id": 2,
+      "start": 5.5,
+      "end": 7.2,
+      "speaker": "SPEAKER_00",
+      "text": "great the weather looks good for the demo on friday",
+      "words": [
+        {"word": "great", "start": 5.5, "end": 5.7, "speaker": "SPEAKER_00", "score": 0.95},
+        {"word": "the", "start": 5.71, "end": 5.8, "speaker": "SPEAKER_00", "score": 0.91},
+        {"word": "weather", "start": 5.81, "end": 6.1, "speaker": "SPEAKER_00", "score": 0.72},
+        {"word": "looks", "start": 6.11, "end": 6.3, "speaker": "SPEAKER_00", "score": 0.9},
+        {"word": "good", "start": 6.31, "end": 6.5, "speaker": "SPEAKER_00", "score": 0.93},
+        {"word": "for", "start": 6.51, "end": 6.6, "speaker": "SPEAKER_00", "score": 0.91},
+        {"word": "the", "start": 6.61, "end": 6.7, "speaker": "SPEAKER_00", "score": 0.92},
+        {"word": "demo", "start": 6.71, "end": 6.9, "speaker": "SPEAKER_00", "score": 0.96},
+        {"word": "on", "start": 6.91, "end": 7.0, "speaker": "SPEAKER_00", "score": 0.94},
+        {"word": "friday", "start": 7.01, "end": 7.2, "speaker": "SPEAKER_00", "score": 0.95}
+      ]
+    },
+    {
+      "id": 3,
+      "start": 7.3,
+      "end": 9.1,
+      "speaker": "SPEAKER_01",
+      "text": "yeah lets plan for a ten am kickoff then",
+      "words": [
+        {"word": "yeah", "start": 7.3, "end": 7.45, "speaker": "SPEAKER_01", "score": 0.82},
+        {"word": "lets", "start": 7.46, "end": 7.6, "speaker": "SPEAKER_01", "score": 0.9},
+        {"word": "plan", "start": 7.61, "end": 7.8, "speaker": "SPEAKER_01", "score": 0.93},
+        {"word": "for", "start": 7.81, "end": 7.9, "speaker": "SPEAKER_01", "score": 0.89},
+        {"word": "a", "start": 7.91, "end": 7.95, "speaker": "SPEAKER_01", "score": 0.92},
+        {"word": "ten", "start": 7.96, "end": 8.15, "speaker": "SPEAKER_01", "score": 0.91},
+        {"word": "am", "start": 8.16, "end": 8.3, "speaker": "SPEAKER_01", "score": 0.88},
+        {"word": "kickoff", "start": 8.31, "end": 8.7, "speaker": "SPEAKER_01", "score": 0.94},
+        {"word": "then", "start": 8.71, "end": 9.0, "speaker": "SPEAKER_01", "score": 0.9}
+      ]
+    },
+    {
+      "id": 4,
+      "start": 9.2,
+      "end": 10.5,
+      "speaker": "SPEAKER_00",
+      "text": "sounds good ill send the calendar invite",
+      "words": [
+        {"word": "sounds", "start": 9.2, "end": 9.4, "speaker": "SPEAKER_00", "score": 0.95},
+        {"word": "good", "start": 9.41, "end": 9.6, "speaker": "SPEAKER_00", "score": 0.93},
+        {"word": "ill", "start": 9.61, "end": 9.75, "speaker": "SPEAKER_00", "score": 0.87},
+        {"word": "send", "start": 9.76, "end": 9.9, "speaker": "SPEAKER_00", "score": 0.92},
+        {"word": "the", "start": 9.91, "end": 10.0, "speaker": "SPEAKER_00", "score": 0.91},
+        {"word": "calendar", "start": 10.01, "end": 10.3, "speaker": "SPEAKER_00", "score": 0.94},
+        {"word": "invite", "start": 10.31, "end": 10.5, "speaker": "SPEAKER_00", "score": 0.96}
+      ]
+    }
+  ]
+}
