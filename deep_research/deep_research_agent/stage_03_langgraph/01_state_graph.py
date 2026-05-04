@@ -41,7 +41,7 @@ from langgraph.graph.message import add_messages
 
 llm = create_chat_model(
     temperature=0,
-    max_tokens=256,
+    max_tokens=4096,
 )
 
 

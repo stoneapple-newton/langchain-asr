@@ -47,7 +47,7 @@ segments = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=256,
+    max_tokens=4096,
 )
 
 LOW_CONF_THRESHOLD = 0.75
@@ -131,7 +131,22 @@ class BatchCorrections(BaseModel):
     corrections: list[WordCorrection]
 
 
-correction_parser = JsonOutputParser(pydantic_object=BatchCorrections)
+correction_parser = JsonOutputParser()
+
+
+def to_dict(value):
+    """Normalize structured-output responses across providers."""
+    if isinstance(value, BaseModel):
+        return value.model_dump()
+    return value
+
+
+def make_structured_chain(prompt, schema, parser):
+    try:
+        structured_llm = llm.with_structured_output(schema)
+    except (AttributeError, NotImplementedError, ValueError):
+        return prompt | llm | parser
+    return prompt | structured_llm | to_dict
 
 correction_prompt = ChatPromptTemplate.from_messages([
     ("system",
@@ -151,7 +166,7 @@ correction_prompt = ChatPromptTemplate.from_messages([
     glossary=", ".join(DOMAIN_GLOSSARY),
 )
 
-correction_chain = correction_prompt | llm | correction_parser
+correction_chain = make_structured_chain(correction_prompt, BatchCorrections, correction_parser)
 
 
 def format_candidates_for_prompt(candidates: list[ErrorCandidate]) -> str:

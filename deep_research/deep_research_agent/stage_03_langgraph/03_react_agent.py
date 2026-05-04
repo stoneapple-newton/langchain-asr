@@ -98,7 +98,7 @@ tools = [get_current_datetime, calculate, unit_converter]
 
 llm = create_chat_model(
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 llm_with_tools = llm.bind_tools(tools)

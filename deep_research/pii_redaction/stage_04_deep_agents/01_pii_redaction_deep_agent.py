@@ -60,7 +60,7 @@ def build_agent():
 
     return create_deep_agent(
         name="pii-redactor",
-        model=create_chat_model(temperature=0, max_tokens=768),
+        model=create_chat_model(temperature=0, max_tokens=4096),
         tools=[regex_candidate_report, supported_labels],
         system_prompt=(
             "You redact direct PII from text.\n"

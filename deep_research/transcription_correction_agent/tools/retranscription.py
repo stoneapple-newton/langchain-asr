@@ -140,7 +140,7 @@ def transcribe_with_multimodal_llm(
                 ],
             },
         ],
-        max_tokens=256,
+        max_tokens=4096,
     )
 
     transcribed = response.choices[0].message.content or ""
@@ -182,7 +182,7 @@ def correct_with_text_llm(
         if str(root) not in sys.path:
             sys.path.insert(0, str(root))
         from config import create_chat_model  # type: ignore
-        llm = create_chat_model(temperature=0, max_tokens=256)
+        llm = create_chat_model(temperature=0, max_tokens=4096)
 
     from langchain_core.prompts import ChatPromptTemplate
     from langchain_core.output_parsers import StrOutputParser

@@ -49,7 +49,7 @@ segments = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 
@@ -106,7 +106,22 @@ class CleanedText(BaseModel):
     changes: list[str] = Field(description="Brief list of changes made")
 
 
-punct_parser = JsonOutputParser(pydantic_object=CleanedText)
+punct_parser = JsonOutputParser()
+
+
+def to_dict(value):
+    """Normalize structured-output responses across providers."""
+    if isinstance(value, BaseModel):
+        return value.model_dump()
+    return value
+
+
+def make_structured_chain(prompt, schema, parser):
+    try:
+        structured_llm = llm.with_structured_output(schema)
+    except (AttributeError, NotImplementedError, ValueError):
+        return prompt | llm | parser
+    return prompt | structured_llm | to_dict
 
 punct_prompt = ChatPromptTemplate.from_messages([
     ("system",
@@ -122,7 +137,7 @@ punct_prompt = ChatPromptTemplate.from_messages([
      "Text to clean: {text}"),
 ]).partial(format_instructions=punct_parser.get_format_instructions())
 
-punct_chain = punct_prompt | llm | punct_parser
+punct_chain = make_structured_chain(punct_prompt, CleanedText, punct_parser)
 
 
 def build_context(segments: list[dict], idx: int, window: int = 1) -> str:

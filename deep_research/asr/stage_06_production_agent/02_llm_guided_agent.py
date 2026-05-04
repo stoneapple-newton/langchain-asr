@@ -57,7 +57,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model, create_embeddings
+from config import create_chat_model, create_embeddings, structured_output_chain
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
 from pydantic import BaseModel, Field
@@ -72,7 +72,7 @@ with open(TRANSCRIPT_PATH) as f:
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=1024,
+    max_tokens=4096,
 )
 embeddings = create_embeddings("asr")
 
@@ -131,8 +131,8 @@ class SupervisorDecision(BaseModel):
     )
 
 
-plan_parser = JsonOutputParser(pydantic_object=RemediationPlan)
-supervisor_parser = JsonOutputParser(pydantic_object=SupervisorDecision)
+plan_parser = JsonOutputParser()
+supervisor_parser = JsonOutputParser()
 
 
 # ---------------------------------------------------------------------------
@@ -208,7 +208,7 @@ planner_prompt = ChatPromptTemplate.from_messages([
      "Meeting metadata: {metadata}"),
 ]).partial(format_instructions=plan_parser.get_format_instructions())
 
-planner_chain = planner_prompt | llm | plan_parser
+planner_chain = structured_output_chain(llm, planner_prompt, RemediationPlan)
 
 # --- Supervisor ---
 supervisor_prompt = ChatPromptTemplate.from_messages([
@@ -234,7 +234,7 @@ supervisor_prompt = ChatPromptTemplate.from_messages([
     max_rounds=str(MAX_ROUNDS),
 )
 
-supervisor_chain = supervisor_prompt | llm | supervisor_parser
+supervisor_chain = structured_output_chain(llm, supervisor_prompt, SupervisorDecision)
 
 # --- Cleaner ---
 cleaner_prompt = ChatPromptTemplate.from_messages([

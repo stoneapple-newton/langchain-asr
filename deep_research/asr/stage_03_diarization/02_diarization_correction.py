@@ -34,7 +34,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from pydantic import BaseModel, Field
 
 
@@ -53,7 +53,7 @@ if name_map_path.exists():
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 KNOWN_SPEAKERS = sorted({s.get("speaker") for s in segments if s.get("speaker")})
@@ -95,7 +95,7 @@ class SegmentDecision(BaseModel):
     action: str = Field(description="One of: 'keep', 'reassign', 'merge_with_prev', 'merge_with_next'")
 
 
-decision_parser = JsonOutputParser(pydantic_object=SegmentDecision)
+decision_parser = JsonOutputParser()
 
 context_correction_prompt = ChatPromptTemplate.from_messages([
     ("system",
@@ -120,7 +120,7 @@ context_correction_prompt = ChatPromptTemplate.from_messages([
     format_instructions=decision_parser.get_format_instructions(),
 )
 
-context_correction_chain = context_correction_prompt | llm | decision_parser
+context_correction_chain = structured_output_chain(llm, context_correction_prompt, SegmentDecision)
 
 
 def build_speaker_roles_text(name_map: dict[str, str]) -> str:
@@ -189,7 +189,7 @@ class BulkDiarizationResult(BaseModel):
     notes: str = Field(description="Any observations about the diarization quality")
 
 
-bulk_parser = JsonOutputParser(pydantic_object=BulkDiarizationResult)
+bulk_parser = JsonOutputParser()
 
 bulk_prompt = ChatPromptTemplate.from_messages([
     ("system",
@@ -209,7 +209,7 @@ bulk_prompt = ChatPromptTemplate.from_messages([
     format_instructions=bulk_parser.get_format_instructions(),
 )
 
-bulk_chain = bulk_prompt | llm | bulk_parser
+bulk_chain = structured_output_chain(llm, bulk_prompt, BulkDiarizationResult)
 
 
 def format_block_for_bulk(segments: list[dict], start: int, size: int = 8) -> str:

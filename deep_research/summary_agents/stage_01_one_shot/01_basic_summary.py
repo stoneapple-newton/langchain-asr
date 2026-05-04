@@ -36,7 +36,7 @@ from deep_research.summary_agents.shared import load_transcript, format_transcri
 llm = create_chat_model(
     profile="asr_v2",  # Use the ASR-tuned model profile
     temperature=0,     # Deterministic output
-    max_tokens=1024,
+    max_tokens=4096,
 )
 
 # Load the sample transcript

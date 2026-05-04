@@ -65,7 +65,7 @@ def inspect_terminology_notes(notes_text: str) -> str:
 
 def build_translation_agent():
     return create_agent(
-        model=create_chat_model("asr_v2", temperature=0, max_tokens=1024),
+        model=create_chat_model("asr_v2", temperature=0, max_tokens=4096),
         tools=[inspect_source_segments, inspect_translation_rules, inspect_terminology_notes],
         system_prompt=(
             "You are a structured transcript-translation agent.\n"

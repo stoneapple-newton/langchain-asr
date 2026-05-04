@@ -121,7 +121,7 @@ class TranscriptionVerificationReport(BaseModel):
 # Tools for the Agent
 # ============================================================================
 
-llm = create_chat_model(temperature=0, max_tokens=512)
+llm = create_chat_model(temperature=0, max_tokens=4096)
 
 
 @tool

@@ -43,7 +43,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from pydantic import BaseModel, Field
 
 
@@ -57,7 +57,7 @@ segments = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=1024,
+    max_tokens=4096,
 )
 
 
@@ -87,8 +87,8 @@ class SpeakerDecision(BaseModel):
     change_recommended: bool
 
 
-topic_parser = JsonOutputParser(pydantic_object=TopicMap)
-decision_parser = JsonOutputParser(pydantic_object=SpeakerDecision)
+topic_parser = JsonOutputParser()
+decision_parser = JsonOutputParser()
 
 
 # ---------------------------------------------------------------------------
@@ -108,7 +108,7 @@ topic_prompt = ChatPromptTemplate.from_messages([
     ("human", "Full transcript ({n_segments} segments):\n\n{transcript}"),
 ]).partial(format_instructions=topic_parser.get_format_instructions())
 
-topic_chain = topic_prompt | llm | topic_parser
+topic_chain = structured_output_chain(llm, topic_prompt, TopicMap)
 
 
 def build_transcript_text(segs: list[dict], max_chars: int = 3000) -> str:
@@ -225,7 +225,7 @@ resolution_prompt = ChatPromptTemplate.from_messages([
      "Context (2 turns after):\n{next_context}"),
 ]).partial(format_instructions=decision_parser.get_format_instructions())
 
-resolution_chain = resolution_prompt | llm | decision_parser
+resolution_chain = structured_output_chain(llm, resolution_prompt, SpeakerDecision)
 
 
 def get_window(index: int, before: int = 2, after: int = 2) -> tuple[str, str]:

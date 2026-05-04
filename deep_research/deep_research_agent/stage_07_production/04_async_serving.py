@@ -102,7 +102,7 @@ class ChatState(TypedDict):
 
 llm_sync = create_chat_model(
     temperature=0.2,
-    max_tokens=256,
+    max_tokens=4096,
 )
 settings = get_settings()
 

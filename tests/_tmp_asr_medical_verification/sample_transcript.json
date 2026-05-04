@@ -1,0 +1,233 @@
+{
+  "language": "en",
+  "segments": [
+    {
+      "id": "0",
+      "start": 0.0,
+      "end": 4.2,
+      "text": "Good morning, let's review the patient's cardiac situation.",
+      "speaker": "DOCTOR",
+      "words": []
+    },
+    {
+      "id": "1",
+      "start": 4.5,
+      "end": 9.8,
+      "text": "The ECG showed signs of atrial fibrillation, which is concerning.",
+      "speaker": "DOCTOR",
+      "words": [
+        {
+          "word": "The",
+          "start": 4.5,
+          "end": 4.7,
+          "speaker": null,
+          "score": 0.99
+        },
+        {
+          "word": "ECG",
+          "start": 4.8,
+          "end": 5.1,
+          "speaker": null,
+          "score": 0.95
+        },
+        {
+          "word": "showed",
+          "start": 5.2,
+          "end": 5.5,
+          "speaker": null,
+          "score": 0.92
+        },
+        {
+          "word": "signs",
+          "start": 5.6,
+          "end": 5.9,
+          "speaker": null,
+          "score": 0.91
+        },
+        {
+          "word": "of",
+          "start": 6.0,
+          "end": 6.1,
+          "speaker": null,
+          "score": 0.97
+        },
+        {
+          "word": "a",
+          "start": 6.2,
+          "end": 6.25,
+          "speaker": null,
+          "score": 0.98
+        },
+        {
+          "word": "trial",
+          "start": 6.3,
+          "end": 6.6,
+          "speaker": null,
+          "score": 0.44
+        },
+        {
+          "word": "fibrillation",
+          "start": 6.7,
+          "end": 7.5,
+          "speaker": null,
+          "score": 0.48
+        }
+      ],
+      "corrections": [
+        {
+          "method": "llm_text",
+          "correction_type": "error",
+          "confidence": 0.95,
+          "medical_terms": [
+            "atrial fibrillation",
+            "lisinopril"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "start": 10.1,
+      "end": 15.6,
+      "text": "Yes, and his blood pressure has been elevated consistently.",
+      "speaker": "NURSE",
+      "words": []
+    },
+    {
+      "id": "3",
+      "start": 16.0,
+      "end": 22.3,
+      "text": "We should consider starting him on lisinopril for the hypertension.",
+      "speaker": "DOCTOR",
+      "words": [
+        {
+          "word": "lissanopril",
+          "start": 18.7,
+          "end": 19.3,
+          "speaker": null,
+          "score": 0.42
+        },
+        {
+          "word": "hyper",
+          "start": 20.1,
+          "end": 20.5,
+          "speaker": null,
+          "score": 0.51
+        },
+        {
+          "word": "tension",
+          "start": 20.6,
+          "end": 21.1,
+          "speaker": null,
+          "score": 0.51
+        }
+      ],
+      "corrections": [
+        {
+          "method": "llm_text",
+          "correction_type": "error",
+          "confidence": 0.94,
+          "medical_terms": [
+            "hypertension",
+            "lisinopril",
+            "metformin",
+            "atrial fibrillation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "start": 22.8,
+      "end": 28.1,
+      "text": "He's already on atorvastatin and metformin for the diabetes.",
+      "speaker": "NURSE",
+      "words": [
+        {
+          "word": "atorvastaten",
+          "start": 24.0,
+          "end": 24.8,
+          "speaker": null,
+          "score": 0.39
+        },
+        {
+          "word": "metphormin",
+          "start": 25.2,
+          "end": 25.9,
+          "speaker": null,
+          "score": 0.41
+        }
+      ],
+      "corrections": [
+        {
+          "method": "llm_text",
+          "correction_type": "error",
+          "confidence": 0.93,
+          "medical_terms": [
+            "atrial fibrillation",
+            "atorvastatin",
+            "metformin",
+            "hypertension",
+            "tachycardia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "start": 28.5,
+      "end": 34.7,
+      "text": "The echo cardio gram from last week showed reduced ejection fraction.",
+      "speaker": "DOCTOR",
+      "words": []
+    },
+    {
+      "id": "6",
+      "start": 35.0,
+      "end": 41.2,
+      "text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "speaker": "DOCTOR",
+      "words": []
+    },
+    {
+      "id": "7",
+      "start": 41.5,
+      "end": 47.8,
+      "text": "Should we order a bronco scopy for the persistent cough as well?",
+      "speaker": "NURSE",
+      "words": []
+    },
+    {
+      "id": "8",
+      "start": 48.2,
+      "end": 55.0,
+      "text": "Yes, and let's check the creatinine levels to rule out nephropathy.",
+      "speaker": "DOCTOR",
+      "words": []
+    },
+    {
+      "id": "9",
+      "start": 55.3,
+      "end": 61.6,
+      "text": "The oncology team flagged possible meta stasis in the mediastinum.",
+      "speaker": "NURSE",
+      "words": []
+    },
+    {
+      "id": "10",
+      "start": 62.0,
+      "end": 68.4,
+      "text": "We'll need a biopsy and start azithromycin for the pnuemonia.",
+      "speaker": "DOCTOR",
+      "words": []
+    },
+    {
+      "id": "11",
+      "start": 68.8,
+      "end": 75.1,
+      "text": "I'll monitor for tacky cardia given his current status.",
+      "speaker": "NURSE",
+      "words": []
+    }
+  ]
+}

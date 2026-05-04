@@ -56,7 +56,7 @@ segments = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0.1,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 
@@ -152,7 +152,22 @@ class FluentRewrite(BaseModel):
     confidence: float = Field(description="0.0-1.0: how confident the rewrite is correct")
 
 
-rewrite_parser = JsonOutputParser(pydantic_object=FluentRewrite)
+rewrite_parser = JsonOutputParser()
+
+
+def to_dict(value):
+    """Normalize structured-output responses across providers."""
+    if isinstance(value, BaseModel):
+        return value.model_dump()
+    return value
+
+
+def make_structured_chain(prompt, schema, parser):
+    try:
+        structured_llm = llm.with_structured_output(schema)
+    except (AttributeError, NotImplementedError, ValueError):
+        return prompt | llm | parser
+    return prompt | structured_llm | to_dict
 
 
 # ---------------------------------------------------------------------------
@@ -190,8 +205,8 @@ FLUENT_PROMPT = ChatPromptTemplate.from_messages([
      "CONTEXT (1 turn after):\n{next_turn}"),
 ]).partial(format_instructions=rewrite_parser.get_format_instructions())
 
-conservative_chain = CONSERVATIVE_PROMPT | llm | rewrite_parser
-fluent_chain = FLUENT_PROMPT | llm | rewrite_parser
+conservative_chain = make_structured_chain(CONSERVATIVE_PROMPT, FluentRewrite, rewrite_parser)
+fluent_chain = make_structured_chain(FLUENT_PROMPT, FluentRewrite, rewrite_parser)
 
 
 def get_context(index: int, before: int = 2, after: int = 1) -> tuple[str, str]:

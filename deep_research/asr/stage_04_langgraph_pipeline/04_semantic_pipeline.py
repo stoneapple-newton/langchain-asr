@@ -48,7 +48,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
 from pydantic import BaseModel, Field
@@ -64,7 +64,7 @@ segments_raw = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=1024,
+    max_tokens=4096,
 )
 
 
@@ -95,8 +95,8 @@ class TranscriptVerdict(BaseModel):
     recommendation: str = Field(description="'publish', 'needs_light_editing', 'needs_rework'")
 
 
-assess_parser = JsonOutputParser(pydantic_object=SemanticAssessment)
-verdict_parser = JsonOutputParser(pydantic_object=TranscriptVerdict)
+assess_parser = JsonOutputParser()
+verdict_parser = JsonOutputParser()
 
 
 # ---------------------------------------------------------------------------
@@ -132,7 +132,7 @@ assess_prompt = ChatPromptTemplate.from_messages([
      "Segments (global index shown in brackets):\n{block}"),
 ]).partial(format_instructions=assess_parser.get_format_instructions())
 
-assess_chain = assess_prompt | llm | assess_parser
+assess_chain = structured_output_chain(llm, assess_prompt, SemanticAssessment)
 
 
 # Repair chains — one per issue type
@@ -184,7 +184,7 @@ judge_prompt = ChatPromptTemplate.from_messages([
      "Sample of current transcript (first 10 segments):\n{sample}"),
 ]).partial(format_instructions=verdict_parser.get_format_instructions())
 
-judge_chain = judge_prompt | llm | verdict_parser
+judge_chain = structured_output_chain(llm, judge_prompt, TranscriptVerdict)
 
 
 # ---------------------------------------------------------------------------

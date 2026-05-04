@@ -20,7 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from deep_research.pii_redaction.shared.pii_utils import (
     PiiPredictionModel,
     dataset_path,
@@ -32,7 +32,7 @@ from deep_research.pii_redaction.shared.pii_utils import (
 
 VARIANT_NAME = "one_shot_prompt"
 
-parser = JsonOutputParser(pydantic_object=PiiPredictionModel)
+parser = JsonOutputParser()
 prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -54,8 +54,8 @@ prompt = ChatPromptTemplate.from_messages(
 
 
 def redact_text(text: str) -> dict:
-    llm = create_chat_model(temperature=0, max_tokens=768)
-    chain = prompt | llm | parser
+    llm = create_chat_model(temperature=0, max_tokens=4096)
+    chain = structured_output_chain(llm, prompt, PiiPredictionModel)
     raw = chain.invoke({"text": text})
     return finalize_prediction(
         text,

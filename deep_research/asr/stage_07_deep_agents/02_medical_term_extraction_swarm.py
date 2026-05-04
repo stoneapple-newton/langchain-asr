@@ -273,7 +273,7 @@ def build_medical_extraction_swarm(root_dir: str | Path | None = None):
     from config import create_chat_model
 
     repo_root = Path(root_dir) if root_dir else REPO_ROOT
-    model = create_chat_model("asr", temperature=0, max_tokens=768)
+    model = create_chat_model("asr", temperature=0, max_tokens=4096)
     shared_tools = build_shared_tools()
 
     return create_deep_agent(

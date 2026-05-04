@@ -30,7 +30,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from pydantic import BaseModel, Field
 
 llm = create_chat_model(temperature=0)
@@ -62,16 +62,13 @@ class ResearchPlan(BaseModel):
     sub_questions: list[str] = Field(description="3-5 sub-questions to investigate")
     estimated_sources: int = Field(description="Estimated number of sources needed")
 
-parser = JsonOutputParser(pydantic_object=ResearchPlan)
+parser = JsonOutputParser()
 
-structured_chain = (
-    ChatPromptTemplate.from_messages([
+structured_prompt = ChatPromptTemplate.from_messages([
         ("system", "You are a research planner. Respond ONLY with valid JSON matching this schema:\n{format_instructions}"),
         ("human", "Create a research plan for: {topic}"),
     ]).partial(format_instructions=parser.get_format_instructions())
-    | llm
-    | parser
-)
+structured_chain = structured_output_chain(llm, structured_prompt, ResearchPlan)
 
 plan = structured_chain.invoke({"topic": "impact of social media on teen mental health"})
 print(f"Topic:          {plan['topic']}")

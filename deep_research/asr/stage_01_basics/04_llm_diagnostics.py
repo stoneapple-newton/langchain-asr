@@ -52,7 +52,7 @@ segments = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=1024,
+    max_tokens=4096,
 )
 
 
@@ -94,8 +94,23 @@ class RemediationPlan(BaseModel):
     estimated_effort: str = Field(description="low, medium, or high")
 
 
-chunk_parser = JsonOutputParser(pydantic_object=ChunkDiagnostic)
-plan_parser = JsonOutputParser(pydantic_object=RemediationPlan)
+chunk_parser = JsonOutputParser()
+plan_parser = JsonOutputParser()
+
+
+def to_dict(value):
+    """Normalize structured-output responses across providers."""
+    if isinstance(value, BaseModel):
+        return value.model_dump()
+    return value
+
+
+def make_structured_chain(prompt, schema, parser):
+    try:
+        structured_llm = llm.with_structured_output(schema)
+    except (AttributeError, NotImplementedError, ValueError):
+        return prompt | llm | parser
+    return prompt | structured_llm | to_dict
 
 
 # ---------------------------------------------------------------------------
@@ -121,7 +136,7 @@ chunk_prompt = ChatPromptTemplate.from_messages([
      "Segments (starting at global index {offset}):\n{block}"),
 ]).partial(format_instructions=chunk_parser.get_format_instructions())
 
-chunk_chain = chunk_prompt | llm | chunk_parser
+chunk_chain = make_structured_chain(chunk_prompt, ChunkDiagnostic, chunk_parser)
 
 
 # ---------------------------------------------------------------------------
@@ -144,7 +159,7 @@ plan_prompt = ChatPromptTemplate.from_messages([
      "Sample issues found:\n{issue_summary}"),
 ]).partial(format_instructions=plan_parser.get_format_instructions())
 
-plan_chain = plan_prompt | llm | plan_parser
+plan_chain = make_structured_chain(plan_prompt, RemediationPlan, plan_parser)
 
 
 # ---------------------------------------------------------------------------

@@ -22,7 +22,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from deep_research.diarization_improvements.shared.diarization_utils import (
     CorrectionPrediction,
     dataset_path,
@@ -55,7 +55,7 @@ class RunOnCorrectionResult(BaseModel):
 # Prompt
 # ---------------------------------------------------------------------------
 
-_parser = JsonOutputParser(pydantic_object=RunOnCorrectionResult)
+_parser = JsonOutputParser()
 
 _prompt = ChatPromptTemplate.from_messages(
     [
@@ -130,8 +130,8 @@ def fix_run_on(transcript: dict) -> dict:
         + segments[target_idx + 1: target_idx + 3]
     )
 
-    llm = create_chat_model(temperature=0, max_tokens=1024)
-    chain = _prompt | llm | _parser
+    llm = create_chat_model(temperature=0, max_tokens=4096)
+    chain = structured_output_chain(llm, _prompt, RunOnCorrectionResult)
 
     raw = chain.invoke(
         {

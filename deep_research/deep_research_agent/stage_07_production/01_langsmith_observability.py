@@ -57,7 +57,7 @@ for key, value in settings.tracing.to_langsmith_env(
 
 llm = create_chat_model(
     temperature=0,
-    max_tokens=256,
+    max_tokens=4096,
 )
 
 

@@ -47,7 +47,7 @@ segments = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 embeddings = create_embeddings("asr")
 

@@ -38,7 +38,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model, create_embeddings
+from config import create_chat_model, create_embeddings, structured_output_chain
 from pydantic import BaseModel, Field
 
 
@@ -52,7 +52,7 @@ segments = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 embeddings = create_embeddings("asr")
 
@@ -126,7 +126,7 @@ class SegmentCorrection(BaseModel):
     confidence: float
 
 
-correction_parser = JsonOutputParser(pydantic_object=SegmentCorrection)
+correction_parser = JsonOutputParser()
 
 
 def make_correction_chain(system_instruction: str):
@@ -134,7 +134,7 @@ def make_correction_chain(system_instruction: str):
         ("system", system_instruction + "\n\nRespond with JSON: {format_instructions}"),
         ("human", "Context:\n{context}\n\nText: {text}"),
     ]).partial(format_instructions=correction_parser.get_format_instructions())
-    return prompt | llm | correction_parser
+    return structured_output_chain(llm, prompt, SegmentCorrection)
 
 
 term_chain = make_correction_chain(

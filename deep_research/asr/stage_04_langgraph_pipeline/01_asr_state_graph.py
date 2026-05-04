@@ -53,7 +53,7 @@ OUT_DIR = TRANSCRIPT_PATH.parent
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 FILLERS = {"uh", "um", "you know", "i mean", "like"}

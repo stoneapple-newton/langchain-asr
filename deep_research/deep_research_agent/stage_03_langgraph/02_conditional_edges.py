@@ -40,7 +40,7 @@ from langgraph.graph.message import add_messages
 
 llm = create_chat_model(
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 MAX_REVISIONS = 2   # safety guard against infinite loops

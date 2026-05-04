@@ -20,7 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parents[4]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -41,7 +41,7 @@ from translation_shared import (
 
 VARIANT_NAME = "one_shot_translation"
 
-parser = JsonOutputParser(pydantic_object=TranslationDraftModel)
+parser = JsonOutputParser()
 prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -65,8 +65,8 @@ prompt = ChatPromptTemplate.from_messages(
 
 def _run_one_shot_translation(example: dict) -> dict:
     doc = load_source_document(example["source_document"], source_path=f"{example['id']}.json")
-    llm = create_chat_model("asr_v2", temperature=0, max_tokens=1024)
-    chain = prompt | llm | parser
+    llm = create_chat_model("asr_v2", temperature=0, max_tokens=4096)
+    chain = structured_output_chain(llm, prompt, TranslationDraftModel)
     return chain.invoke(
         {
             "example_id": example["id"],

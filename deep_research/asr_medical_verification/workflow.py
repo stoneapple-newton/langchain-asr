@@ -33,7 +33,7 @@ from .state import AgentState, WorkerState
 
 
 def _get_llm():
-    return create_chat_model("asr_v2", temperature=0, max_tokens=256)
+    return create_chat_model("asr_v2", temperature=0, max_tokens=4096)
 
 
 def _candidate_to_dict(candidate: Any) -> dict[str, Any]:

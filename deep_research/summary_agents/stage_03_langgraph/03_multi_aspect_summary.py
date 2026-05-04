@@ -72,7 +72,7 @@ class ParallelSummaryState(TypedDict):
 llm = create_chat_model(
     profile="asr_v2",
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 # Define the aspects we want to extract in parallel

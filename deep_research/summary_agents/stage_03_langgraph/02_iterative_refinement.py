@@ -32,7 +32,7 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from pydantic import BaseModel, Field
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from deep_research.summary_agents.shared import load_transcript, format_transcript_for_llm
 
 
@@ -82,7 +82,7 @@ class RefinementState(TypedDict):
 llm = create_chat_model(
     profile="asr_v2",
     temperature=0,
-    max_tokens=1024,
+    max_tokens=4096,
 )
 
 QUALITY_THRESHOLD = 7  # Minimum acceptable quality (out of 10)
@@ -132,7 +132,7 @@ def assess_quality(state: RefinementState) -> dict:
     """Assess the quality of the current summary."""
     print(f"  [assess_quality] Checking quality...")
     
-    parser = JsonOutputParser(pydantic_object=QualityAssessment)
+    parser = JsonOutputParser()
     
     prompt = ChatPromptTemplate.from_messages([
         (
@@ -148,7 +148,7 @@ def assess_quality(state: RefinementState) -> dict:
         ),
     ]).partial(format_instructions=parser.get_format_instructions())
     
-    chain = prompt | llm | parser
+    chain = structured_output_chain(llm, prompt, QualityAssessment)
     
     assessment = chain.invoke({
         "transcript": state["transcript"][:1500],

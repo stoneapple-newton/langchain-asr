@@ -42,7 +42,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model, create_embeddings
+from config import create_chat_model, create_embeddings, structured_output_chain
 from pydantic import BaseModel, Field
 
 
@@ -60,7 +60,7 @@ if name_map_path.exists():
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 embeddings = create_embeddings("asr")
 
@@ -113,7 +113,7 @@ class SpeakerProfileNarrative(BaseModel):
     profile_text: str = Field(description="2-3 sentence narrative profile for embedding")
 
 
-profile_parser = JsonOutputParser(pydantic_object=SpeakerProfileNarrative)
+profile_parser = JsonOutputParser()
 
 profile_prompt = ChatPromptTemplate.from_messages([
     ("system",
@@ -128,7 +128,7 @@ profile_prompt = ChatPromptTemplate.from_messages([
      "All text by this speaker:\n{text}"),
 ]).partial(format_instructions=profile_parser.get_format_instructions())
 
-profile_chain = profile_prompt | llm | profile_parser
+profile_chain = structured_output_chain(llm, profile_prompt, SpeakerProfileNarrative)
 
 print("=== 2. Generating speaker profiles ===")
 profiles: list[dict] = []

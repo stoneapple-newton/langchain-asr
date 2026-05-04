@@ -86,7 +86,7 @@ def transcribe_with_openai_audio(
                 ],
             },
         ],
-        max_tokens=256,
+        max_tokens=4096,
     )
     content = response.choices[0].message.content or ""
     return content.strip().strip('"').strip("'"), 0.85
@@ -100,7 +100,7 @@ def correct_with_text_llm(
     medical_context: str = "",
     llm=None,
 ) -> tuple[str, float]:
-    model = llm or create_chat_model("asr_v2", temperature=0, max_tokens=256)
+    model = llm or create_chat_model("asr_v2", temperature=0, max_tokens=4096)
     prompt = ChatPromptTemplate.from_messages(
         [
             (

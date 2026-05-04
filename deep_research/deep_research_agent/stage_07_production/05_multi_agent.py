@@ -56,7 +56,7 @@ from langgraph.types import Command
 
 llm = create_chat_model(
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 

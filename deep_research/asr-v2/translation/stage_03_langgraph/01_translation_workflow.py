@@ -24,7 +24,7 @@ REPO_ROOT = Path(__file__).resolve().parents[4]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -54,7 +54,7 @@ class TranslationState(TypedDict):
     result: dict[str, Any]
 
 
-parser = JsonOutputParser(pydantic_object=TranslationDraftModel)
+parser = JsonOutputParser()
 draft_prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -101,8 +101,8 @@ def prepare_node(state: TranslationState) -> dict[str, Any]:
 
 
 def draft_node(state: TranslationState) -> dict[str, Any]:
-    llm = create_chat_model("asr_v2", temperature=0, max_tokens=1024)
-    chain = draft_prompt | llm | parser
+    llm = create_chat_model("asr_v2", temperature=0, max_tokens=4096)
+    chain = structured_output_chain(llm, draft_prompt, TranslationDraftModel)
     payload = chain.invoke(
         {
             "example_id": state["example"]["id"],
@@ -120,8 +120,8 @@ def draft_node(state: TranslationState) -> dict[str, Any]:
 
 
 def review_node(state: TranslationState) -> dict[str, Any]:
-    llm = create_chat_model("asr_v2", temperature=0, max_tokens=1024)
-    chain = review_prompt | llm | parser
+    llm = create_chat_model("asr_v2", temperature=0, max_tokens=4096)
+    chain = structured_output_chain(llm, review_prompt, TranslationDraftModel)
     reviewed = chain.invoke(
         {
             "segment_block": format_segment_preserving_prompt(state["doc"]),

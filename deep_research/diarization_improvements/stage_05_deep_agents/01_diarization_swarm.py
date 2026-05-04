@@ -231,7 +231,7 @@ def build_diarization_swarm():
 
     return create_deep_agent(
         name="diarization-swarm",
-        model=create_chat_model(temperature=0, max_tokens=1024),
+        model=create_chat_model(temperature=0, max_tokens=4096),
         tools=SHARED_TOOLS,
         system_prompt=(
             "You are a diarization correction supervisor.\n\n"

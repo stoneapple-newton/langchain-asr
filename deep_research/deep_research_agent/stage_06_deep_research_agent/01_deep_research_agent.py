@@ -46,7 +46,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model, create_embeddings, get_settings
+from config import create_chat_model, create_embeddings, get_settings, structured_output_chain
 from langchain_community.tools import DuckDuckGoSearchRun
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
@@ -59,7 +59,7 @@ from langgraph.graph.message import add_messages
 
 llm = create_chat_model(
     temperature=0,
-    max_tokens=1024,
+    max_tokens=4096,
 )
 
 embeddings = create_embeddings()
@@ -126,7 +126,7 @@ class ResearchState(TypedDict):
 # Node 1: plan
 # ---------------------------------------------------------------------------
 
-plan_parser = JsonOutputParser(pydantic_object=ResearchPlan)
+plan_parser = JsonOutputParser()
 
 plan_prompt = ChatPromptTemplate.from_messages([
     ("system",
@@ -135,7 +135,7 @@ plan_prompt = ChatPromptTemplate.from_messages([
     ("human", "Research topic: {topic}"),
 ]).partial(format_instructions=plan_parser.get_format_instructions())
 
-plan_chain = plan_prompt | llm | plan_parser
+plan_chain = structured_output_chain(llm, plan_prompt, ResearchPlan)
 
 
 def plan_node(state: ResearchState) -> dict:
@@ -233,7 +233,7 @@ def store_node(state: ResearchState) -> dict:
 # Node 4: analyse
 # ---------------------------------------------------------------------------
 
-analysis_parser = JsonOutputParser(pydantic_object=AnalysisDecision)
+analysis_parser = JsonOutputParser()
 
 analysis_prompt = ChatPromptTemplate.from_messages([
     ("system",
@@ -248,7 +248,7 @@ analysis_prompt = ChatPromptTemplate.from_messages([
      "Searches done: {done} / {total}"),
 ]).partial(format_instructions=analysis_parser.get_format_instructions())
 
-analysis_chain = analysis_prompt | llm | analysis_parser
+analysis_chain = structured_output_chain(llm, analysis_prompt, AnalysisDecision)
 
 
 def analyse_node(state: ResearchState) -> dict:

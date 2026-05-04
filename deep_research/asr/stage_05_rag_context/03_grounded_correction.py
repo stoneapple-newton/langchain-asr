@@ -46,7 +46,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model, create_embeddings
+from config import create_chat_model, create_embeddings, structured_output_chain
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pydantic import BaseModel, Field
 
@@ -61,7 +61,7 @@ segments = raw["segments"]
 llm = create_chat_model(
     "asr",
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 embeddings = create_embeddings("asr")
 
@@ -135,8 +135,8 @@ class GroundedCorrection(BaseModel):
     )
 
 
-grade_parser = JsonOutputParser(pydantic_object=DocumentGrades)
-correction_parser = JsonOutputParser(pydantic_object=GroundedCorrection)
+grade_parser = JsonOutputParser()
+correction_parser = JsonOutputParser()
 
 
 # ---------------------------------------------------------------------------
@@ -174,7 +174,7 @@ grade_prompt = ChatPromptTemplate.from_messages([
      "Retrieved documents:\n{docs}"),
 ]).partial(format_instructions=grade_parser.get_format_instructions())
 
-grade_chain = grade_prompt | llm | grade_parser
+grade_chain = structured_output_chain(llm, grade_prompt, DocumentGrades)
 
 
 # ---------------------------------------------------------------------------
@@ -196,7 +196,7 @@ correction_prompt = ChatPromptTemplate.from_messages([
      "Segment: {text}"),
 ]).partial(format_instructions=correction_parser.get_format_instructions())
 
-correction_chain = correction_prompt | llm | correction_parser
+correction_chain = structured_output_chain(llm, correction_prompt, GroundedCorrection)
 
 
 # ---------------------------------------------------------------------------

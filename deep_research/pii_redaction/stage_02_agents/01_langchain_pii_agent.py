@@ -49,7 +49,7 @@ def supported_redaction_labels() -> str:
 
 def build_agent():
     return create_agent(
-        model=create_chat_model(temperature=0, max_tokens=768),
+        model=create_chat_model(temperature=0, max_tokens=4096),
         tools=[regex_candidate_report, supported_redaction_labels],
         system_prompt=(
             "You are a structured PII-redaction agent.\n"

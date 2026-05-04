@@ -120,7 +120,7 @@ class FollowUpState(TypedDict):
 llm = create_chat_model(
     profile="asr_v2",
     temperature=0,
-    max_tokens=1024,
+    max_tokens=4096,
 )
 
 

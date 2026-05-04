@@ -28,7 +28,7 @@ def _get_llm():
     if str(repo_root) not in sys.path:
         sys.path.insert(0, str(repo_root))
     from config import create_chat_model
-    return create_chat_model(temperature=0)
+    return create_chat_model(temperature=0, max_tokens=4096)
 
 
 class SummaryQualityScore(BaseModel):
@@ -113,8 +113,10 @@ class SummaryEvaluator:
     def _get_eval_chain(self):
         """Lazy initialization of evaluation chain."""
         if self._eval_chain is None:
+            from config import structured_output_chain
+
             llm = _get_llm()
-            parser = JsonOutputParser(pydantic_object=SummaryQualityScore)
+            parser = JsonOutputParser()
             prompt = ChatPromptTemplate.from_messages([
                 (
                     "system",
@@ -129,7 +131,7 @@ class SummaryEvaluator:
                     "Provide your evaluation as JSON."
                 ),
             ]).partial(format_instructions=parser.get_format_instructions())
-            self._eval_chain = prompt | llm | parser
+            self._eval_chain = structured_output_chain(llm, prompt, SummaryQualityScore)
         return self._eval_chain
 
     def evaluate(

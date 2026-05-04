@@ -1,0 +1,150 @@
+{
+  "source": "sample_transcript.json",
+  "total_segments": 33,
+  "issues": [
+    {
+      "index": 4,
+      "issue_type": "transcription_error",
+      "description": "ASR confidence tag '[low-conf: the, JWT, the]' present",
+      "severity": "high",
+      "suggested_fix": "Remove the bracketed annotation and verify/replace the uncertain words with confirmed wording"
+    },
+    {
+      "index": 4,
+      "issue_type": "false_start",
+      "description": "Duplicate word 'the the' indicates a restarted phrase",
+      "severity": "medium",
+      "suggested_fix": "Eliminate the duplicate so it reads 'updated the JWT library' (confirm intended wording)"
+    },
+    {
+      "index": 6,
+      "issue_type": "false_start",
+      "description": "Redundant restart: 'by um by Thursday' contains repeated 'by'",
+      "severity": "low",
+      "suggested_fix": "Remove duplicate/restart: transcribe as '...ready by Thursday if we can get a code review slot.'"
+    },
+    {
+      "index": 8,
+      "issue_type": "transcription_error",
+      "description": "Missing contraction/apostrophe: 'lets' should be 'let's'",
+      "severity": "low",
+      "suggested_fix": "Change 'lets' to \"let's\" and add punctuation: 'Great \u2014 now let's talk about the new dashboard feature.'"
+    },
+    {
+      "index": 17,
+      "issue_type": "false_start",
+      "description": "Duplicate token 'I I' indicates a false start/stutter",
+      "severity": "medium",
+      "suggested_fix": "Remove duplicate 'I' or mark as stutter; transcribe as 'I need to finalize it this week...'"
+    },
+    {
+      "index": 17,
+      "issue_type": "transcription_error",
+      "description": "Bracketed ASR marker '[low-conf: I]' included in transcript",
+      "severity": "low",
+      "suggested_fix": "Remove the bracketed confidence tag or move it to metadata/notes"
+    },
+    {
+      "index": 21,
+      "issue_type": "transcription_error",
+      "description": "'dashboard mobile' likely should be 'mobile dashboard'; run-on sentence",
+      "severity": "medium",
+      "suggested_fix": "Reorder to 'mobile dashboard' and add commas: 'auth service fix is top priority for this week, mobile dashboard is on track for October 15, and analytics spec goes out today.'"
+    },
+    {
+      "index": 24,
+      "issue_type": "transcription_error",
+      "description": "lets -> let's (missing apostrophe/capitalization)",
+      "severity": "low",
+      "suggested_fix": "Change 'lets' to \"let's\" and capitalize start of sentence."
+    },
+    {
+      "index": 25,
+      "issue_type": "technical_term_error",
+      "description": "node -> Node.js (technical name/capitalization)",
+      "severity": "medium",
+      "suggested_fix": "Use 'Node' or 'Node.js' (e.g., 'Node 18' or 'Node.js 18') for clarity."
+    },
+    {
+      "index": 25,
+      "issue_type": "transcription_error",
+      "description": "Run-on sentence / missing punctuation between clauses",
+      "severity": "low",
+      "suggested_fix": "Insert punctuation: '...chart library. It requires Node 18 or above.'"
+    },
+    {
+      "index": 27,
+      "issue_type": "technical_term_error",
+      "description": "node 16 -> Node 16/Node.js 16 (capitalization/format)",
+      "severity": "medium",
+      "suggested_fix": "Normalize to 'Node 16' or 'Node.js 16'."
+    },
+    {
+      "index": 27,
+      "issue_type": "technical_term_error",
+      "description": "devops -> DevOps (capitalization of team/tool name)",
+      "severity": "medium",
+      "suggested_fix": "Capitalize as 'DevOps'."
+    },
+    {
+      "index": 27,
+      "issue_type": "transcription_error",
+      "description": "itll -> it'll (missing apostrophe)",
+      "severity": "low",
+      "suggested_fix": "Change 'itll' to \"it'll\"."
+    },
+    {
+      "index": 28,
+      "issue_type": "transcription_error",
+      "description": "ill -> I'll (missing apostrophe/capitalization)",
+      "severity": "low",
+      "suggested_fix": "Change 'ill' to \"I'll\" and capitalize sentence start."
+    },
+    {
+      "index": 28,
+      "issue_type": "technical_term_error",
+      "description": "devops -> DevOps (capitalization of team/tool name)",
+      "severity": "medium",
+      "suggested_fix": "Capitalize as 'DevOps'."
+    }
+  ],
+  "severity_counts": {
+    "high": 1,
+    "medium": 7,
+    "low": 7
+  },
+  "type_counts": {
+    "transcription_error": 8,
+    "false_start": 3,
+    "technical_term_error": 4
+  },
+  "remediation_plan": {
+    "overall_quality": "fair",
+    "primary_issue_categories": [
+      "Transcription artifacts (ASR markers, low-confidence tags, missing punctuation)",
+      "False starts / duplicate tokens / stutters",
+      "Technical term capitalization & formatting (Node, Node.js, DevOps, JWT, versions)",
+      "Contractions & punctuation (let's, it'll, I'll) and run-on sentences"
+    ],
+    "remediation_steps": [
+      "Remove ASR confidence/bracket markers (e.g. patterns like \"[low-conf: ...]\", \"[unk]\", \"[inaudible]\") from visible transcript; if marker indicates low confidence keep a note/flag for manual verification. Specifically: strip the tag but add a QA flag for seg 4 for human check.",
+      "Collapse duplicate adjacent tokens resulting from false starts/stutters. Automated rule: replace occurrences matching regex \\b(\\w+)\\s+\\1\\b with \\1. Apply with a whitelist/exception list (e.g., \"that that\" may sometimes be valid) and log replacements for human review (prioritise segs 4, 6, 17).",
+      "Remove filler-word restarts and redundant repeats (e.g., patterns like \"um by by\", \"by um by\") by removing typical fillers (um, uh, mm) when adjacent to duplicates or sentence boundaries. Use regex to remove isolated filler tokens and dedupe surrounding words; flag any sentence where removing filler materially changes meaning.",
+      "Standardize technical terms and capitalization using a mapping table applied case-insensitively with word-boundary matching. Minimum mappings: \"node\" -> \"Node.js\" (general reference), \"node 16\" or \"node16\" -> \"Node 16\" or \"Node.js 16\" (choose one style consistently), \"devops\" -> \"DevOps\", \"jwt\" or \"Jwt\" -> \"JWT\", \"dashboard mobile\" -> \"mobile dashboard\" (reorder where context indicates). Log all automated replacements for review (apply to segs 21, 25, 27, 28).",
+      "Fix contractions and common missing-apostrophe errors with context-aware replacements: \"lets\" -> \"let's\", \"itll\"/\"itll\" -> \"it'll\", \"ill\" at sentence-start -> \"I'll\". Use regex like \\b[Ii]ll\\b -> \"I'll\" only when preceding/following tokens indicate contraction (e.g., presence of a verb after); otherwise flag for human verification (apply to segs 8, 24, 27, 28).",
+      "Insert or correct punctuation to break run-on sentences and clarify clause boundaries. Automated heuristics: add periods where there is a long clause with multiple commas and no terminal punctuation; but mark segments with ambiguity for manual editing. Prioritise segs 21 and 25 for manual punctation fixes.",
+      "Run a QA pass that 1) reports all automated changes (diff) and 2) highlights sentences where automated rules conflicted or multiple issue types overlapped. Use that report to perform a manual pass on the highest-risk segments.",
+      "Maintain a replacement log and add unit tests/regex tests for each mapping to prevent overcorrection (for example, avoid changing 'ill' meaning sick to \"I'll\").",
+      "Final read-through by an editor to ensure tone, meaning, and technical accuracy preserved \u2014 focus manual effort first on segments flagged during automated steps."
+    ],
+    "segments_needing_manual_review": [
+      4,
+      17,
+      21,
+      25,
+      27,
+      28
+    ],
+    "estimated_effort": "medium"
+  }
+}

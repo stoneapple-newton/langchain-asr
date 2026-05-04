@@ -19,7 +19,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from langgraph.graph import END, START, StateGraph
 from pydantic import BaseModel, Field
 
@@ -53,7 +53,7 @@ class QualityState(TypedDict):
     output_paths: dict
 
 
-parser = JsonOutputParser(pydantic_object=EditedChunk)
+parser = JsonOutputParser()
 prompt = ChatPromptTemplate.from_messages([
     (
         "system",
@@ -66,9 +66,9 @@ prompt = ChatPromptTemplate.from_messages([
 llm = create_chat_model(
     "asr_v2",
     temperature=0,
-    max_tokens=768,
+    max_tokens=4096,
 )
-chain = prompt | llm | parser
+chain = structured_output_chain(llm, prompt, EditedChunk)
 
 
 def load_node(state: QualityState) -> dict:

@@ -81,7 +81,7 @@ from tools.medical_terms import (
 # LLM setup (text-only; used for detection + fallback correction)
 # ---------------------------------------------------------------------------
 
-_llm = create_chat_model(temperature=0, max_tokens=1024)
+_llm = create_chat_model(temperature=0, max_tokens=4096)
 
 # ---------------------------------------------------------------------------
 # Helper: build surrounding context string for a segment

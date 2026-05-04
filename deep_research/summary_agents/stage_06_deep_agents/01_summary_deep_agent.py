@@ -132,7 +132,7 @@ def build_summary_deep_agent():
         format_markdown_summary,
     ]
     
-    model = create_chat_model(profile="asr_v2", temperature=0, max_tokens=1024)
+    model = create_chat_model(profile="asr_v2", temperature=0, max_tokens=4096)
     
     return create_deep_agent(
         name="meeting-summarizer",

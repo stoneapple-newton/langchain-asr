@@ -1,0 +1,3234 @@
+{
+  "language": "en",
+  "duration": 187.4,
+  "segments": [
+    {
+      "start": 0.21,
+      "end": 4.85,
+      "text": " Alright, everyone. Let's get started; we have a lot to cover today.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "alright",
+          "start": 0.21,
+          "end": 0.61,
+          "score": 0.92,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "everyone",
+          "start": 0.65,
+          "end": 1.12,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "lets",
+          "start": 1.18,
+          "end": 1.44,
+          "score": 0.88,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "get",
+          "start": 1.48,
+          "end": 1.62,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "started",
+          "start": 1.66,
+          "end": 2.11,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "uh",
+          "start": 2.18,
+          "end": 2.32,
+          "score": 0.78,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "we",
+          "start": 2.4,
+          "end": 2.52,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "have",
+          "start": 2.55,
+          "end": 2.71,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "a",
+          "start": 2.74,
+          "end": 2.8,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "lot",
+          "start": 2.83,
+          "end": 3.05,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 3.08,
+          "end": 3.18,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "cover",
+          "start": 3.21,
+          "end": 3.57,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "today",
+          "start": 3.61,
+          "end": 4.85,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 5.1,
+      "end": 12.44,
+      "text": " So, the main agenda is reviewing the Q4 roadmap and figuring out what we can actually ship before the end of the quarter.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "so",
+          "start": 5.1,
+          "end": 5.22,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 5.25,
+          "end": 5.35,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "main",
+          "start": 5.38,
+          "end": 5.62,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "agenda",
+          "start": 5.65,
+          "end": 6.05,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 6.08,
+          "end": 6.2,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "reviewing",
+          "start": 6.23,
+          "end": 6.82,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 6.85,
+          "end": 6.95,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "Q4",
+          "start": 6.98,
+          "end": 7.35,
+          "score": 0.91,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "roadmap",
+          "start": 7.38,
+          "end": 7.92,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 7.95,
+          "end": 8.08,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "um",
+          "start": 8.12,
+          "end": 8.28,
+          "score": 0.82,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "figuring",
+          "start": 8.35,
+          "end": 8.82,
+          "score": 0.93,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "out",
+          "start": 8.85,
+          "end": 9.02,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "what",
+          "start": 9.05,
+          "end": 9.22,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "we",
+          "start": 9.25,
+          "end": 9.35,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "can",
+          "start": 9.38,
+          "end": 9.52,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "actually",
+          "start": 9.55,
+          "end": 9.95,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "ship",
+          "start": 9.98,
+          "end": 10.32,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "before",
+          "start": 10.35,
+          "end": 10.72,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 10.75,
+          "end": 10.85,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "end",
+          "start": 10.88,
+          "end": 11.08,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "of",
+          "start": 11.11,
+          "end": 11.21,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 11.24,
+          "end": 11.34,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "quarter",
+          "start": 11.37,
+          "end": 12.44,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 13.05,
+      "end": 18.92,
+      "text": " Yeah, I think the biggest blocker right now is the authentication service. It's been really flaky in staging.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "yeah",
+          "start": 13.05,
+          "end": 13.28,
+          "score": 0.91,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "I",
+          "start": 13.31,
+          "end": 13.41,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "think",
+          "start": 13.44,
+          "end": 13.72,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 13.75,
+          "end": 13.85,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "biggest",
+          "start": 13.88,
+          "end": 14.25,
+          "score": 0.96,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "blocker",
+          "start": 14.28,
+          "end": 14.72,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "right",
+          "start": 14.75,
+          "end": 14.98,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "now",
+          "start": 15.01,
+          "end": 15.22,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "is",
+          "start": 15.25,
+          "end": 15.38,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 15.41,
+          "end": 15.51,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "authentication",
+          "start": 15.54,
+          "end": 16.45,
+          "score": 0.72,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "service",
+          "start": 16.48,
+          "end": 16.92,
+          "score": 0.94,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "its",
+          "start": 16.95,
+          "end": 17.12,
+          "score": 0.87,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "been",
+          "start": 17.15,
+          "end": 17.38,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "really",
+          "start": 17.41,
+          "end": 17.72,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "flaky",
+          "start": 17.75,
+          "end": 18.12,
+          "score": 0.89,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "in",
+          "start": 18.15,
+          "end": 18.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "staging",
+          "start": 18.31,
+          "end": 18.92,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 19.2,
+      "end": 22.85,
+      "text": " How long has that been an issue?",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "how",
+          "start": 19.2,
+          "end": 19.42,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "long",
+          "start": 19.45,
+          "end": 19.72,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "has",
+          "start": 19.75,
+          "end": 19.95,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "that",
+          "start": 19.98,
+          "end": 20.18,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "been",
+          "start": 20.21,
+          "end": 20.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "an",
+          "start": 20.48,
+          "end": 20.62,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "issue",
+          "start": 20.65,
+          "end": 22.85,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 23.1,
+      "end": 28.74,
+      "text": " About two weeks. Since we updated the JWT library, the old tokens aren't being invalidated properly.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "uh",
+          "start": 23.1,
+          "end": 23.28,
+          "score": 0.75,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "about",
+          "start": 23.31,
+          "end": 23.58,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "two",
+          "start": 23.61,
+          "end": 23.82,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "weeks",
+          "start": 23.85,
+          "end": 24.18,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "since",
+          "start": 24.21,
+          "end": 24.52,
+          "score": 0.96,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "we",
+          "start": 24.55,
+          "end": 24.68,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "updated",
+          "start": 24.71,
+          "end": 25.12,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 25.15,
+          "end": 25.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 25.28,
+          "end": 25.42,
+          "score": 0.61,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "JWT",
+          "start": 25.45,
+          "end": 25.88,
+          "score": 0.68,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "library",
+          "start": 25.91,
+          "end": 26.42,
+          "score": 0.93,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 26.45,
+          "end": 26.58,
+          "score": 0.55,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 26.58,
+          "end": 26.72,
+          "score": 0.52,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "old",
+          "start": 26.75,
+          "end": 26.95,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "tokens",
+          "start": 26.98,
+          "end": 27.38,
+          "score": 0.94,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "arent",
+          "start": 27.41,
+          "end": 27.72,
+          "score": 0.86,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "being",
+          "start": 27.75,
+          "end": 27.98,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "invalidated",
+          "start": 28.01,
+          "end": 28.52,
+          "score": 0.71,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "properly",
+          "start": 28.55,
+          "end": 28.74,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 28.9,
+      "end": 34.55,
+      "text": " Okay, so that's a security concern, not just a bug. We need to prioritize that.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "okay",
+          "start": 28.9,
+          "end": 29.18,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "so",
+          "start": 29.21,
+          "end": 29.38,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "thats",
+          "start": 29.41,
+          "end": 29.72,
+          "score": 0.87,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "a",
+          "start": 29.75,
+          "end": 29.85,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "security",
+          "start": 29.88,
+          "end": 30.35,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "concern",
+          "start": 30.38,
+          "end": 30.82,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "not",
+          "start": 30.85,
+          "end": 31.02,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "just",
+          "start": 31.05,
+          "end": 31.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "a",
+          "start": 31.31,
+          "end": 31.41,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "bug",
+          "start": 31.44,
+          "end": 31.72,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "we",
+          "start": 31.75,
+          "end": 31.88,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "need",
+          "start": 31.91,
+          "end": 32.15,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 32.18,
+          "end": 32.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "prioritize",
+          "start": 32.31,
+          "end": 32.95,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "that",
+          "start": 32.98,
+          "end": 34.55,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 35.05,
+      "end": 40.18,
+      "text": " Agreed, and I can have a fix ready by Thursday if we can get a code review slot.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "agreed",
+          "start": 35.05,
+          "end": 35.48,
+          "score": 0.94,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "and",
+          "start": 35.51,
+          "end": 35.65,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "I",
+          "start": 35.68,
+          "end": 35.78,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "can",
+          "start": 35.81,
+          "end": 35.98,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "have",
+          "start": 36.01,
+          "end": 36.22,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "a",
+          "start": 36.25,
+          "end": 36.35,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "fix",
+          "start": 36.38,
+          "end": 36.65,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "ready",
+          "start": 36.68,
+          "end": 36.98,
+          "score": 0.96,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "by",
+          "start": 37.01,
+          "end": 37.18,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "um",
+          "start": 37.22,
+          "end": 37.42,
+          "score": 0.79,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "by",
+          "start": 37.48,
+          "end": 37.65,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "thursday",
+          "start": 37.68,
+          "end": 38.12,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "if",
+          "start": 38.15,
+          "end": 38.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "we",
+          "start": 38.31,
+          "end": 38.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "can",
+          "start": 38.48,
+          "end": 38.65,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "get",
+          "start": 38.68,
+          "end": 38.82,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "a",
+          "start": 38.85,
+          "end": 38.95,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "code",
+          "start": 38.98,
+          "end": 39.28,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "review",
+          "start": 39.31,
+          "end": 39.68,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "slot",
+          "start": 39.71,
+          "end": 40.18,
+          "score": 0.93,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 40.85,
+      "end": 44.22,
+      "text": " I can do the review Wednesday afternoon.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "I",
+          "start": 40.85,
+          "end": 40.95,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "can",
+          "start": 40.98,
+          "end": 41.15,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "do",
+          "start": 41.18,
+          "end": 41.35,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 41.38,
+          "end": 41.51,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "review",
+          "start": 41.54,
+          "end": 41.95,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "wednesday",
+          "start": 41.98,
+          "end": 42.52,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "afternoon",
+          "start": 42.55,
+          "end": 44.22,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 44.8,
+      "end": 50.35,
+      "text": " Great. Now let's talk about the new dashboard feature. The designs look really good, by the way.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "great",
+          "start": 44.8,
+          "end": 45.12,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "now",
+          "start": 45.15,
+          "end": 45.35,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "lets",
+          "start": 45.38,
+          "end": 45.62,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "talk",
+          "start": 45.65,
+          "end": 45.92,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "about",
+          "start": 45.95,
+          "end": 46.22,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 46.25,
+          "end": 46.38,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "new",
+          "start": 46.41,
+          "end": 46.62,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "dashboard",
+          "start": 46.65,
+          "end": 47.18,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "feature",
+          "start": 47.21,
+          "end": 47.65,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 47.68,
+          "end": 47.82,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "designs",
+          "start": 47.85,
+          "end": 48.28,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "look",
+          "start": 48.31,
+          "end": 48.58,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "really",
+          "start": 48.61,
+          "end": 48.92,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "good",
+          "start": 48.95,
+          "end": 49.22,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "by",
+          "start": 49.25,
+          "end": 49.42,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 49.45,
+          "end": 49.58,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "way",
+          "start": 49.61,
+          "end": 50.35,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 51.1,
+      "end": 58.72,
+      "text": " Thanks. We went through three iterations on the color palette to make sure it meets accessibility contrast ratios.",
+      "speaker": "SPEAKER_02",
+      "words": [
+        {
+          "word": "thanks",
+          "start": 51.1,
+          "end": 51.45,
+          "score": 0.96,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "we",
+          "start": 51.48,
+          "end": 51.62,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "went",
+          "start": 51.65,
+          "end": 51.88,
+          "score": 0.97,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "through",
+          "start": 51.91,
+          "end": 52.18,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "like",
+          "start": 52.21,
+          "end": 52.42,
+          "score": 0.89,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "three",
+          "start": 52.45,
+          "end": 52.72,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "iterations",
+          "start": 52.75,
+          "end": 53.32,
+          "score": 0.94,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "on",
+          "start": 53.35,
+          "end": 53.52,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "the",
+          "start": 53.55,
+          "end": 53.68,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "color",
+          "start": 53.71,
+          "end": 54.02,
+          "score": 0.97,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "palette",
+          "start": 54.05,
+          "end": 54.52,
+          "score": 0.91,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "uh",
+          "start": 54.55,
+          "end": 54.72,
+          "score": 0.77,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "to",
+          "start": 54.75,
+          "end": 54.88,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "make",
+          "start": 54.91,
+          "end": 55.12,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "sure",
+          "start": 55.15,
+          "end": 55.42,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "it",
+          "start": 55.45,
+          "end": 55.58,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "meets",
+          "start": 55.61,
+          "end": 55.92,
+          "score": 0.96,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "accessibility",
+          "start": 55.95,
+          "end": 56.82,
+          "score": 0.73,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "contrast",
+          "start": 56.85,
+          "end": 57.38,
+          "score": 0.88,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "ratios",
+          "start": 57.41,
+          "end": 58.72,
+          "score": 0.85,
+          "speaker": "SPEAKER_02"
+        }
+      ]
+    },
+    {
+      "start": 59.05,
+      "end": 62.88,
+      "text": " That's really important, especially for our enterprise customers.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "thats",
+          "start": 59.05,
+          "end": 59.32,
+          "score": 0.88,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "really",
+          "start": 59.35,
+          "end": 59.65,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "important",
+          "start": 59.68,
+          "end": 60.18,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "especially",
+          "start": 60.21,
+          "end": 60.72,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "for",
+          "start": 60.75,
+          "end": 60.92,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "our",
+          "start": 60.95,
+          "end": 61.12,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "enterprise",
+          "start": 61.15,
+          "end": 61.72,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "customers",
+          "start": 61.75,
+          "end": 62.88,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 63.2,
+      "end": 70.45,
+      "text": " Yeah, and we also added hover states and empty-state illustrations. The mobile-responsive version still needs work, though.",
+      "speaker": "SPEAKER_02",
+      "words": [
+        {
+          "word": "yeah",
+          "start": 63.2,
+          "end": 63.45,
+          "score": 0.93,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "and",
+          "start": 63.48,
+          "end": 63.62,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "we",
+          "start": 63.65,
+          "end": 63.78,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "also",
+          "start": 63.81,
+          "end": 64.08,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "added",
+          "start": 64.11,
+          "end": 64.45,
+          "score": 0.97,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "hover",
+          "start": 64.48,
+          "end": 64.82,
+          "score": 0.92,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "states",
+          "start": 64.85,
+          "end": 65.22,
+          "score": 0.95,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "and",
+          "start": 65.25,
+          "end": 65.42,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "empty",
+          "start": 65.45,
+          "end": 65.78,
+          "score": 0.96,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "state",
+          "start": 65.81,
+          "end": 66.12,
+          "score": 0.95,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "illustrations",
+          "start": 66.15,
+          "end": 67.05,
+          "score": 0.83,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "the",
+          "start": 67.08,
+          "end": 67.22,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "mobile",
+          "start": 67.25,
+          "end": 67.62,
+          "score": 0.96,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "responsive",
+          "start": 67.65,
+          "end": 68.22,
+          "score": 0.9,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "version",
+          "start": 68.25,
+          "end": 68.68,
+          "score": 0.95,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "still",
+          "start": 68.71,
+          "end": 68.98,
+          "score": 0.97,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "needs",
+          "start": 69.01,
+          "end": 69.28,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "work",
+          "start": 69.31,
+          "end": 69.62,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "though",
+          "start": 69.65,
+          "end": 70.45,
+          "score": 0.95,
+          "speaker": "SPEAKER_02"
+        }
+      ]
+    },
+    {
+      "start": 70.9,
+      "end": 76.35,
+      "text": " How much time do you think that needs?",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "how",
+          "start": 70.9,
+          "end": 71.12,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "much",
+          "start": 71.15,
+          "end": 71.42,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "time",
+          "start": 71.45,
+          "end": 71.72,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "do",
+          "start": 71.75,
+          "end": 71.92,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "you",
+          "start": 71.95,
+          "end": 72.12,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "think",
+          "start": 72.15,
+          "end": 72.42,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "that",
+          "start": 72.45,
+          "end": 72.68,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "needs",
+          "start": 72.71,
+          "end": 76.35,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 76.8,
+      "end": 82.45,
+      "text": " Probably two to three days, assuming the breakpoints don't shift too much when engineering implements it.",
+      "speaker": "SPEAKER_02",
+      "words": [
+        {
+          "word": "probably",
+          "start": 76.8,
+          "end": 77.22,
+          "score": 0.95,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "two",
+          "start": 77.25,
+          "end": 77.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "to",
+          "start": 77.48,
+          "end": 77.62,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "three",
+          "start": 77.65,
+          "end": 77.92,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "days",
+          "start": 77.95,
+          "end": 78.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "assuming",
+          "start": 78.31,
+          "end": 78.82,
+          "score": 0.94,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "the",
+          "start": 78.85,
+          "end": 78.98,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "breakpoints",
+          "start": 79.01,
+          "end": 79.65,
+          "score": 0.82,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "dont",
+          "start": 79.68,
+          "end": 79.92,
+          "score": 0.88,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "shift",
+          "start": 79.95,
+          "end": 80.25,
+          "score": 0.91,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "too",
+          "start": 80.28,
+          "end": 80.45,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "much",
+          "start": 80.48,
+          "end": 80.72,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "when",
+          "start": 80.75,
+          "end": 80.98,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "engineering",
+          "start": 81.01,
+          "end": 81.62,
+          "score": 0.94,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "implements",
+          "start": 81.65,
+          "end": 82.18,
+          "score": 0.92,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "it",
+          "start": 82.21,
+          "end": 82.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        }
+      ]
+    },
+    {
+      "start": 83.05,
+      "end": 87.88,
+      "text": " Let's plan for that. We can't slip the dashboard past October fifteenth.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "lets",
+          "start": 83.05,
+          "end": 83.28,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "plan",
+          "start": 83.31,
+          "end": 83.58,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "for",
+          "start": 83.61,
+          "end": 83.78,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "that",
+          "start": 83.81,
+          "end": 84.05,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "we",
+          "start": 84.08,
+          "end": 84.22,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "cant",
+          "start": 84.25,
+          "end": 84.52,
+          "score": 0.87,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "slip",
+          "start": 84.55,
+          "end": 84.82,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 84.85,
+          "end": 84.98,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "dashboard",
+          "start": 85.01,
+          "end": 85.55,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "past",
+          "start": 85.58,
+          "end": 85.88,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "october",
+          "start": 85.91,
+          "end": 86.42,
+          "score": 0.93,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "fifteenth",
+          "start": 86.45,
+          "end": 87.88,
+          "score": 0.91,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 88.2,
+      "end": 92.75,
+      "text": " Understood. I'll have the mobile specs finalized by the end of the week.",
+      "speaker": "SPEAKER_02",
+      "words": [
+        {
+          "word": "understood",
+          "start": 88.2,
+          "end": 88.82,
+          "score": 0.94,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "ill",
+          "start": 88.85,
+          "end": 89.05,
+          "score": 0.83,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "have",
+          "start": 89.08,
+          "end": 89.28,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "the",
+          "start": 89.31,
+          "end": 89.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "mobile",
+          "start": 89.48,
+          "end": 89.85,
+          "score": 0.96,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "specs",
+          "start": 89.88,
+          "end": 90.22,
+          "score": 0.92,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "finalized",
+          "start": 90.25,
+          "end": 90.82,
+          "score": 0.94,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "by",
+          "start": 90.85,
+          "end": 91.02,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "end",
+          "start": 91.05,
+          "end": 91.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "of",
+          "start": 91.31,
+          "end": 91.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "week",
+          "start": 91.48,
+          "end": 92.75,
+          "score": 0.98,
+          "speaker": "SPEAKER_02"
+        }
+      ]
+    },
+    {
+      "start": 93.3,
+      "end": 99.55,
+      "text": " One more thing: the analytics integration \u2014 do we have the event-tracking spec from Product?",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "one",
+          "start": 93.3,
+          "end": 93.52,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "more",
+          "start": 93.55,
+          "end": 93.78,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "thing",
+          "start": 93.81,
+          "end": 94.12,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 94.15,
+          "end": 94.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "analytics",
+          "start": 94.31,
+          "end": 94.95,
+          "score": 0.91,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "integration",
+          "start": 94.98,
+          "end": 95.62,
+          "score": 0.9,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "do",
+          "start": 95.65,
+          "end": 95.82,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "we",
+          "start": 95.85,
+          "end": 95.98,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "have",
+          "start": 96.01,
+          "end": 96.22,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 96.25,
+          "end": 96.38,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "event",
+          "start": 96.41,
+          "end": 96.75,
+          "score": 0.96,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "tracking",
+          "start": 96.78,
+          "end": 97.22,
+          "score": 0.94,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "spec",
+          "start": 97.25,
+          "end": 97.58,
+          "score": 0.88,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "from",
+          "start": 97.61,
+          "end": 97.82,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "product",
+          "start": 97.85,
+          "end": 99.55,
+          "score": 0.94,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 100.1,
+      "end": 106.45,
+      "text": " Not yet. I need to finalize it this week. It's 80 percent done; I just need to add the conversion funnel events.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "not",
+          "start": 100.1,
+          "end": 100.32,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "yet",
+          "start": 100.35,
+          "end": 100.62,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "I",
+          "start": 100.65,
+          "end": 100.75,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "I",
+          "start": 100.75,
+          "end": 100.88,
+          "score": 0.71,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "need",
+          "start": 100.91,
+          "end": 101.15,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 101.18,
+          "end": 101.32,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "finalize",
+          "start": 101.35,
+          "end": 101.85,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "it",
+          "start": 101.88,
+          "end": 102.02,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "this",
+          "start": 102.05,
+          "end": 102.28,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "week",
+          "start": 102.31,
+          "end": 102.62,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "its",
+          "start": 102.65,
+          "end": 102.88,
+          "score": 0.87,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "like",
+          "start": 102.91,
+          "end": 103.12,
+          "score": 0.89,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "80",
+          "start": 103.15,
+          "end": 103.42,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "percent",
+          "start": 103.45,
+          "end": 103.82,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "done",
+          "start": 103.85,
+          "end": 104.15,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "I",
+          "start": 104.18,
+          "end": 104.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "just",
+          "start": 104.31,
+          "end": 104.55,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "need",
+          "start": 104.58,
+          "end": 104.82,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 104.85,
+          "end": 104.98,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "add",
+          "start": 105.01,
+          "end": 105.22,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "the",
+          "start": 105.25,
+          "end": 105.38,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "conversion",
+          "start": 105.41,
+          "end": 105.98,
+          "score": 0.92,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "funnel",
+          "start": 106.01,
+          "end": 106.38,
+          "score": 0.89,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "events",
+          "start": 106.41,
+          "end": 106.45,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 107.05,
+      "end": 111.88,
+      "text": " Can you share a draft version today so I can at least start on the implementation scaffolding?",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "can",
+          "start": 107.05,
+          "end": 107.25,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "you",
+          "start": 107.28,
+          "end": 107.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "share",
+          "start": 107.48,
+          "end": 107.78,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "a",
+          "start": 107.81,
+          "end": 107.92,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "draft",
+          "start": 107.95,
+          "end": 108.28,
+          "score": 0.96,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "version",
+          "start": 108.31,
+          "end": 108.72,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "today",
+          "start": 108.75,
+          "end": 109.08,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "so",
+          "start": 109.11,
+          "end": 109.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "I",
+          "start": 109.31,
+          "end": 109.42,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "can",
+          "start": 109.45,
+          "end": 109.62,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "at",
+          "start": 109.65,
+          "end": 109.78,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "least",
+          "start": 109.81,
+          "end": 110.12,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "start",
+          "start": 110.15,
+          "end": 110.45,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "on",
+          "start": 110.48,
+          "end": 110.62,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 110.65,
+          "end": 110.78,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "implementation",
+          "start": 110.81,
+          "end": 111.52,
+          "score": 0.88,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "scaffolding",
+          "start": 111.55,
+          "end": 111.88,
+          "score": 0.84,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 112.3,
+      "end": 115.72,
+      "text": " Yeah, absolutely. I will send it over right after this call.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "yeah",
+          "start": 112.3,
+          "end": 112.55,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "absolutely",
+          "start": 112.58,
+          "end": 113.12,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "I",
+          "start": 113.15,
+          "end": 113.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "will",
+          "start": 113.31,
+          "end": 113.52,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "send",
+          "start": 113.55,
+          "end": 113.82,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "it",
+          "start": 113.85,
+          "end": 113.98,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "over",
+          "start": 114.01,
+          "end": 114.32,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "right",
+          "start": 114.35,
+          "end": 114.62,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "after",
+          "start": 114.65,
+          "end": 114.95,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "this",
+          "start": 114.98,
+          "end": 115.22,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "call",
+          "start": 115.25,
+          "end": 115.72,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 116.2,
+      "end": 118.55,
+      "text": " Perfect.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "perfect",
+          "start": 116.2,
+          "end": 118.55,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 119.1,
+      "end": 128.85,
+      "text": " Okay, so to summarize: Auth service fix is top priority for this week. Dashboard Mobile is on track for October fifteenth, and the analytics spec goes out today.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "okay",
+          "start": 119.1,
+          "end": 119.38,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "so",
+          "start": 119.41,
+          "end": 119.58,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 119.61,
+          "end": 119.75,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "summarize",
+          "start": 119.78,
+          "end": 120.32,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "auth",
+          "start": 120.35,
+          "end": 120.65,
+          "score": 0.76,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "service",
+          "start": 120.68,
+          "end": 121.08,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "fix",
+          "start": 121.11,
+          "end": 121.38,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 121.41,
+          "end": 121.55,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "top",
+          "start": 121.58,
+          "end": 121.82,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "priority",
+          "start": 121.85,
+          "end": 122.38,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "for",
+          "start": 122.41,
+          "end": 122.58,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "this",
+          "start": 122.61,
+          "end": 122.82,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "week",
+          "start": 122.85,
+          "end": 123.15,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "dashboard",
+          "start": 123.18,
+          "end": 123.72,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "mobile",
+          "start": 123.75,
+          "end": 124.12,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 124.15,
+          "end": 124.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "on",
+          "start": 124.31,
+          "end": 124.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "track",
+          "start": 124.48,
+          "end": 124.78,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "for",
+          "start": 124.81,
+          "end": 124.98,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "october",
+          "start": 125.01,
+          "end": 125.52,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "fifteenth",
+          "start": 125.55,
+          "end": 126.12,
+          "score": 0.91,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 126.15,
+          "end": 126.32,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "analytics",
+          "start": 126.35,
+          "end": 126.98,
+          "score": 0.92,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "spec",
+          "start": 127.01,
+          "end": 127.35,
+          "score": 0.89,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "goes",
+          "start": 127.38,
+          "end": 127.65,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "out",
+          "start": 127.68,
+          "end": 127.88,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "today",
+          "start": 127.91,
+          "end": 128.85,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 129.2,
+      "end": 130.85,
+      "text": " Sounds good.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "sounds",
+          "start": 129.2,
+          "end": 129.62,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "good",
+          "start": 129.65,
+          "end": 130.85,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 131.05,
+      "end": 132.45,
+      "text": " Agreed.",
+      "speaker": "SPEAKER_02",
+      "words": [
+        {
+          "word": "agreed",
+          "start": 131.05,
+          "end": 132.45,
+          "score": 0.95,
+          "speaker": "SPEAKER_02"
+        }
+      ]
+    },
+    {
+      "start": 133.1,
+      "end": 139.55,
+      "text": " Alright, let's wrap up. Any other blockers before we close?",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "alright",
+          "start": 133.1,
+          "end": 133.52,
+          "score": 0.93,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "lets",
+          "start": 133.55,
+          "end": 133.78,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "wrap",
+          "start": 133.81,
+          "end": 134.08,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "up",
+          "start": 134.11,
+          "end": 134.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "any",
+          "start": 134.31,
+          "end": 134.55,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "other",
+          "start": 134.58,
+          "end": 134.85,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "blockers",
+          "start": 134.88,
+          "end": 135.38,
+          "score": 0.94,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "before",
+          "start": 135.41,
+          "end": 135.75,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "we",
+          "start": 135.78,
+          "end": 135.92,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "close",
+          "start": 135.95,
+          "end": 139.55,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 140.05,
+      "end": 147.38,
+      "text": " Not a blocker, but I wanted to flag that we might need to upgrade our Node version for the new chart library. It requires Node 18 or above.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "not",
+          "start": 140.05,
+          "end": 140.25,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "a",
+          "start": 140.28,
+          "end": 140.38,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "blocker",
+          "start": 140.41,
+          "end": 140.85,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "but",
+          "start": 140.88,
+          "end": 141.05,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "I",
+          "start": 141.08,
+          "end": 141.18,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "wanted",
+          "start": 141.21,
+          "end": 141.52,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "to",
+          "start": 141.55,
+          "end": 141.68,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "flag",
+          "start": 141.71,
+          "end": 141.98,
+          "score": 0.96,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "that",
+          "start": 142.01,
+          "end": 142.22,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "we",
+          "start": 142.25,
+          "end": 142.38,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "might",
+          "start": 142.41,
+          "end": 142.65,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "need",
+          "start": 142.68,
+          "end": 142.92,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "to",
+          "start": 142.95,
+          "end": 143.08,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "upgrade",
+          "start": 143.11,
+          "end": 143.55,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "our",
+          "start": 143.58,
+          "end": 143.75,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "node",
+          "start": 143.78,
+          "end": 144.02,
+          "score": 0.91,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "version",
+          "start": 144.05,
+          "end": 144.52,
+          "score": 0.94,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "for",
+          "start": 144.55,
+          "end": 144.72,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "the",
+          "start": 144.75,
+          "end": 144.88,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "new",
+          "start": 144.91,
+          "end": 145.12,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "chart",
+          "start": 145.15,
+          "end": 145.45,
+          "score": 0.94,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "library",
+          "start": 145.48,
+          "end": 145.95,
+          "score": 0.93,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "it",
+          "start": 145.98,
+          "end": 146.12,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "requires",
+          "start": 146.15,
+          "end": 146.62,
+          "score": 0.93,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "node",
+          "start": 146.65,
+          "end": 146.88,
+          "score": 0.9,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "18",
+          "start": 146.91,
+          "end": 147.15,
+          "score": 0.92,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "or",
+          "start": 147.18,
+          "end": 147.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "above",
+          "start": 147.31,
+          "end": 147.38,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 147.9,
+      "end": 153.45,
+      "text": " What are we on currently?",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "what",
+          "start": 147.9,
+          "end": 148.12,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "are",
+          "start": 148.15,
+          "end": 148.32,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "we",
+          "start": 148.35,
+          "end": 148.48,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "on",
+          "start": 148.51,
+          "end": 148.65,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "currently",
+          "start": 148.68,
+          "end": 153.45,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 153.8,
+      "end": 158.25,
+      "text": " Node 16, so it'll need to go through DevOps for approval before we can upgrade.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "node",
+          "start": 153.8,
+          "end": 154.05,
+          "score": 0.91,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "16",
+          "start": 154.08,
+          "end": 154.35,
+          "score": 0.89,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "so",
+          "start": 154.38,
+          "end": 154.55,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "itll",
+          "start": 154.58,
+          "end": 154.82,
+          "score": 0.78,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "need",
+          "start": 154.85,
+          "end": 155.08,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "to",
+          "start": 155.11,
+          "end": 155.22,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "go",
+          "start": 155.25,
+          "end": 155.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "through",
+          "start": 155.48,
+          "end": 155.78,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "devops",
+          "start": 155.81,
+          "end": 156.28,
+          "score": 0.83,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "for",
+          "start": 156.31,
+          "end": 156.48,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "approval",
+          "start": 156.51,
+          "end": 157.02,
+          "score": 0.94,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "before",
+          "start": 157.05,
+          "end": 157.38,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "we",
+          "start": 157.41,
+          "end": 157.55,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "can",
+          "start": 157.58,
+          "end": 157.75,
+          "score": 0.98,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "upgrade",
+          "start": 157.78,
+          "end": 158.25,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 158.8,
+      "end": 164.35,
+      "text": " I'll raise a ticket with DevOps today and loop you in.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "ill",
+          "start": 158.8,
+          "end": 159.02,
+          "score": 0.82,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "raise",
+          "start": 159.05,
+          "end": 159.35,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "a",
+          "start": 159.38,
+          "end": 159.48,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "ticket",
+          "start": 159.51,
+          "end": 159.88,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "with",
+          "start": 159.91,
+          "end": 160.12,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "devops",
+          "start": 160.15,
+          "end": 160.65,
+          "score": 0.84,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "today",
+          "start": 160.68,
+          "end": 161.08,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "and",
+          "start": 161.11,
+          "end": 161.28,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "loop",
+          "start": 161.31,
+          "end": 161.62,
+          "score": 0.95,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 161.65,
+          "end": 161.82,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "in",
+          "start": 161.85,
+          "end": 164.35,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 164.9,
+      "end": 166.55,
+      "text": " Thanks, appreciate it.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "thanks",
+          "start": 164.9,
+          "end": 165.25,
+          "score": 0.96,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "appreciate",
+          "start": 165.28,
+          "end": 165.82,
+          "score": 0.95,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "word": "it",
+          "start": 165.85,
+          "end": 166.55,
+          "score": 0.99,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 167.1,
+      "end": 174.85,
+      "text": " Alright, that is everything. Talk to you all next week. Have a good one, everyone.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "word": "alright",
+          "start": 167.1,
+          "end": 167.52,
+          "score": 0.93,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "that",
+          "start": 167.55,
+          "end": 167.78,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "is",
+          "start": 167.81,
+          "end": 167.98,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "everything",
+          "start": 168.01,
+          "end": 168.55,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "talk",
+          "start": 168.58,
+          "end": 168.88,
+          "score": 0.96,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "to",
+          "start": 168.91,
+          "end": 169.05,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "you",
+          "start": 169.08,
+          "end": 169.22,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "all",
+          "start": 169.25,
+          "end": 169.45,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "next",
+          "start": 169.48,
+          "end": 169.75,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "week",
+          "start": 169.78,
+          "end": 170.08,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "have",
+          "start": 170.11,
+          "end": 170.32,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "a",
+          "start": 170.35,
+          "end": 170.45,
+          "score": 0.99,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "good",
+          "start": 170.48,
+          "end": 170.72,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "one",
+          "start": 170.75,
+          "end": 170.98,
+          "score": 0.98,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "word": "everyone",
+          "start": 171.01,
+          "end": 174.85,
+          "score": 0.97,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    {
+      "start": 175.2,
+      "end": 176.55,
+      "text": " Bye.",
+      "speaker": "SPEAKER_01",
+      "words": [
+        {
+          "word": "bye",
+          "start": 175.2,
+          "end": 176.55,
+          "score": 0.97,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    },
+    {
+      "start": 176.8,
+      "end": 178.45,
+      "text": " Bye, everyone.",
+      "speaker": "SPEAKER_02",
+      "words": [
+        {
+          "word": "bye",
+          "start": 176.8,
+          "end": 177.12,
+          "score": 0.96,
+          "speaker": "SPEAKER_02"
+        },
+        {
+          "word": "everyone",
+          "start": 177.15,
+          "end": 178.45,
+          "score": 0.95,
+          "speaker": "SPEAKER_02"
+        }
+      ]
+    }
+  ],
+  "meeting_metadata": {
+    "title": "Q4 Planning Sync",
+    "date": "2024-10-07",
+    "participants_hint": [
+      "Product Manager",
+      "Engineer",
+      "Designer"
+    ],
+    "known_speakers": {}
+  }
+}

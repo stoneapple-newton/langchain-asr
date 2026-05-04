@@ -177,7 +177,7 @@ ALL_TOOLS = [
 
 def build_agent():
     return create_agent(
-        model=create_chat_model(temperature=0, max_tokens=1024),
+        model=create_chat_model(temperature=0, max_tokens=4096),
         tools=ALL_TOOLS,
         system_prompt=(
             "You are a diarization correction specialist.\n\n"

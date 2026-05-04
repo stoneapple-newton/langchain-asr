@@ -39,7 +39,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 llm = create_chat_model(
     temperature=0,
-    max_tokens=512,
+    max_tokens=4096,
 )
 
 embeddings = create_embeddings()

@@ -19,6 +19,11 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from config import create_chat_model
+try:
+    from config import structured_output_chain
+except ImportError:
+    def structured_output_chain(llm, prompt, schema):
+        return prompt | llm | JsonOutputParser()
 from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,7 +45,7 @@ class EditedChunk(BaseModel):
     edited_lines: list[str] = Field(description="Edited transcript lines in the same order as input")
 
 
-parser = JsonOutputParser(pydantic_object=EditedChunk)
+parser = JsonOutputParser()
 prompt = ChatPromptTemplate.from_messages([
     (
         "system",
@@ -58,10 +63,10 @@ prompt = ChatPromptTemplate.from_messages([
 llm = create_chat_model(
     "asr_v2",
     temperature=0,
-    max_tokens=768,
+    max_tokens=4096,
 )
 
-chain = prompt | llm | parser
+chain = structured_output_chain(llm, prompt, EditedChunk)
 
 sample_path = ROOT / "sample_data" / "meeting_sample.json"
 base_doc = improve_readability(repair_diarization(load_transcript(sample_path)))

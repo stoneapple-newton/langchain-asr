@@ -32,7 +32,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from deep_research.diarization_improvements.shared.diarization_utils import (
     apply_head_attached_fix,
     apply_tail_attached_fix,
@@ -108,7 +108,7 @@ def detect_node(state: CorrectionState) -> dict:
 # Node: classify (LLM validation)
 # ---------------------------------------------------------------------------
 
-_classify_parser = JsonOutputParser(pydantic_object=DefectClassification)
+_classify_parser = JsonOutputParser()
 _classify_prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -130,8 +130,8 @@ _classify_prompt = ChatPromptTemplate.from_messages(
 
 def classify_node(state: CorrectionState) -> dict:
     """Optional LLM validation of the heuristic defect classification."""
-    llm = create_chat_model(temperature=0, max_tokens=256)
-    chain = _classify_prompt | llm | _classify_parser
+    llm = create_chat_model(temperature=0, max_tokens=4096)
+    chain = structured_output_chain(llm, _classify_prompt, DefectClassification)
 
     segments = state["transcript"].get("segments", [])
     raw = chain.invoke(
@@ -194,7 +194,7 @@ class RunOnSplit(BaseModel):
     new_speaker: str = Field(default="")
 
 
-_run_on_parser = JsonOutputParser(pydantic_object=RunOnSplit)
+_run_on_parser = JsonOutputParser()
 _run_on_prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -232,8 +232,8 @@ def correct_run_on_node(state: CorrectionState) -> dict:
     target = segments[target_idx]
     context_segs = segments[max(0, target_idx - 2): target_idx] + segments[target_idx + 1: target_idx + 3]
 
-    llm = create_chat_model(temperature=0, max_tokens=1024)
-    chain = _run_on_prompt | llm | _run_on_parser
+    llm = create_chat_model(temperature=0, max_tokens=4096)
+    chain = structured_output_chain(llm, _run_on_prompt, RunOnSplit)
 
     raw = chain.invoke(
         {

@@ -1,0 +1,3331 @@
+{
+  "transcript_path": "C:\\Users\\Newto\\Documents\\project\\test-langchain\\tests\\_tmp_asr_medical_verification\\sample_transcript.json",
+  "applied_count": 14,
+  "corrections": [
+    {
+      "segment_id": "4",
+      "segment_idx": 4,
+      "original_text": "He's already on atorvastaten and metphormin for the diabetes.",
+      "corrected_text": "He's already on atorvastatin and metformin for the diabetes.",
+      "confidence": 0.93,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "atrial fibrillation",
+        "atorvastatin",
+        "metformin",
+        "hypertension",
+        "tachycardia"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "atorvastatin",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_atorvastatin",
+          "raw_text": "atorvastatin",
+          "canonical_en": "atorvastatin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "atorvastatina",
+            "fr": "atorvastatine",
+            "de": "atorvastatin",
+            "pt": "atorvastatina",
+            "zh": "阿托伐他汀",
+            "ja": "アトルバスタチン",
+            "ar": "اتورفاستاتين",
+            "hi": "एटोरवास्टेटिन"
+          },
+          "aliases": {
+            "en": [
+              "lipitor"
+            ]
+          },
+          "phonetic_variants": [
+            "atorvastaten"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "metformin",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "already",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_tachycardia",
+          "raw_text": "He's",
+          "canonical_en": "tachycardia",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "taquicardia",
+            "fr": "tachycardie",
+            "de": "tachykardie",
+            "pt": "taquicardia",
+            "zh": "心动过速",
+            "ja": "頻脈",
+            "ar": "تسرع القلب",
+            "hi": "टैकीकार्डिया"
+          },
+          "aliases": {
+            "en": [
+              "rapid heart rate"
+            ]
+          },
+          "phonetic_variants": [
+            "tacky cardia"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: low_confidence",
+      "accepted": true
+    },
+    {
+      "segment_id": "6",
+      "segment_idx": 6,
+      "original_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "corrected_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "encephalopathy",
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "neurology_encephalopathy",
+          "raw_text": "encephalo pathy",
+          "canonical_en": "encephalopathy",
+          "specialty": "neurology",
+          "category": "condition",
+          "translations": {
+            "es": "encefalopatia",
+            "fr": "encephalopathie",
+            "de": "enzephalopathie",
+            "pt": "encefalopatia",
+            "zh": "脑病",
+            "ja": "脳症",
+            "ar": "اعتلال دماغي",
+            "hi": "एन्सेफैलोपैथी"
+          },
+          "aliases": {
+            "en": [
+              "brain dysfunction"
+            ]
+          },
+          "phonetic_variants": [
+            "encephalo pathy"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "early",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: repetition",
+      "accepted": false
+    },
+    {
+      "segment_id": "6",
+      "segment_idx": 6,
+      "original_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "corrected_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "encephalopathy",
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "neurology_encephalopathy",
+          "raw_text": "encephalo pathy",
+          "canonical_en": "encephalopathy",
+          "specialty": "neurology",
+          "category": "condition",
+          "translations": {
+            "es": "encefalopatia",
+            "fr": "encephalopathie",
+            "de": "enzephalopathie",
+            "pt": "encefalopatia",
+            "zh": "脑病",
+            "ja": "脳症",
+            "ar": "اعتلال دماغي",
+            "hi": "एन्सेफैलोपैथी"
+          },
+          "aliases": {
+            "en": [
+              "brain dysfunction"
+            ]
+          },
+          "phonetic_variants": [
+            "encephalo pathy"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "early",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: repetition",
+      "accepted": false
+    },
+    {
+      "segment_id": "4",
+      "segment_idx": 4,
+      "original_text": "He's already on atorvastaten and metphormin for the diabetes.",
+      "corrected_text": "He's already on atorvastatin and metformin for the diabetes.",
+      "confidence": 0.93,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "atrial fibrillation",
+        "atorvastatin",
+        "metformin",
+        "hypertension",
+        "tachycardia"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "atorvastatin",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_atorvastatin",
+          "raw_text": "atorvastatin",
+          "canonical_en": "atorvastatin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "atorvastatina",
+            "fr": "atorvastatine",
+            "de": "atorvastatin",
+            "pt": "atorvastatina",
+            "zh": "阿托伐他汀",
+            "ja": "アトルバスタチン",
+            "ar": "اتورفاستاتين",
+            "hi": "एटोरवास्टेटिन"
+          },
+          "aliases": {
+            "en": [
+              "lipitor"
+            ]
+          },
+          "phonetic_variants": [
+            "atorvastaten"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "metformin",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "already",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_tachycardia",
+          "raw_text": "He's",
+          "canonical_en": "tachycardia",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "taquicardia",
+            "fr": "tachycardie",
+            "de": "tachykardie",
+            "pt": "taquicardia",
+            "zh": "心动过速",
+            "ja": "頻脈",
+            "ar": "تسرع القلب",
+            "hi": "टैकीकार्डिया"
+          },
+          "aliases": {
+            "en": [
+              "rapid heart rate"
+            ]
+          },
+          "phonetic_variants": [
+            "tacky cardia"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: low_confidence",
+      "accepted": true
+    },
+    {
+      "segment_id": "3",
+      "segment_idx": 3,
+      "original_text": "We should consider starting him on lissanopril for the hyper tension.",
+      "corrected_text": "We should consider starting him on lisinopril for the hypertension.",
+      "confidence": 0.94,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "hypertension",
+        "lisinopril",
+        "metformin",
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "hypertension",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "lisinopril",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "for",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "on",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: low_confidence",
+      "accepted": true
+    },
+    {
+      "segment_id": "1",
+      "segment_idx": 1,
+      "original_text": "The ECG showed signs of a trial fibrillation, which is concerning.",
+      "corrected_text": "The ECG showed signs of atrial fibrillation, which is concerning.",
+      "confidence": 0.95,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "atrial fibrillation",
+        "lisinopril"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "atrial fibrillation",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "is",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: low_confidence",
+      "accepted": true
+    },
+    {
+      "segment_id": "1",
+      "segment_idx": 1,
+      "original_text": "The ECG showed signs of a trial fibrillation, which is concerning.",
+      "corrected_text": "The ECG showed signs of atrial fibrillation, which is concerning.",
+      "confidence": 0.95,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "atrial fibrillation",
+        "lisinopril"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "atrial fibrillation",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "is",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: low_confidence",
+      "accepted": true
+    },
+    {
+      "segment_id": "3",
+      "segment_idx": 3,
+      "original_text": "We should consider starting him on lissanopril for the hyper tension.",
+      "corrected_text": "We should consider starting him on lisinopril for the hypertension.",
+      "confidence": 0.94,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "hypertension",
+        "lisinopril",
+        "metformin",
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "hypertension",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "lisinopril",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "for",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "on",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: low_confidence",
+      "accepted": true
+    },
+    {
+      "segment_id": "3",
+      "segment_idx": 3,
+      "original_text": "We should consider starting him on lissanopril for the hyper tension.",
+      "corrected_text": "We should consider starting him on lisinopril for the hypertension.",
+      "confidence": 0.94,
+      "method": "llm_text",
+      "correction_type": "error",
+      "medical_terms": [
+        "hypertension",
+        "lisinopril",
+        "metformin",
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "hypertension",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "lisinopril",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "for",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "on",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "ASR error candidate: low_confidence",
+      "accepted": true
+    },
+    {
+      "segment_id": "0",
+      "segment_idx": 0,
+      "original_text": "Good morning, let's review the patient's cardiac situation.",
+      "corrected_text": "Good morning, let's review the patient's cardiac situation.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "hypertension"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "situation.",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term hypertension",
+      "accepted": false
+    },
+    {
+      "segment_id": "0",
+      "segment_idx": 0,
+      "original_text": "Good morning, let's review the patient's cardiac situation.",
+      "corrected_text": "Good morning, let's review the patient's cardiac situation.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "hypertension"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "situation.",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term hypertension",
+      "accepted": false
+    },
+    {
+      "segment_id": "1",
+      "segment_idx": 1,
+      "original_text": "The ECG showed signs of a trial fibrillation, which is concerning.",
+      "corrected_text": "The ECG showed signs of atrial fibrillation, which is concerning.",
+      "confidence": 0.95,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "atrial fibrillation",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term atrial fibrillation",
+      "accepted": true
+    },
+    {
+      "segment_id": "1",
+      "segment_idx": 1,
+      "original_text": "The ECG showed signs of a trial fibrillation, which is concerning.",
+      "corrected_text": "The ECG showed signs of atrial fibrillation, which is concerning.",
+      "confidence": 0.95,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "lisinopril"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "is",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term lisinopril",
+      "accepted": true
+    },
+    {
+      "segment_id": "2",
+      "segment_idx": 2,
+      "original_text": "Yes, and his blood pressure has been elevated consistently.",
+      "corrected_text": "Yes, and his blood pressure has been elevated consistently.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "hypertension"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "blood pressure",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term hypertension",
+      "accepted": false
+    },
+    {
+      "segment_id": "2",
+      "segment_idx": 2,
+      "original_text": "Yes, and his blood pressure has been elevated consistently.",
+      "corrected_text": "Yes, and his blood pressure has been elevated consistently.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "hypertension"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "blood pressure",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term hypertension",
+      "accepted": false
+    },
+    {
+      "segment_id": "2",
+      "segment_idx": 2,
+      "original_text": "Yes, and his blood pressure has been elevated consistently.",
+      "corrected_text": "Yes, and his blood pressure has been elevated consistently.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "hypertension"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "blood pressure",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term hypertension",
+      "accepted": false
+    },
+    {
+      "segment_id": "3",
+      "segment_idx": 3,
+      "original_text": "We should consider starting him on lissanopril for the hyper tension.",
+      "corrected_text": "We should consider starting him on lisinopril for the hypertension.",
+      "confidence": 0.94,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "hypertension",
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "hypertension",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "on",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term hypertension",
+      "accepted": true
+    },
+    {
+      "segment_id": "3",
+      "segment_idx": 3,
+      "original_text": "We should consider starting him on lissanopril for the hyper tension.",
+      "corrected_text": "We should consider starting him on lisinopril for the hypertension.",
+      "confidence": 0.94,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "lisinopril",
+        "metformin"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "lisinopril",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "for",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term lisinopril",
+      "accepted": true
+    },
+    {
+      "segment_id": "3",
+      "segment_idx": 3,
+      "original_text": "We should consider starting him on lissanopril for the hyper tension.",
+      "corrected_text": "We should consider starting him on lisinopril for the hypertension.",
+      "confidence": 0.94,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "lisinopril",
+        "metformin"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "lisinopril",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "for",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term metformin",
+      "accepted": true
+    },
+    {
+      "segment_id": "4",
+      "segment_idx": 4,
+      "original_text": "He's already on atorvastaten and metphormin for the diabetes.",
+      "corrected_text": "He's already on atorvastatin and metformin for the diabetes.",
+      "confidence": 0.93,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "atrial fibrillation",
+        "hypertension",
+        "tachycardia"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "atorvastatin",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "already",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_tachycardia",
+          "raw_text": "He's",
+          "canonical_en": "tachycardia",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "taquicardia",
+            "fr": "tachycardie",
+            "de": "tachykardie",
+            "pt": "taquicardia",
+            "zh": "心动过速",
+            "ja": "頻脈",
+            "ar": "تسرع القلب",
+            "hi": "टैकीकार्डिया"
+          },
+          "aliases": {
+            "en": [
+              "rapid heart rate"
+            ]
+          },
+          "phonetic_variants": [
+            "tacky cardia"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term atrial fibrillation",
+      "accepted": true
+    },
+    {
+      "segment_id": "4",
+      "segment_idx": 4,
+      "original_text": "He's already on atorvastaten and metphormin for the diabetes.",
+      "corrected_text": "He's already on atorvastatin and metformin for the diabetes.",
+      "confidence": 0.93,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "atorvastatin",
+        "metformin",
+        "lisinopril"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pharmacy_atorvastatin",
+          "raw_text": "atorvastatin",
+          "canonical_en": "atorvastatin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "atorvastatina",
+            "fr": "atorvastatine",
+            "de": "atorvastatin",
+            "pt": "atorvastatina",
+            "zh": "阿托伐他汀",
+            "ja": "アトルバスタチン",
+            "ar": "اتورفاستاتين",
+            "hi": "एटोरवास्टेटिन"
+          },
+          "aliases": {
+            "en": [
+              "lipitor"
+            ]
+          },
+          "phonetic_variants": [
+            "atorvastaten"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "metformin",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "already",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term metformin",
+      "accepted": true
+    },
+    {
+      "segment_id": "5",
+      "segment_idx": 5,
+      "original_text": "The echo cardio gram from last week showed reduced ejection fraction.",
+      "corrected_text": "The echo cardio gram from last week showed reduced ejection fraction.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "echocardiogram"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_echocardiogram",
+          "raw_text": "echo cardio gram",
+          "canonical_en": "echocardiogram",
+          "specialty": "cardiology",
+          "category": "procedure",
+          "translations": {
+            "es": "ecocardiograma",
+            "fr": "echocardiogramme",
+            "de": "echokardiogramm",
+            "pt": "ecocardiograma",
+            "zh": "超声心动图",
+            "ja": "心エコー",
+            "ar": "تخطيط صدى القلب",
+            "hi": "इकोकार्डियोग्राम"
+          },
+          "aliases": {
+            "en": [
+              "echo"
+            ]
+          },
+          "phonetic_variants": [
+            "echo cardio gram"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term echocardiogram",
+      "accepted": false
+    },
+    {
+      "segment_id": "6",
+      "segment_idx": 6,
+      "original_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "corrected_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "encephalopathy"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "neurology_encephalopathy",
+          "raw_text": "encephalo pathy",
+          "canonical_en": "encephalopathy",
+          "specialty": "neurology",
+          "category": "condition",
+          "translations": {
+            "es": "encefalopatia",
+            "fr": "encephalopathie",
+            "de": "enzephalopathie",
+            "pt": "encefalopatia",
+            "zh": "脑病",
+            "ja": "脳症",
+            "ar": "اعتلال دماغي",
+            "hi": "एन्सेफैलोपैथी"
+          },
+          "aliases": {
+            "en": [
+              "brain dysfunction"
+            ]
+          },
+          "phonetic_variants": [
+            "encephalo pathy"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term encephalopathy",
+      "accepted": false
+    },
+    {
+      "segment_id": "6",
+      "segment_idx": 6,
+      "original_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "corrected_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "early",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term atrial fibrillation",
+      "accepted": false
+    },
+    {
+      "segment_id": "6",
+      "segment_idx": 6,
+      "original_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "corrected_text": "I'm also worried about the the the signs of early encephalo pathy.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "early",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term atrial fibrillation",
+      "accepted": false
+    },
+    {
+      "segment_id": "7",
+      "segment_idx": 7,
+      "original_text": "Should we order a bronco scopy for the persistent cough as well?",
+      "corrected_text": "Should we order a bronco scopy for the persistent cough as well?",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "bronchoscopy"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pulmonology_bronchoscopy",
+          "raw_text": "bronco scopy",
+          "canonical_en": "bronchoscopy",
+          "specialty": "pulmonology",
+          "category": "procedure",
+          "translations": {
+            "es": "broncoscopia",
+            "fr": "bronchoscopie",
+            "de": "bronchoskopie",
+            "pt": "broncoscopia",
+            "zh": "支气管镜检查",
+            "ja": "気管支鏡検査",
+            "ar": "تنظير القصبات",
+            "hi": "ब्रोंकोस्कोपी"
+          },
+          "aliases": {
+            "en": [
+              "bronch"
+            ]
+          },
+          "phonetic_variants": [
+            "bronco scopy"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term bronchoscopy",
+      "accepted": false
+    },
+    {
+      "segment_id": "7",
+      "segment_idx": 7,
+      "original_text": "Should we order a bronco scopy for the persistent cough as well?",
+      "corrected_text": "Should we order a bronco scopy for the persistent cough as well?",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "metformin",
+        "atorvastatin",
+        "lisinopril"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "for",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_atorvastatin",
+          "raw_text": "as",
+          "canonical_en": "atorvastatin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "atorvastatina",
+            "fr": "atorvastatine",
+            "de": "atorvastatin",
+            "pt": "atorvastatina",
+            "zh": "阿托伐他汀",
+            "ja": "アトルバスタチン",
+            "ar": "اتورفاستاتين",
+            "hi": "एटोरवास्टेटिन"
+          },
+          "aliases": {
+            "en": [
+              "lipitor"
+            ]
+          },
+          "phonetic_variants": [
+            "atorvastaten"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "a",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term metformin",
+      "accepted": false
+    },
+    {
+      "segment_id": "7",
+      "segment_idx": 7,
+      "original_text": "Should we order a bronco scopy for the persistent cough as well?",
+      "corrected_text": "Should we order a bronco scopy for the persistent cough as well?",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "metformin",
+        "atorvastatin",
+        "lisinopril"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "for",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_atorvastatin",
+          "raw_text": "as",
+          "canonical_en": "atorvastatin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "atorvastatina",
+            "fr": "atorvastatine",
+            "de": "atorvastatin",
+            "pt": "atorvastatina",
+            "zh": "阿托伐他汀",
+            "ja": "アトルバスタチン",
+            "ar": "اتورفاستاتين",
+            "hi": "एटोरवास्टेटिन"
+          },
+          "aliases": {
+            "en": [
+              "lipitor"
+            ]
+          },
+          "phonetic_variants": [
+            "atorvastaten"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "a",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term atorvastatin",
+      "accepted": false
+    },
+    {
+      "segment_id": "8",
+      "segment_idx": 8,
+      "original_text": "Yes, and let's check the creatinine levels to rule out nephropathy.",
+      "corrected_text": "Yes, and let's check the creatinine levels to rule out nephropathy.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "creatinine"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "nephrology_creatinine",
+          "raw_text": "creatinine",
+          "canonical_en": "creatinine",
+          "specialty": "nephrology",
+          "category": "lab",
+          "translations": {
+            "es": "creatinina",
+            "fr": "creatinine",
+            "de": "kreatinin",
+            "pt": "creatinina",
+            "zh": "肌酐",
+            "ja": "クレアチニン",
+            "ar": "الكرياتينين",
+            "hi": "क्रिएटिनिन"
+          },
+          "aliases": {
+            "en": [
+              "serum creatinine"
+            ]
+          },
+          "phonetic_variants": [
+            "createinine"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term creatinine",
+      "accepted": false
+    },
+    {
+      "segment_id": "8",
+      "segment_idx": 8,
+      "original_text": "Yes, and let's check the creatinine levels to rule out nephropathy.",
+      "corrected_text": "Yes, and let's check the creatinine levels to rule out nephropathy.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "hypertension"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "check",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term hypertension",
+      "accepted": false
+    },
+    {
+      "segment_id": "8",
+      "segment_idx": 8,
+      "original_text": "Yes, and let's check the creatinine levels to rule out nephropathy.",
+      "corrected_text": "Yes, and let's check the creatinine levels to rule out nephropathy.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "hypertension"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_hypertension",
+          "raw_text": "check",
+          "canonical_en": "hypertension",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "hipertension",
+            "fr": "hypertension",
+            "de": "hypertonie",
+            "pt": "hipertensao",
+            "zh": "高血压",
+            "ja": "高血圧",
+            "ar": "ارتفاع ضغط الدم",
+            "hi": "उच्च रक्तचाप"
+          },
+          "aliases": {
+            "en": [
+              "high blood pressure",
+              "htn"
+            ]
+          },
+          "phonetic_variants": [
+            "hyper tension"
+          ],
+          "codes": {
+            "icd10": "I10"
+          },
+          "icd_hint": "I10",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term hypertension",
+      "accepted": false
+    },
+    {
+      "segment_id": "9",
+      "segment_idx": 9,
+      "original_text": "The oncology team flagged possible meta stasis in the mediastinum.",
+      "corrected_text": "The oncology team flagged possible meta stasis in the mediastinum.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "metastasis"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "oncology_metastasis",
+          "raw_text": "meta stasis",
+          "canonical_en": "metastasis",
+          "specialty": "oncology",
+          "category": "condition",
+          "translations": {
+            "es": "metastasis",
+            "fr": "metastase",
+            "de": "metastase",
+            "pt": "metastase",
+            "zh": "转移",
+            "ja": "転移",
+            "ar": "نقيلة",
+            "hi": "मेटास्टेसिस"
+          },
+          "aliases": {
+            "en": [
+              "metastatic spread"
+            ]
+          },
+          "phonetic_variants": [
+            "meta stasis"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term metastasis",
+      "accepted": false
+    },
+    {
+      "segment_id": "9",
+      "segment_idx": 9,
+      "original_text": "The oncology team flagged possible meta stasis in the mediastinum.",
+      "corrected_text": "The oncology team flagged possible meta stasis in the mediastinum.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "lisinopril"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "in",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term lisinopril",
+      "accepted": false
+    },
+    {
+      "segment_id": "10",
+      "segment_idx": 10,
+      "original_text": "We'll need a biopsy and start azithromycin for the pnuemonia.",
+      "corrected_text": "We'll need a biopsy and start azithromycin for the pnuemonia.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "pneumonia",
+        "bronchoscopy"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pulmonology_pneumonia",
+          "raw_text": "pnuemonia",
+          "canonical_en": "pneumonia",
+          "specialty": "pulmonology",
+          "category": "condition",
+          "translations": {
+            "es": "neumonia",
+            "fr": "pneumonie",
+            "de": "lungenentzundung",
+            "pt": "pneumonia",
+            "zh": "肺炎",
+            "ja": "肺炎",
+            "ar": "التهاب رئوي",
+            "hi": "निमोनिया"
+          },
+          "aliases": {
+            "en": [
+              "lung infection"
+            ]
+          },
+          "phonetic_variants": [
+            "pnuemonia",
+            "new monia"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pulmonology_bronchoscopy",
+          "raw_text": "biopsy",
+          "canonical_en": "bronchoscopy",
+          "specialty": "pulmonology",
+          "category": "procedure",
+          "translations": {
+            "es": "broncoscopia",
+            "fr": "bronchoscopie",
+            "de": "bronchoskopie",
+            "pt": "broncoscopia",
+            "zh": "支气管镜检查",
+            "ja": "気管支鏡検査",
+            "ar": "تنظير القصبات",
+            "hi": "ब्रोंकोस्कोपी"
+          },
+          "aliases": {
+            "en": [
+              "bronch"
+            ]
+          },
+          "phonetic_variants": [
+            "bronco scopy"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term pneumonia",
+      "accepted": false
+    },
+    {
+      "segment_id": "10",
+      "segment_idx": 10,
+      "original_text": "We'll need a biopsy and start azithromycin for the pnuemonia.",
+      "corrected_text": "We'll need a biopsy and start azithromycin for the pnuemonia.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "biopsy",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term atrial fibrillation",
+      "accepted": false
+    },
+    {
+      "segment_id": "10",
+      "segment_idx": 10,
+      "original_text": "We'll need a biopsy and start azithromycin for the pnuemonia.",
+      "corrected_text": "We'll need a biopsy and start azithromycin for the pnuemonia.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "biopsy",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term atrial fibrillation",
+      "accepted": false
+    },
+    {
+      "segment_id": "11",
+      "segment_idx": 11,
+      "original_text": "I'll monitor for tacky cardia given his current status.",
+      "corrected_text": "I'll monitor for tacky cardia given his current status.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "tachycardia",
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_tachycardia",
+          "raw_text": "tacky cardia",
+          "canonical_en": "tachycardia",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "taquicardia",
+            "fr": "tachycardie",
+            "de": "tachykardie",
+            "pt": "taquicardia",
+            "zh": "心动过速",
+            "ja": "頻脈",
+            "ar": "تسرع القلب",
+            "hi": "टैकीकार्डिया"
+          },
+          "aliases": {
+            "en": [
+              "rapid heart rate"
+            ]
+          },
+          "phonetic_variants": [
+            "tacky cardia"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "monitor",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term tachycardia",
+      "accepted": false
+    },
+    {
+      "segment_id": "11",
+      "segment_idx": 11,
+      "original_text": "I'll monitor for tacky cardia given his current status.",
+      "corrected_text": "I'll monitor for tacky cardia given his current status.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "tachycardia",
+        "atrial fibrillation"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "cardiology_tachycardia",
+          "raw_text": "tacky cardia",
+          "canonical_en": "tachycardia",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "taquicardia",
+            "fr": "tachycardie",
+            "de": "tachykardie",
+            "pt": "taquicardia",
+            "zh": "心动过速",
+            "ja": "頻脈",
+            "ar": "تسرع القلب",
+            "hi": "टैकीकार्डिया"
+          },
+          "aliases": {
+            "en": [
+              "rapid heart rate"
+            ]
+          },
+          "phonetic_variants": [
+            "tacky cardia"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "cardiology_atrial_fibrillation",
+          "raw_text": "monitor",
+          "canonical_en": "atrial fibrillation",
+          "specialty": "cardiology",
+          "category": "condition",
+          "translations": {
+            "es": "fibrilacion auricular",
+            "fr": "fibrillation auriculaire",
+            "de": "vorhofflimmern",
+            "pt": "fibrilacao atrial",
+            "zh": "房颤",
+            "ja": "心房細動",
+            "ar": "الرجفان الاذيني",
+            "hi": "एट्रियल फिब्रिलेशन"
+          },
+          "aliases": {
+            "en": [
+              "afib",
+              "a-fib"
+            ],
+            "zh": [
+              "心房颤动"
+            ]
+          },
+          "phonetic_variants": [
+            "a trial fibrillation",
+            "atrial fib relation"
+          ],
+          "codes": {
+            "icd10": "I48"
+          },
+          "icd_hint": "I48",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term atrial fibrillation",
+      "accepted": false
+    },
+    {
+      "segment_id": "11",
+      "segment_idx": 11,
+      "original_text": "I'll monitor for tacky cardia given his current status.",
+      "corrected_text": "I'll monitor for tacky cardia given his current status.",
+      "confidence": 0.4,
+      "method": "llm_text",
+      "correction_type": "medical_term",
+      "medical_terms": [
+        "metformin",
+        "lisinopril"
+      ],
+      "linked_terms": [
+        {
+          "term_id": "pharmacy_metformin",
+          "raw_text": "tacky",
+          "canonical_en": "metformin",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "metformina",
+            "fr": "metformine",
+            "de": "metformin",
+            "pt": "metformina",
+            "zh": "二甲双胍",
+            "ja": "メトホルミン",
+            "ar": "ميتفورمين",
+            "hi": "मेटफॉर्मिन"
+          },
+          "aliases": {
+            "en": [
+              "glucophage"
+            ]
+          },
+          "phonetic_variants": [
+            "metphormin",
+            "met formin"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        },
+        {
+          "term_id": "pharmacy_lisinopril",
+          "raw_text": "I'll",
+          "canonical_en": "lisinopril",
+          "specialty": "pharmacy",
+          "category": "medication",
+          "translations": {
+            "es": "lisinopril",
+            "fr": "lisinopril",
+            "de": "lisinopril",
+            "pt": "lisinopril",
+            "zh": "赖诺普利",
+            "ja": "リシノプリル",
+            "ar": "ليزينوبريل",
+            "hi": "लिसिनोप्रिल"
+          },
+          "aliases": {
+            "en": [
+              "zestril",
+              "prinivil"
+            ]
+          },
+          "phonetic_variants": [
+            "lissanopril",
+            "lisin april"
+          ],
+          "codes": {},
+          "icd_hint": "",
+          "confidence": 1.0
+        }
+      ],
+      "issue_reason": "Matched glossary term metformin",
+      "accepted": false
+    }
+  ],
+  "linked_terms": [
+    {
+      "term_id": "cardiology_atrial_fibrillation",
+      "raw_text": "atorvastatin",
+      "canonical_en": "atrial fibrillation",
+      "specialty": "cardiology",
+      "category": "condition",
+      "translations": {
+        "es": "fibrilacion auricular",
+        "fr": "fibrillation auriculaire",
+        "de": "vorhofflimmern",
+        "pt": "fibrilacao atrial",
+        "zh": "房颤",
+        "ja": "心房細動",
+        "ar": "الرجفان الاذيني",
+        "hi": "एट्रियल फिब्रिलेशन"
+      },
+      "aliases": {
+        "en": [
+          "afib",
+          "a-fib"
+        ],
+        "zh": [
+          "心房颤动"
+        ]
+      },
+      "phonetic_variants": [
+        "a trial fibrillation",
+        "atrial fib relation"
+      ],
+      "codes": {
+        "icd10": "I48"
+      },
+      "icd_hint": "I48",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "pharmacy_atorvastatin",
+      "raw_text": "atorvastatin",
+      "canonical_en": "atorvastatin",
+      "specialty": "pharmacy",
+      "category": "medication",
+      "translations": {
+        "es": "atorvastatina",
+        "fr": "atorvastatine",
+        "de": "atorvastatin",
+        "pt": "atorvastatina",
+        "zh": "阿托伐他汀",
+        "ja": "アトルバスタチン",
+        "ar": "اتورفاستاتين",
+        "hi": "एटोरवास्टेटिन"
+      },
+      "aliases": {
+        "en": [
+          "lipitor"
+        ]
+      },
+      "phonetic_variants": [
+        "atorvastaten"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "pharmacy_metformin",
+      "raw_text": "metformin",
+      "canonical_en": "metformin",
+      "specialty": "pharmacy",
+      "category": "medication",
+      "translations": {
+        "es": "metformina",
+        "fr": "metformine",
+        "de": "metformin",
+        "pt": "metformina",
+        "zh": "二甲双胍",
+        "ja": "メトホルミン",
+        "ar": "ميتفورمين",
+        "hi": "मेटफॉर्मिन"
+      },
+      "aliases": {
+        "en": [
+          "glucophage"
+        ]
+      },
+      "phonetic_variants": [
+        "metphormin",
+        "met formin"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "cardiology_hypertension",
+      "raw_text": "already",
+      "canonical_en": "hypertension",
+      "specialty": "cardiology",
+      "category": "condition",
+      "translations": {
+        "es": "hipertension",
+        "fr": "hypertension",
+        "de": "hypertonie",
+        "pt": "hipertensao",
+        "zh": "高血压",
+        "ja": "高血圧",
+        "ar": "ارتفاع ضغط الدم",
+        "hi": "उच्च रक्तचाप"
+      },
+      "aliases": {
+        "en": [
+          "high blood pressure",
+          "htn"
+        ]
+      },
+      "phonetic_variants": [
+        "hyper tension"
+      ],
+      "codes": {
+        "icd10": "I10"
+      },
+      "icd_hint": "I10",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "cardiology_tachycardia",
+      "raw_text": "He's",
+      "canonical_en": "tachycardia",
+      "specialty": "cardiology",
+      "category": "condition",
+      "translations": {
+        "es": "taquicardia",
+        "fr": "tachycardie",
+        "de": "tachykardie",
+        "pt": "taquicardia",
+        "zh": "心动过速",
+        "ja": "頻脈",
+        "ar": "تسرع القلب",
+        "hi": "टैकीकार्डिया"
+      },
+      "aliases": {
+        "en": [
+          "rapid heart rate"
+        ]
+      },
+      "phonetic_variants": [
+        "tacky cardia"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "neurology_encephalopathy",
+      "raw_text": "encephalo pathy",
+      "canonical_en": "encephalopathy",
+      "specialty": "neurology",
+      "category": "condition",
+      "translations": {
+        "es": "encefalopatia",
+        "fr": "encephalopathie",
+        "de": "enzephalopathie",
+        "pt": "encefalopatia",
+        "zh": "脑病",
+        "ja": "脳症",
+        "ar": "اعتلال دماغي",
+        "hi": "एन्सेफैलोपैथी"
+      },
+      "aliases": {
+        "en": [
+          "brain dysfunction"
+        ]
+      },
+      "phonetic_variants": [
+        "encephalo pathy"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "pharmacy_lisinopril",
+      "raw_text": "lisinopril",
+      "canonical_en": "lisinopril",
+      "specialty": "pharmacy",
+      "category": "medication",
+      "translations": {
+        "es": "lisinopril",
+        "fr": "lisinopril",
+        "de": "lisinopril",
+        "pt": "lisinopril",
+        "zh": "赖诺普利",
+        "ja": "リシノプリル",
+        "ar": "ليزينوبريل",
+        "hi": "लिसिनोप्रिल"
+      },
+      "aliases": {
+        "en": [
+          "zestril",
+          "prinivil"
+        ]
+      },
+      "phonetic_variants": [
+        "lissanopril",
+        "lisin april"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "cardiology_echocardiogram",
+      "raw_text": "echo cardio gram",
+      "canonical_en": "echocardiogram",
+      "specialty": "cardiology",
+      "category": "procedure",
+      "translations": {
+        "es": "ecocardiograma",
+        "fr": "echocardiogramme",
+        "de": "echokardiogramm",
+        "pt": "ecocardiograma",
+        "zh": "超声心动图",
+        "ja": "心エコー",
+        "ar": "تخطيط صدى القلب",
+        "hi": "इकोकार्डियोग्राम"
+      },
+      "aliases": {
+        "en": [
+          "echo"
+        ]
+      },
+      "phonetic_variants": [
+        "echo cardio gram"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "pulmonology_bronchoscopy",
+      "raw_text": "bronco scopy",
+      "canonical_en": "bronchoscopy",
+      "specialty": "pulmonology",
+      "category": "procedure",
+      "translations": {
+        "es": "broncoscopia",
+        "fr": "bronchoscopie",
+        "de": "bronchoskopie",
+        "pt": "broncoscopia",
+        "zh": "支气管镜检查",
+        "ja": "気管支鏡検査",
+        "ar": "تنظير القصبات",
+        "hi": "ब्रोंकोस्कोपी"
+      },
+      "aliases": {
+        "en": [
+          "bronch"
+        ]
+      },
+      "phonetic_variants": [
+        "bronco scopy"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "nephrology_creatinine",
+      "raw_text": "creatinine",
+      "canonical_en": "creatinine",
+      "specialty": "nephrology",
+      "category": "lab",
+      "translations": {
+        "es": "creatinina",
+        "fr": "creatinine",
+        "de": "kreatinin",
+        "pt": "creatinina",
+        "zh": "肌酐",
+        "ja": "クレアチニン",
+        "ar": "الكرياتينين",
+        "hi": "क्रिएटिनिन"
+      },
+      "aliases": {
+        "en": [
+          "serum creatinine"
+        ]
+      },
+      "phonetic_variants": [
+        "createinine"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "oncology_metastasis",
+      "raw_text": "meta stasis",
+      "canonical_en": "metastasis",
+      "specialty": "oncology",
+      "category": "condition",
+      "translations": {
+        "es": "metastasis",
+        "fr": "metastase",
+        "de": "metastase",
+        "pt": "metastase",
+        "zh": "转移",
+        "ja": "転移",
+        "ar": "نقيلة",
+        "hi": "मेटास्टेसिस"
+      },
+      "aliases": {
+        "en": [
+          "metastatic spread"
+        ]
+      },
+      "phonetic_variants": [
+        "meta stasis"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    },
+    {
+      "term_id": "pulmonology_pneumonia",
+      "raw_text": "pnuemonia",
+      "canonical_en": "pneumonia",
+      "specialty": "pulmonology",
+      "category": "condition",
+      "translations": {
+        "es": "neumonia",
+        "fr": "pneumonie",
+        "de": "lungenentzundung",
+        "pt": "pneumonia",
+        "zh": "肺炎",
+        "ja": "肺炎",
+        "ar": "التهاب رئوي",
+        "hi": "निमोनिया"
+      },
+      "aliases": {
+        "en": [
+          "lung infection"
+        ]
+      },
+      "phonetic_variants": [
+        "pnuemonia",
+        "new monia"
+      ],
+      "codes": {},
+      "icd_hint": "",
+      "confidence": 1.0
+    }
+  ],
+  "stage_log": [
+    "Loaded 12 segments",
+    "Low-confidence rate: 6.7%",
+    "Detection flagged 9 error candidates",
+    "Detection flagged 30 medical candidates",
+    "Applied 3 accepted corrections"
+  ]
+}

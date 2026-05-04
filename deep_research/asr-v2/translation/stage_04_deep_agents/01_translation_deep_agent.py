@@ -78,7 +78,7 @@ def build_translation_deep_agent():
 
     return create_deep_agent(
         name="translation-supervisor",
-        model=create_chat_model("asr_v2", temperature=0, max_tokens=1024),
+        model=create_chat_model("asr_v2", temperature=0, max_tokens=4096),
         tools=[inspect_translation_rules, inspect_source_segments, inspect_terminology_notes],
         system_prompt=(
             "You supervise a segment-preserving translation workflow.\n"

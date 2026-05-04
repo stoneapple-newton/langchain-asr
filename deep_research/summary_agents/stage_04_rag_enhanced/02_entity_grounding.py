@@ -32,7 +32,7 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from pydantic import BaseModel, Field
 
-from config import create_chat_model
+from config import create_chat_model, structured_output_chain
 from deep_research.summary_agents.shared import load_transcript, format_transcript_for_llm
 
 
@@ -114,7 +114,7 @@ class GroundingState(TypedDict):
 llm = create_chat_model(
     profile="asr_v2",
     temperature=0,
-    max_tokens=1024,
+    max_tokens=4096,
 )
 
 
@@ -126,7 +126,7 @@ def extract_entities(state: GroundingState) -> dict:
     """Extract entities from the transcript."""
     print("  [extract_entities] Finding named entities...")
     
-    parser = JsonOutputParser(pydantic_object=EntityExtraction)
+    parser = JsonOutputParser()
     
     prompt = ChatPromptTemplate.from_messages([
         (
@@ -138,7 +138,7 @@ def extract_entities(state: GroundingState) -> dict:
         ("human", "{transcript}"),
     ]).partial(format_instructions=parser.get_format_instructions())
     
-    chain = prompt | llm | parser
+    chain = structured_output_chain(llm, prompt, EntityExtraction)
     result = chain.invoke({"transcript": state["transcript"][:2000]})
     
     entities = result.get("entities", [])
