@@ -1,0 +1,126 @@
+{
+  "language": "en",
+  "job_name": "q3_team_meeting",
+  "segments": [
+    {
+      "id": 0, "start": 0.0, "end": 3.5,
+      "speaker": "SPEAKER_00",
+      "text": "alright let us kick off today's meeting with the sprint review",
+      "words": []
+    },
+    {
+      "id": 1, "start": 3.6, "end": 7.2,
+      "speaker": "SPEAKER_01",
+      "text": "sure we completed all eight story points in the authentication module",
+      "words": []
+    },
+    {
+      "id": 2, "start": 7.3, "end": 11.0,
+      "speaker": "SPEAKER_02",
+      "text": "the checkout flow is also done and the unit tests are all passing",
+      "words": []
+    },
+    {
+      "id": 3, "start": 11.1, "end": 14.8,
+      "speaker": "SPEAKER_00",
+      "text": "great work team the release is looking solid for Friday",
+      "words": []
+    },
+    {
+      "id": 4, "start": 14.9, "end": 18.5,
+      "speaker": "SPEAKER_01",
+      "text": "the staging deployment went smoothly no blockers at this stage",
+      "words": []
+    },
+    {
+      "id": 5, "start": 23.0, "end": 27.5,
+      "speaker": "SPEAKER_00",
+      "text": "moving on let us talk about the production bug that came in last night",
+      "words": []
+    },
+    {
+      "id": 6, "start": 27.6, "end": 32.1,
+      "speaker": "SPEAKER_02",
+      "text": "yes the payment gateway is throwing a five hundred error for about two percent of transactions",
+      "words": []
+    },
+    {
+      "id": 7, "start": 32.2, "end": 36.0,
+      "speaker": "SPEAKER_01",
+      "text": "I reproduced it locally it looks like a timeout issue with the third party API",
+      "words": []
+    },
+    {
+      "id": 8, "start": 36.1, "end": 40.8,
+      "speaker": "SPEAKER_00",
+      "text": "can you have a fix ready by noon so we can deploy before the afternoon traffic peak",
+      "words": []
+    },
+    {
+      "id": 9, "start": 40.9, "end": 44.5,
+      "speaker": "SPEAKER_01",
+      "text": "yes I will push a patch with retry logic and an alert before noon",
+      "words": []
+    },
+    {
+      "id": 10, "start": 44.6, "end": 48.3,
+      "speaker": "SPEAKER_02",
+      "text": "I will also check if the same timeout is hitting the refund endpoint",
+      "words": []
+    },
+    {
+      "id": 11, "start": 54.0, "end": 58.5,
+      "speaker": "SPEAKER_00",
+      "text": "okay switching to Q3 planning what are our priorities for the next quarter",
+      "words": []
+    },
+    {
+      "id": 12, "start": 58.6, "end": 63.2,
+      "speaker": "SPEAKER_02",
+      "text": "I think we should focus on the analytics dashboard it has been requested by three enterprise clients",
+      "words": []
+    },
+    {
+      "id": 13, "start": 63.3, "end": 68.0,
+      "speaker": "SPEAKER_01",
+      "text": "agreed and we also need to address the API rate limiting before we can onboard larger customers",
+      "words": []
+    },
+    {
+      "id": 14, "start": 68.1, "end": 72.8,
+      "speaker": "SPEAKER_00",
+      "text": "let us also schedule a design review for the new onboarding flow in the first two weeks",
+      "words": []
+    },
+    {
+      "id": 15, "start": 72.9, "end": 77.5,
+      "speaker": "SPEAKER_02",
+      "text": "I can reach out to the design team today and set up the kickoff meeting for next Monday",
+      "words": []
+    },
+    {
+      "id": 16, "start": 83.0, "end": 87.5,
+      "speaker": "SPEAKER_00",
+      "text": "before we wrap up let us confirm the action items for today",
+      "words": []
+    },
+    {
+      "id": 17, "start": 87.6, "end": 92.1,
+      "speaker": "SPEAKER_01",
+      "text": "I will send the patch and monitoring alert for the payment timeout by noon",
+      "words": []
+    },
+    {
+      "id": 18, "start": 92.2, "end": 96.8,
+      "speaker": "SPEAKER_02",
+      "text": "and I will check the refund endpoint and contact the design team for the Q3 kickoff",
+      "words": []
+    },
+    {
+      "id": 19, "start": 96.9, "end": 100.5,
+      "speaker": "SPEAKER_00",
+      "text": "perfect see you all at the sync on Thursday thanks everyone",
+      "words": []
+    }
+  ]
+}
