@@ -41,17 +41,19 @@ VARIANT_MODULES: dict[str, Path] = {
     "one_shot_run_on":     ROOT / "stage_02_one_shot" / "01_fix_run_on.py",
     "one_shot_head":       ROOT / "stage_02_one_shot" / "02_fix_head_attached.py",
     "one_shot_tail":       ROOT / "stage_02_one_shot" / "03_fix_tail_attached.py",
+    "cot_all_types":       ROOT / "stage_03b_chain_of_thought" / "01_fix_all_cot.py",
     "langchain_tools":     ROOT / "stage_03_langchain_tools" / "01_tool_agent.py",
     "langgraph_pipeline":  ROOT / "stage_04_langgraph" / "01_correction_graph.py",
     "deep_agents_swarm":   ROOT / "stage_05_deep_agents" / "01_diarization_swarm.py",
 }
 
-# Which defect type(s) each one-shot variant targets
+# Which defect type(s) each variant targets (None = handles all types)
 VARIANT_DEFECT_FILTER: dict[str, str | None] = {
     "one_shot_run_on":    "run_on",
     "one_shot_head":      "head_attached",
     "one_shot_tail":      "tail_attached",
-    "langchain_tools":    None,   # handles all types
+    "cot_all_types":      None,   # unified prompt handles all three types
+    "langchain_tools":    None,
     "langgraph_pipeline": None,
     "deep_agents_swarm":  None,
 }

@@ -24,6 +24,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from config import create_chat_model, structured_output_chain
 from deep_research.diarization_improvements.shared.diarization_utils import (
+    DIARIZATION_PROFILE,
     CorrectionPrediction,
     dataset_path,
     format_defect_descriptions,
@@ -130,7 +131,7 @@ def fix_run_on(transcript: dict) -> dict:
         + segments[target_idx + 1: target_idx + 3]
     )
 
-    llm = create_chat_model(temperature=0, max_tokens=4096)
+    llm = create_chat_model(DIARIZATION_PROFILE, temperature=0, max_tokens=4096)
     chain = structured_output_chain(llm, _prompt, RunOnCorrectionResult)
 
     raw = chain.invoke(

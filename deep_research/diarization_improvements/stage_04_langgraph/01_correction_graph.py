@@ -34,6 +34,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from config import create_chat_model, structured_output_chain
 from deep_research.diarization_improvements.shared.diarization_utils import (
+    DIARIZATION_PROFILE,
     apply_head_attached_fix,
     apply_tail_attached_fix,
     dataset_path,
@@ -130,7 +131,7 @@ _classify_prompt = ChatPromptTemplate.from_messages(
 
 def classify_node(state: CorrectionState) -> dict:
     """Optional LLM validation of the heuristic defect classification."""
-    llm = create_chat_model(temperature=0, max_tokens=4096)
+    llm = create_chat_model(DIARIZATION_PROFILE, temperature=0, max_tokens=4096)
     chain = structured_output_chain(llm, _classify_prompt, DefectClassification)
 
     segments = state["transcript"].get("segments", [])
@@ -232,7 +233,7 @@ def correct_run_on_node(state: CorrectionState) -> dict:
     target = segments[target_idx]
     context_segs = segments[max(0, target_idx - 2): target_idx] + segments[target_idx + 1: target_idx + 3]
 
-    llm = create_chat_model(temperature=0, max_tokens=4096)
+    llm = create_chat_model(DIARIZATION_PROFILE, temperature=0, max_tokens=4096)
     chain = structured_output_chain(llm, _run_on_prompt, RunOnSplit)
 
     raw = chain.invoke(

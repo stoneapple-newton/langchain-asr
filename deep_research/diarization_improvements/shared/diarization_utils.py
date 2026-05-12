@@ -8,11 +8,18 @@ and prompt helpers used by all stages (one-shot → LangChain → LangGraph → 
 from __future__ import annotations
 
 import json
+import os
 import re
 from pathlib import Path
 from typing import Any
 
 from pydantic import BaseModel, Field
+
+# ---------------------------------------------------------------------------
+# Provider profile
+# ---------------------------------------------------------------------------
+
+DIARIZATION_PROFILE: str = os.environ.get("DIARIZATION_CHAT_PROFILE", "default")
 
 
 # ---------------------------------------------------------------------------

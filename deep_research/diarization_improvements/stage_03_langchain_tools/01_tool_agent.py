@@ -1,9 +1,13 @@
 """
 Stage 3: LangChain Tools Diarization Agent
 ==========================================
-CONCEPT: A LangChain agent with @tool decorators decides which correction tool
-to call based on the detected defect type. Rule-based tools handle head/tail;
-an LLM-backed tool handles the harder run-on case.
+CONCEPT: A LangChain tool-calling agent with @tool decorators decides which
+correction to apply based on the detected defect type. Rule-based tools handle
+head/tail; an LLM-backed tool handles the harder run-on case.
+
+Improvement over one-shot: the agent actively inspects the transcript, picks the
+right tool, and produces a structured final answer — rather than firing a single
+fixed prompt regardless of the defect type.
 
 Run this file:
   uv run deep_research/diarization_improvements/stage_03_langchain_tools/01_tool_agent.py
@@ -11,11 +15,14 @@ Run this file:
 
 from __future__ import annotations
 
+import importlib.util
 import json
+import re
 from pathlib import Path
 import sys
 
-from langchain.agents import create_agent
+from langchain.agents import AgentExecutor, create_tool_calling_agent
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.tools import tool
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -24,6 +31,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from config import create_chat_model
 from deep_research.diarization_improvements.shared.diarization_utils import (
+    DIARIZATION_PROFILE,
     CorrectionPrediction,
     apply_head_attached_fix,
     apply_tail_attached_fix,
@@ -37,6 +45,25 @@ from deep_research.diarization_improvements.shared.diarization_utils import (
 )
 
 VARIANT_NAME = "langchain_tools"
+
+# ---------------------------------------------------------------------------
+# System prompt
+# ---------------------------------------------------------------------------
+
+_SYSTEM_PROMPT = (
+    "You are a diarization correction specialist.\n\n"
+    + format_defect_descriptions()
+    + "\n\n"
+    "Workflow:\n"
+    "1. Call tool_detect_defect_type to classify the problem.\n"
+    "2. Call tool_scan_embedded_labels if the defect is head_attached or tail_attached.\n"
+    "3. Call the appropriate fix tool: tool_fix_head_attached, tool_fix_tail_attached, "
+    "or tool_fix_run_on.\n"
+    "4. Return a JSON object as your final answer with these keys:\n"
+    "   corrected_segments (list of segment dicts), defect_type_detected (string), "
+    "notes (list of strings).\n\n"
+    "Always set defect_type_detected in your final response."
+)
 
 
 # ---------------------------------------------------------------------------
@@ -114,16 +141,6 @@ def tool_fix_run_on(transcript_json: str) -> str:
     Uses an LLM to find the natural speaker boundary and produce two segments.
     Returns the corrected transcript as JSON."""
     try:
-        from deep_research.diarization_improvements.stage_02_one_shot.fix_run_on import fix_run_on
-        transcript = json.loads(transcript_json)
-        result = fix_run_on(transcript)
-        # Return the corrected transcript (reassembled)
-        corrected_transcript = dict(transcript)
-        corrected_transcript["segments"] = result["segments"]
-        return json.dumps(corrected_transcript)
-    except ImportError:
-        # Fallback: use the same logic inline via stage_02
-        import importlib.util
         stage02_path = Path(__file__).parent.parent / "stage_02_one_shot" / "01_fix_run_on.py"
         spec = importlib.util.spec_from_file_location("_fix_run_on", stage02_path)
         mod = importlib.util.module_from_spec(spec)
@@ -138,7 +155,11 @@ def tool_fix_run_on(transcript_json: str) -> str:
 
 
 @tool
-def tool_evaluate_result(corrected_json: str, ground_truth_json: str, defect_type: str = "unknown") -> str:
+def tool_evaluate_result(
+    corrected_json: str,
+    ground_truth_json: str,
+    defect_type: str = "unknown",
+) -> str:
     """Score a corrected transcript against the ground truth.
     Returns evaluation metrics as JSON including speaker_accuracy, f1, text_preserved."""
     try:
@@ -175,56 +196,47 @@ ALL_TOOLS = [
 ]
 
 
-def build_agent():
-    return create_agent(
-        model=create_chat_model(temperature=0, max_tokens=4096),
-        tools=ALL_TOOLS,
-        system_prompt=(
-            "You are a diarization correction specialist.\n\n"
-            + format_defect_descriptions()
-            + "\n\n"
-            "Workflow:\n"
-            "1. Call tool_detect_defect_type to classify the problem.\n"
-            "2. Call tool_scan_embedded_labels if the defect is head_attached or tail_attached.\n"
-            "3. Call the appropriate fix tool: tool_fix_head_attached, tool_fix_tail_attached, "
-            "   or tool_fix_run_on.\n"
-            "4. Return the corrected segments as a JSON list.\n\n"
-            "Always set defect_type_detected in your final response."
-        ),
-        response_format=CorrectionPrediction,
-    )
+def build_agent() -> AgentExecutor:
+    llm = create_chat_model(DIARIZATION_PROFILE, temperature=0, max_tokens=4096)
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", _SYSTEM_PROMPT),
+        ("human", "{input}"),
+        MessagesPlaceholder(variable_name="agent_scratchpad"),
+    ])
+    agent = create_tool_calling_agent(llm, ALL_TOOLS, prompt)
+    return AgentExecutor(agent=agent, tools=ALL_TOOLS, max_iterations=12, verbose=False)
 
 
 def correct_transcript(transcript: dict, ground_truth: dict | None = None) -> dict:
-    """
-    Run the LangChain tools agent on a transcript and return a correction dict.
-    """
-    agent = build_agent()
-    transcript_json = json.dumps(transcript)
+    """Run the LangChain tools agent on a transcript and return a correction dict."""
+    executor = build_agent()
+    result = executor.invoke({
+        "input": (
+            f"Fix the diarization defect in this transcript:\n"
+            f"{json.dumps(transcript)}"
+        ),
+    })
 
-    result = agent.invoke(
-        {
-            "messages": [
-                {
-                    "role": "user",
-                    "content": (
-                        f"Fix the diarization defect in this transcript:\n{transcript_json}"
-                    ),
-                }
-            ]
-        },
-        config={"recursion_limit": 12},
-    )
+    output = result.get("output", "")
 
-    structured: CorrectionPrediction = result.get("structured_response") or CorrectionPrediction()
-    structured_dict = structured.model_dump() if hasattr(structured, "model_dump") else dict(structured)
+    # The agent is instructed to end with a JSON object. Parse it.
+    try:
+        match = re.search(r"\{.*\}", output, re.DOTALL)
+        payload = json.loads(match.group(0)) if match else {}
+    except Exception:
+        payload = {}
 
-    # If agent returned empty segments, fall back to input segments
-    if not structured_dict.get("segments"):
-        structured_dict["segments"] = transcript.get("segments", [])
+    segments = payload.get("corrected_segments", transcript.get("segments", []))
+    # If corrected_segments came from a tool result embedded in the output, fall back.
+    if not segments:
+        segments = transcript.get("segments", [])
 
-    structured_dict["variant"] = VARIANT_NAME
-    return structured_dict
+    return {
+        "segments": segments,
+        "defect_type_detected": payload.get("defect_type_detected", "unknown"),
+        "notes": payload.get("notes", [output[:200]] if output else []),
+        "variant": VARIANT_NAME,
+    }
 
 
 if __name__ == "__main__":

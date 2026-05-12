@@ -28,6 +28,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from config import create_chat_model
 from deep_research.diarization_improvements.shared.diarization_utils import (
+    DIARIZATION_PROFILE,
     apply_head_attached_fix,
     apply_tail_attached_fix,
     dataset_path,
@@ -231,7 +232,7 @@ def build_diarization_swarm():
 
     return create_deep_agent(
         name="diarization-swarm",
-        model=create_chat_model(temperature=0, max_tokens=4096),
+        model=create_chat_model(DIARIZATION_PROFILE, temperature=0, max_tokens=4096),
         tools=SHARED_TOOLS,
         system_prompt=(
             "You are a diarization correction supervisor.\n\n"
